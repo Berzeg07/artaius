@@ -1,7 +1,55 @@
 @font-face {
-    font-family: "Whitney";
+    font-family: "Rubik";
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/Whitney-Light/Whitney-Light.woff") format("woff"), url("../fonts/Whitney-Light/Whitney-Light.eot") format("eot"), url("../fonts/Whitney-Light/Whitney-Light.ttf") format("ttf");
+    src: url("../fonts/Rubik-Light/Rubik-Light.woff") format("woff"), url("../fonts/Rubik-Light/Rubik-Light.eot") format("eot"), url("../fonts/Rubik-Light/Rubik-Light.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Rubik-Regular/Rubik-Regular.woff") format("woff"), url("../fonts/Rubik-Regular/Rubik-Regular.eot") format("eot"), url("../fonts/Rubik-Regular/Rubik-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Rubik-SemiBold/Rubik-SemiBold.woff") format("woff"), url("../fonts/Rubik-SemiBold/Rubik-SemiBold.eot") format("eot"), url("../fonts/Rubik-SemiBold/Rubik-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Rubik-Bold/Rubik-Bold.woff") format("woff"), url("../fonts/Rubik-Bold/Rubik-Bold.eot") format("eot"), url("../fonts/Rubik-Bold/Rubik-Bold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot") format("eot"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/PlayfairDisplay-Medium/PlayfairDisplay-Medium.woff") format("woff"), url("../fonts/PlayfairDisplay-Medium/PlayfairDisplay-Medium.eot") format("eot"), url("../fonts/PlayfairDisplay-Medium/PlayfairDisplay-Medium.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff") format("woff"), url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot") format("eot"), url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf") format("ttf");
 }

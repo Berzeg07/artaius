@@ -22,13 +22,15 @@ ul {
 }
 
 body {
-    // font-family: 'Open Sans', sans-serif;
-    font-family: "Whitney";
+    font-family: "Rubik";
     font-weight: 400;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
     height: 100%;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 ol,

@@ -1,1 +1,99 @@
-p Шапка
+.header
+    .header__top
+        .container
+            .column
+                .select.select_city
+                    select
+                        option Санкт-Петербург
+                        option Москва
+                        option Саратов
+
+
+                .shipping-action Бесплатная доставка*
+
+                ul.top-nav
+                    li
+                        a(href="#") Контакты
+                    li
+                        a(href="#") Доставка и оплата
+                    li
+                        a(href="#") О нас
+
+            .column
+                .social
+                    .social__title Связаться с нами
+
+                    ul.social-list
+                        li
+                            a(href="#")
+                                img(src="img/inst-icon.svg") 
+                        li
+                            a(href="#")
+                                img(src="img/vk-icon.svg") 
+                        li
+                            a(href="#")
+                                img(src="img/whatsapp-icon.svg") 
+
+                .login
+                    a(href="#") Вход 
+                    span / 
+                    a(href="#") Регистрация
+
+    .header__middle.container
+        .column
+            button(type="button").burger
+
+            .logo.logo_header
+                img(src="img/logo.svg")
+
+            form.seacrh(action="#" method="POST")
+                input(type="text" placeholder="Начните поиск").seacrh__inp
+                button(type="submit").seacrh__btn 
+                    span Найти
+
+        .column
+            ul.header__phone
+                li
+                    a(href="tel:78126699665").phone-link.phone-link_header +7 (812) 669-96-65
+                li
+                    .sub-info Пн — Вс: 10:30 — 19:00
+
+            ul.header__basket
+                li
+                    a(href="#").login-icon
+                        img(src="img/login-icon.svg")
+                li
+                    a(href="#").favor-link
+                        img(src="img/favor.svg")
+                li
+                    .basket
+                        a(href="#").basket__item
+                            img(src="img/basket.svg")
+
+                        .basket__item
+                            .basket__price 
+                                |8 967 
+                                <span>&#8381;</span>
+
+                            .sub-info 3 товара          
+
+    .header__bottom
+        .container
+            button(type="button").catalog-btn Каталог
+
+            ul.main-nav
+                li
+                    a(href="#") Парикмахерский инструмент
+                li
+                    a(href="#") Для волос
+                li  
+                    a(href="#") Для лица
+                li
+                    a(href="#").main-nav__action Акции
+                li  
+                    a(href="#").main-nav__popular Популярные
+                li
+                    a(href="#") Мастера рекомендуют
+
+
+
