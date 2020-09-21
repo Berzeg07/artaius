@@ -280,7 +280,6 @@
 
 .burger.is-active {
     background: url("../img/close-black.svg") no-repeat center;
-
 }
 
 .catalog-btn {
@@ -345,12 +344,15 @@
     width: 240px;
 }
 
-.seacrh {
+.search_header {
+    margin-top: 4px;
     max-width: 520px;
     width: 100%;
     margin-left: auto;
+}
+
+.search {
     position: relative;
-    margin-top: 4px;
 
     @media (max-width: 599px) {
         bottom: 0;
@@ -379,7 +381,7 @@
     }
 }
 
-.seacrh__inp {
+.search__inp {
     width: 100%;
     border-radius: 0px 20px 0px;
     border: 1px solid #DDDDDD;
@@ -397,7 +399,7 @@
     }
 }
 
-.seacrh__btn {
+.search__btn {
     position: absolute;
     right: 0;
     top: 0;
@@ -1003,4 +1005,52 @@
 .mob-menu__phone {
     color: #000000;
     font-size: 13px;
+}
+
+body {
+    height: 2000px;
+}
+
+.sticky-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+
+    .container,
+    .sticky-panel__nav {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sticky-panel__dropdown {
+    top: 79px;
+}
+
+.sticky-panel {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 23px 3px rgba(0, 0, 0, 0.15);
+}
+
+.sticky-panel__nav>li {
+    padding: 30px 0px;
+    margin-right: 38px;
+
+    &:hover {
+        .sticky-panel__dropdown {
+            display: block;
+        }
+    }
+}
+
+.sticky-panel__basket {
+    position: relative;
+    margin-left: auto;
+    top: 10px;
+}
+
+.sticky-panel__search {
+    width: 524px;
 }

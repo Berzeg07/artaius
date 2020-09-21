@@ -36,4 +36,13 @@ $(document).ready(function () {
         $('.mob-menu').toggleClass('is-active');
     });
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 250) {
+            $('.sticky-panel').fadeIn();
+        }
+        else {
+            $('.sticky-panel').fadeOut();
+        }
+    });
+
 });
