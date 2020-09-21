@@ -23,4 +23,17 @@ $(document).ready(function () {
         }
     });
 
+    $('.mob-menu__cat-link').click(function () {
+        $(this).next().addClass('is-active');
+    });
+
+    $('.mob-menu__back').click(function () {
+        $(this).parent().removeClass('is-active');
+    });
+
+    $('.burger').click(function () {
+        $(this).toggleClass('is-active');
+        $('.mob-menu').toggleClass('is-active');
+    });
+
 });
