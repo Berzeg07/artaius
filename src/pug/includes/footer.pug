@@ -1,7 +1,93 @@
 .footer
-    p Футер
+    .footer__top
+        .container
+            .column
+                .footer__item.footer__item_top
+                    ul.footer__contact
+                        li
+                            a(href="mailto:starline.office@gmail.com").email-link starline.office@gmail.com
+                        li
+                            a(href="tel:79219506264").phone-link +7 (921) 950-62-64
+                        li
+                            a(href="tel:78126699665").phone-link +7 (812) 669-96-65
 
+                    .sub-info.sub-info_footer Пн — Вс: 10:30 — 19:00
 
+                .footer__item
+                    .footer__title Социальные сети
+
+                    ul.social-list.social-list_footer
+                        li
+                            a(href="#")
+                                +icon('vk-icon','vk-icon vk-footer')
+                        li
+                            a(href="#")
+                                +icon('inst-icon','inst-icon inst-footer')
+
+                    ul.payment.payment_top
+                        li
+                            +icon('paypal','paypal-icon')
+                        li
+                            +icon('visa','visa-icon')
+
+            .column
+                .footer__list-title О компании
+
+                ul.footer__list
+                    li
+                        a(href="#") Контакты
+                    li
+                        a(href="#") Реквизиты
+                    li
+                        a(href="#") Политика конфиденциальности
+                    li
+                        a(href="#") Публичная оферта
+                    li
+                        a(href="#") Карта сайта
+                    li
+                        a(href="#") Сертификаты
+
+            .column
+                .footer__list-title Сервис
+
+                ul.footer__list
+                    li
+                        a(href="#") Оплата и доставка
+                    li
+                        a(href="#") Гарантия
+                    li
+                        a(href="#") Отзывы и предложения
+                    li
+                        a(href="#") Где купить
+                    li
+                        a(href="#") Как оформить заказ
+
+            .column 
+                .footer__list-title Для вас
+
+                ul.footer__list
+                    li
+                        a(href="#") Личный кабинет
+                    li
+                        a(href="#") История заказов
+                    li
+                        a(href="#") Избранное
+                    li
+                        a(href="#") Акции
+                    li
+                        a(href="#") Уход за инструментом
+                    li
+                        a(href="#") Подарочные сертификаты
+
+    .footer__bottom
+        .container
+            ul.payment.payment_bottom
+                li
+                    +icon('paypal','paypal-icon')
+                li
+                    +icon('visa','visa-icon')
+
+            .copy Artaius© 2020
 
 include ./footer-modals.pug
 script(src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous")

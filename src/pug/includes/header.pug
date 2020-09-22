@@ -23,16 +23,18 @@
                 .social
                     .social__title Связаться с нами
 
-                    ul.social-list
+                    ul.social-list.social-list_header
+                        li
+                            a(href="#") 
+                                +icon('inst-icon','inst-icon inst-header')
+
                         li
                             a(href="#")
-                                img(src="img/inst-icon.svg") 
+                                +icon('vk-icon','vk-icon vk-header')
+
                         li
                             a(href="#")
-                                img(src="img/vk-icon.svg") 
-                        li
-                            a(href="#")
-                                img(src="img/whatsapp-icon.svg") 
+                                +icon('whatsup-icon','whatsup-icon whatsup-header')
 
                 .login
                     a(href="#") Вход 
@@ -61,14 +63,17 @@
             ul.header__basket
                 li
                     a(href="#").favor-link
-                        img(src="img/favor.svg")
+                        +icon('favor','favor-icon favor-grey')
+
                 li
                     a(href="#").login-icon
-                        img(src="img/login-icon.svg")
+                        +icon('login-icon','login-icon login-icon-grey')
+                        //- img(src="img/login-icon.svg")
                 li
                     .basket
                         a(href="#").basket__item
-                            img(src="img/basket.svg")
+                            +icon('basket','basket-icon basket-icon-grey')
+                            //- img(src="img/basket.svg")
 
                         .basket__item
                             .basket__price 

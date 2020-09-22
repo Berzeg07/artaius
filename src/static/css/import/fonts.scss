@@ -16,6 +16,15 @@
 
 @font-face {
     font-family: "Rubik";
+    font-weight: 450;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Rubik-Medium/Rubik-Medium.woff") format("woff"), url("../fonts/Rubik-Medium/Rubik-Medium.eot") format("eot"), url("../fonts/Rubik-Medium/Rubik-Medium.ttf") format("ttf");
+}
+
+
+@font-face {
+    font-family: "Rubik";
     font-weight: 500;
     font-style: normal;
     font-display: swap;

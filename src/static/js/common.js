@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // alert(1);
+
     $('.select select').selectric();
 
     $('.catalog-btn').click(function () {
@@ -38,11 +38,15 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 250) {
-            $('.sticky-panel').fadeIn();
+            $('.sticky-panel').addClass('is-active');
         }
         else {
-            $('.sticky-panel').fadeOut();
+            $('.sticky-panel').removeClass('is-active');
         }
+    });
+
+    $('.footer__list-title').click(function () {
+        $(this).next().slideToggle();
     });
 
 });
