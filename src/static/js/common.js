@@ -59,6 +59,23 @@ $(document).ready(function () {
         // }
     });
 
+    function tabsScroll() {
+        var screenWidth = $(window).width();
+        if (screenWidth < 400) {
+            $('.tabs-btn').mCustomScrollbar({
+                axis: 'x',              // вертикальный скролл 
+                theme: 'dark',  // тема 
+                // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+                //setHeight: 264,         // высота блока (переписывает CSS) 
+                // mouseWheel: {
+                //     deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
+                // }
+            });
+        }
+    }
+
+    tabsScroll();
+
     var bannerSlider = undefined;
 
     function initBannerSlider() {
@@ -96,5 +113,44 @@ $(document).ready(function () {
     }
 
     initBannerSlider();
+
+    var actionSlider = new Swiper('.tab-slider', {
+        slidesPerView: 4,
+        spaceBetween: 45,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            499: {
+                slidesPerView: 1.6,
+                spaceBetween: 7,
+            },
+            599: {
+                slidesPerView: 2.3,
+                spaceBetween: 7,
+            },
+            767: {
+                slidesPerView: 3.1,
+                spaceBetween: 7,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
+    });
+
+    $('.tabs-btn span').click(function () {
+        $('.tabs-btn__el').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('data-tab');
+        $('.action-tab').not(tab).css({ 'display': 'none' });
+        $(tab).fadeIn(400);
+    });
+    $('.tabs-btn span:first-child').click();
 
 });
