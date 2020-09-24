@@ -1388,22 +1388,140 @@
             span(data-tab="#recomtab").tabs-btn__el Мастера рекомендуют
             span(data-tab="#actiontab").tabs-btn__el Акции
             span(data-tab="#newstab").tabs-btn__el Новинки
-        //- ul.tabs-btn
-        //-     li
-        //-         span(data-tab="#recomtab").tabs-btn__el.is-active Мастера рекомендуют
-        //-     li
-        //-         span(data-tab="#actiontab").tabs-btn__el Акции
-        //-     li
-        //-         span(data-tab="#newstab").tabs-btn__el Новинки
 
     .action-tab#recomtab
-        .tab-slider.swiper-container
+        .tab-slider.swiper-container.tab-sl-1
             .swiper-wrapper
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
 
@@ -1435,10 +1553,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
-
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
 
@@ -1470,10 +1711,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
-
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_orange Лучшая цена
 
@@ -1505,9 +1869,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_red Sale
 
@@ -1538,17 +2026,141 @@
                                             |10 300 
                                             span руб.
 
-            .swiper-button-next
-            .swiper-button-prev
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
 
     .action-tab#actiontab
-        .tab-slider.swiper-container
+        .tab-slider.swiper-container.tab-sl-2
             .swiper-wrapper
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
 
@@ -1580,9 +2192,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+                            button(type="button").fastview-btn Быстрый просмотр
 
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
@@ -1615,10 +2351,134 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
 
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_orange Лучшая цена
 
@@ -1650,9 +2510,134 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_red Sale
 
@@ -1683,17 +2668,142 @@
                                             |10 300 
                                             span руб.
 
-            .swiper-button-next
-            .swiper-button-prev
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
 
     .action-tab#newstab
-        .tab-slider.swiper-container
+        .tab-slider.swiper-container.tab-sl-3
             .swiper-wrapper
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
 
@@ -1725,10 +2835,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
-
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_blue Лучшие отзывы
 
@@ -1760,10 +2993,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
-
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_orange Лучшая цена
 
@@ -1795,9 +3151,133 @@
                                             span руб.
                 .swiper-slide
                     .product-card
+                        .fastview-item
+                            .fastview__brend 
+                                |Suntachi
+                                button(type="button").fastview__close
+
+                            .fastview__title Прямые ножницы 5+ класс
+
+                            .fastview__inner
+                                .fastview__item-left
+                                    .fastview-gallery-top.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                        .swiper-button-next.swiper-button-next-min
+                                        .swiper-button-prev.swiper-button-prev-min
+
+                                    .fastview-gallery-thumb.swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+                                            .swiper-slide
+                                                .fastview-gallery__item
+                                                    img(src="img/fw-product.jpg")
+
+                                    .fastview__more-link
+                                        a(href="#") Больше информации о товаре
+
+                                .fastview__item-right
+                                    .fastview__top-info
+                                        .reviews-reyting
+                                            ul.reviews-reyting__stars
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+                                                li
+                                                    +icon('star','star-icon')
+
+                                            a(href="#").reviews-reyting__article 3 отзыва
+
+                                        .fastview__status В наличии
+
+                                        .addfavor-block
+                                            .addfavor
+                                            .addfavor__txt В избранное
+
+                                    ul.fastview__specif
+                                        li
+                                            span Артикул
+                                            span 09-55
+                                        li
+                                            span Сталь
+                                            span Hitachi Япония, 440А
+                                        li
+                                            span Бренд
+                                            span Suntachi
+                                        li
+                                            span Серия
+                                            span Suntachi Classic Gold
+                                        li
+                                            span Вид полотна
+                                            span Клиновидный
+                                        li
+                                            span Упор
+                                            span Съемный
+                                        li
+                                            span Ручка
+                                            span Эргономика, 2 плоскости
+                                        li
+                                            span Размер колец
+                                            span Верхние: 18-21 мм; Нижнее: 18-20 мм
+                                        li
+                                            span Виды срезов и техника
+                                            span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                                        li
+                                            span Страна производства
+                                            span Южная Корея
+                                        li
+                                            span Категории
+                                            span Прямые ножницы, Ножницы для правшей
+
+                                    ul.fastview__columns
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать упаковку
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .select.select-refprod
+                                                select
+                                                    option Выбрать крепление
+                                                    option Тест 1
+                                                    option Тест 2
+                                        li
+                                            .fastview__price-info
+                                                .fastview__price-new
+                                                    .action-tooltip.action-tooltip_red Sale
+                                                    .fastview__price-new 
+                                                        |7 450  
+                                                        span руб.
+
+                                                .fastview__price-old 
+                                                    |8 320  
+                                                    span руб.
+                                        li
+                                            button(type="button").btn.fastview__btn В корзину
                         .product-card__img
                             a(href="#")
                                 img(src="img/product-1.jpg")
+                            button(type="button").fastview-btn Быстрый просмотр
 
                         .action-tooltip.action-tooltip_red Sale
 
@@ -1828,6 +3308,43 @@
                                             |10 300 
                                             span руб.
 
-            .swiper-button-next
-            .swiper-button-prev
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
+
+.news-block
+    .news-block__item
+        .news-block__title Новости
+        .news-block__article Самые последние новости о трендах от ведущих специалистов-парикмахеров
+
+    .news-block__item
+        .news-slider.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .news-slider__item
+                        .news-slider__img.news-slider__img_brt
+                            img(src="img/news-1.jpg")
+
+                        .news-slider__article Сложно сказать, почему младая поросль матереет
+
+                        .news-slider__date 7.12.2020
+
+                .swiper-slide
+                    .news-slider__item
+                        .news-slider__img.news-slider__img_brb
+                            img(src="img/news-2.jpg")
+
+                        .news-slider__article Сложно сказать, почему младая поросль матереет
+
+                        .news-slider__date 7.12.2020
+
+                .swiper-slide
+                    .news-slider__item
+                        .news-slider__img.news-slider__img_blt
+                            img(src="img/news-3.jpg")
+
+                        .news-slider__article Сложно сказать, почему младая поросль матереет
+
+                        .news-slider__date 7.12.2020
+
+
 
