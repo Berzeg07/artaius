@@ -1,4 +1,175 @@
+//- SVG спрайты *
 mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/img/svg/sprite.svg#" + name)
+
+//- Быстрый просмотр товара *
+mixin fastviewItem
+	.fastview-item
+		.fastview__brend 
+			|Suntachi
+			button(type="button").fastview__close
+
+		.fastview__title Прямые ножницы 5+ класс
+
+		.fastview__inner
+			.fastview__item-left
+				.fastview-gallery-top.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+
+					.swiper-button-next.swiper-button-next-min
+					.swiper-button-prev.swiper-button-prev-min
+
+				.fastview-gallery-thumb.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+
+				.fastview__more-link
+					a(href="#") Больше информации о товаре
+
+			.fastview__item-right
+				.fastview__top-info
+					.reviews-reyting
+						ul.reviews-reyting__stars
+							li
+								+icon('star','star-icon')
+							li
+								+icon('star','star-icon')
+							li
+								+icon('star','star-icon')
+							li
+								+icon('star','star-icon')
+							li
+								+icon('star','star-icon')
+
+						a(href="#").reviews-reyting__article 3 отзыва
+
+					.fastview__status В наличии
+
+					.addfavor-block
+						.addfavor
+						.addfavor__txt В избранное
+
+				ul.fastview__specif
+					li
+						span Артикул
+						span 09-55
+					li
+						span Сталь
+						span Hitachi Япония, 440А
+					li
+						span Бренд
+						span Suntachi
+					li
+						span Серия
+						span Suntachi Classic Gold
+					li
+						span Вид полотна
+						span Клиновидный
+					li
+						span Упор
+						span Съемный
+					li
+						span Ручка
+						span Эргономика, 2 плоскости
+					li
+						span Размер колец
+						span Верхние: 18-21 мм; Нижнее: 18-20 мм
+					li
+						span Виды срезов и техника
+						span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+					li
+						span Страна производства
+						span Южная Корея
+					li
+						span Категории
+						span Прямые ножницы, Ножницы для правшей
+
+				ul.fastview__columns
+					li
+						.select.select-refprod
+							select
+								option Выбрать упаковку
+								option Тест 1
+								option Тест 2
+					li
+						.select.select-refprod
+							select
+								option Выбрать крепление
+								option Тест 1
+								option Тест 2
+					li
+						.fastview__price-info
+							.fastview__price-new
+								.action-tooltip.action-tooltip_red Sale
+								.fastview__price-new 
+									|7 450  
+									span руб.
+
+							.fastview__price-old 
+								|8 320  
+								span руб.
+					li
+						button(type="button").btn.fastview__btn В корзину
+
+//- Карточка товара в слайдере *
+mixin productCard(tooltipClassColor, tooltipText)
+	.product-card
+		+fastviewItem
+		.product-card__img
+			a(href="#")
+				img(src="img/product-1.jpg")
+
+			button(type="button").fastview-btn Быстрый просмотр
+
+		div(class="action-tooltip "+tooltipClassColor)= tooltipText
+
+		.product-card__brend 
+			a(href="#") Suntachi Salon
+
+		.product-card__name
+			a(href="#") Прямые ножницы ZG-B PETROL 7 категория
+
+		ul.specif
+			li
+				span.specif__name Сталь: 
+				span.specif__article Hitachi Япония, 440С
+			li
+				span.specif__name Вид полотна: 
+				span.specif__article Филировочный
+
+		ul.product-card__column
+			li
+				button(type="button").btn.btn_buy Купить
+			li
+				ul.product-card__column-list
+					li
+						span Цена
+						.product-card__old-price 10 600 руб.
+					li
+						.product-card__new-price 
+							|10 300 
+							span руб.
+
+//- Слайдер акций на главной *
+mixin actionSliderMain(tooltipClassColor, tooltipText)
+	.swiper-slide
+		+productCard(tooltipClassColor, tooltipText)
