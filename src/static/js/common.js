@@ -53,6 +53,10 @@ $(document).ready(function () {
         });
     }
 
+    $('.addfavor').click(function () {
+        $(this).toggleClass("is-active");
+    });
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
@@ -67,7 +71,7 @@ $(document).ready(function () {
             breakpoints: {
                 499: {
                     slidesPerView: 1.6,
-                    spaceBetween: 7,
+                    spaceBetween: 2,
                 },
                 599: {
                     slidesPerView: 2.3,
@@ -189,12 +193,16 @@ $(document).ready(function () {
                     clickable: true,
                 },
                 breakpoints: {
-                    991: {
+                    767: {
                         slidesPerView: 1.1,
                         spaceBetween: 10,
                     },
-                    1079: {
+                    991: {
                         slidesPerView: 1.3,
+                        spaceBetween: 38,
+                    },
+                    1079: {
+                        slidesPerView: 1.4,
                         spaceBetween: 10,
                     },
                     1279: {
@@ -223,7 +231,7 @@ $(document).ready(function () {
         breakpoints: {
             599: {
                 slidesPerView: 1.6,
-                spaceBetween: 20,
+                spaceBetween: 5,
             },
             767: {
                 slidesPerView: 2.3,
@@ -231,7 +239,7 @@ $(document).ready(function () {
             },
             991: {
                 slidesPerView: 1.6,
-                spaceBetween: 10,
+                spaceBetween: 25,
             },
             1099: {
                 slidesPerView: 2.2,

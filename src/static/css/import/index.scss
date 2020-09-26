@@ -21,7 +21,7 @@
 
 .header__top {
     background: #F5F5F5;
-    padding: 5px 0px;
+    padding: 3px 0px;
     color: #686868;
 
     @media (max-width: 1279px) {
@@ -690,6 +690,7 @@ svg use {
 
     @media (min-width: 768px) and (max-width: 1279px) {
         width: 141px;
+        margin-left: 6px;
     }
 
     @media (min-width: 1280px) {
@@ -1609,6 +1610,7 @@ svg use {
 .banner-block {
     img {
         display: block;
+        border-radius: 0px 0px 63px 0px;
     }
 
     @media (max-width: 1279px) {
@@ -1659,7 +1661,11 @@ svg use {
     }
 
     .swiper-pagination {
-        bottom: 5px;
+        bottom: -4px;
+
+        @media (max-width: 767px) {
+            bottom: 7px;
+        }
 
         @media (min-width: 1280px) {
             display: none;
@@ -1670,10 +1676,23 @@ svg use {
         width: 12px;
         height: 12px;
         background: #E0F2F1;
+
+        @media (max-width: 767px) {
+            width: 7px;
+            height: 7px;
+        }
     }
 
     .swiper-pagination-bullet-active {
         background: #38B2AC;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 13px;
+
+        @media (max-width: 767px) {
+            margin: 0 8px;
+        }
     }
 
     @media (min-width: 1280px) {
@@ -1695,6 +1714,10 @@ svg use {
 
 .banner-block__item {
     position: relative;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        width: 590px;
+    }
 }
 
 .banner-block__title,
@@ -1708,6 +1731,11 @@ svg use {
     position: absolute;
     bottom: 32px;
     left: 53px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        padding-left: 26px;
+        bottom: 25px;
+    }
 
     @media (max-width: 1279px) {
         left: 14px;
@@ -1740,7 +1768,7 @@ svg use {
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
-        font-size: 30px;
+        font-size: 35px;
     }
 }
 
@@ -1813,7 +1841,8 @@ svg use {
     }
 
     @media (min-width: 1500px) {
-        bottom: 15px;
+        bottom: 19px;
+        left: 0;
     }
 }
 
@@ -1845,7 +1874,7 @@ svg use {
     display: flex;
     align-items: center;
     padding-top: 25px;
-    margin-bottom: 45px;
+    margin-bottom: 8px;
 
     @media (max-width: 400px) {
         width: 100%;
@@ -1858,19 +1887,25 @@ svg use {
         }
     }
 
+    @media (max-width: 767px) {
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+
     @media (min-width: 768px) {
         padding-top: 57px;
         margin-bottom: 55px;
     }
 
     @media (min-width: 1280px) {
-        padding-top: 100px;
+        padding-top: 72px;
+        padding-left: 9px;
         margin-bottom: 76px;
     }
 
     span {
         &:not(:last-child) {
-            margin-right: 23px;
+            margin-right: 25px;
 
             @media (min-width: 768px) {
                 margin-right: 52px;
@@ -1922,23 +1957,51 @@ svg use {
     position: relative;
     width: 168px;
 
+    .addfavor {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+    }
+
     @media (min-width: 768px) {
         width: 238px;
-        padding-left: 19px;
-        padding-right: 19px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1279px) {
+        padding-left: 6px;
+        padding-right: 6px;
     }
 
     @media (min-width: 1280px) {
         width: 306px;
+        padding-left: 19px;
+        padding-right: 19px;
     }
 
     .action-tooltip {
         left: 26px;
         top: -5px;
+
+        @media (max-width: 767px) {
+            font-size: 9px;
+            left: 16px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            left: 14px;
+            font-size: 11px;
+        }
     }
 
-    @media (min-width: 1280px) {
-        &:hover {
+    &:hover {
+        .addfavor {
+            display: block;
+        }
+
+        @media (min-width: 1280px) {
             .fastview-btn {
                 display: block;
             }
@@ -1950,6 +2013,20 @@ svg use {
     text-align: center;
     margin-bottom: 17px;
     position: relative;
+
+    a {
+        display: inline-block;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 20px;
+        margin-bottom: 7px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        padding-top: 20px;
+        margin-bottom: 16px;
+    }
 }
 
 .fastview-btn {
@@ -1977,6 +2054,10 @@ svg use {
         font-size: 12px;
     }
 
+    @media (min-width: 768px) and (max-width: 1279px) {
+        margin-bottom: 12px;
+    }
+
     @media (min-width: 1280px) {
         font-size: 13px;
     }
@@ -1991,6 +2072,10 @@ svg use {
         font-size: 15px;
     }
 
+    @media (min-width: 768px) and (max-width: 1279px) {
+        margin-bottom: 16px;
+    }
+
     @media (min-width: 1280px) {
         font-size: 16px;
     }
@@ -2001,8 +2086,16 @@ svg use {
     margin-bottom: 32px;
     font-size: 10px;
 
+    @media (max-width: 767px) {
+        margin-bottom: 17px;
+    }
+
     @media (min-width: 768px) {
         font-size: 12px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        margin-bottom: 25px;
     }
 
     @media (min-width: 1280px) {
@@ -2050,13 +2143,20 @@ svg use {
         @media (max-width: 767px) {
             display: none;
         }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            left: 15px;
+        }
     }
 
     @media (min-width: 768px) {
         font-size: 14px;
         width: 106px;
         padding-left: 34px;
+    }
 
+    @media (max-width: 1279px) {
+        height: 34px;
     }
 
     @media (min-width: 1280px) {
@@ -2140,9 +2240,9 @@ svg use {
     padding-left: 20px;
     padding-right: 20px;
 
-    @media (max-width: 767px) {
-        padding-left: 0;
-    }
+    // @media (max-width: 767px) {
+    //     padding-left: 0;
+    // }
 
     .swiper-slide {
         display: flex;
@@ -2158,7 +2258,7 @@ svg use {
         }
 
         @media (min-width: 768px) and (max-width: 1279px) {
-            top: 36%;
+            top: 41%;
         }
     }
 
@@ -2366,6 +2466,11 @@ svg use {
     cursor: pointer;
 }
 
+.addfavor.is-active {
+    background: url("../img/favor-active.svg") no-repeat center;
+    background-size: contain;
+}
+
 .fastview__specif {
     font-size: 13px;
     margin-bottom: 25px;
@@ -2463,14 +2568,14 @@ svg use {
         margin-bottom: 70px;
         display: flex;
         justify-content: space-between;
-        padding: 49px 0px 10px 42px;
+        padding: 49px 0px 8px 42px;
         border-radius: 0px 0px 0px 120px;
         margin-left: 15px;
     }
 
     @media (min-width: 1280px) {
         margin-bottom: 150px;
-        max-width: 1747px;
+        max-width: 1730px;
         width: 100%;
         padding: 67px 0px 37px 70px;
     }
@@ -2488,17 +2593,18 @@ svg use {
             @media (min-width: 768px) {
                 width: 270px;
                 padding-right: 44px;
-                padding-top: 25px;
+                padding-top: 20px;
             }
 
             @media (min-width: 1280px) {
                 padding-right: 24px;
+                padding-top: 36px;
             }
         }
 
         &:last-child {
             @media (min-width: 768px) {
-                width: calc(100% - 270px);
+                width: calc(100% - 264px);
                 position: relative;
 
                 &:after {
@@ -2518,24 +2624,40 @@ svg use {
             }
 
             @media (min-width: 1600px) {
+                width: calc(100% - 344px);
+
                 &:after {
                     width: 325px;
                     height: 217px;
+                    top: -27px;
+                    left: -54px;
                 }
             }
+        }
+    }
+
+    .cont-title {
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 21px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-bottom: 40px;
         }
     }
 }
 
 .actions-block {
-    margin-bottom: 70px;
+    margin-bottom: 42px;
 
     @media (min-width: 768px) {
-        margin-bottom: 87px;
+        margin-bottom: 62px;
     }
 
     @media (min-width: 1280px) {
-        margin-bottom: 136px;
+        margin-bottom: 120px;
     }
 }
 
@@ -2570,20 +2692,6 @@ svg use {
     }
 }
 
-.news-block {
-    .cont-title {
-        margin-bottom: 10px;
-
-        @media (min-width: 768px) {
-            margin-bottom: 21px;
-        }
-
-        @media (min-width: 1280px) {
-            margin-bottom: 40px;
-        }
-    }
-}
-
 .cont-title_grey {
     color: #38B2AC;
 
@@ -2600,10 +2708,12 @@ svg use {
     @media (min-width: 768px) {
         font-size: 15px;
         margin-bottom: 0px;
+        line-height: 21px;
     }
 
     @media (min-width: 1280px) {
         font-size: 17px;
+        line-height: 22px;
     }
 }
 
@@ -2611,11 +2721,11 @@ svg use {
     margin-bottom: 10px;
 
     @media (min-width: 768px) {
-        margin-bottom: 16px;
+        margin-bottom: 14px;
     }
 
     @media (min-width: 1280px) {
-        margin-bottom: 22px;
+        margin-bottom: 18px;
     }
 }
 
@@ -2626,11 +2736,12 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 9px;
     }
 
     @media (min-width: 1280px) {
         font-size: 17px;
+        margin-bottom: 15px;
     }
 }
 
@@ -2644,6 +2755,10 @@ svg use {
 }
 
 .news-slider__item {
+    @media (max-width: 499px) {
+        width: 171px;
+    }
+
     @media (min-width: 768px) {
         width: 270px;
     }
@@ -2700,7 +2815,7 @@ svg use {
         @media (min-width: 768px) {
             width: 176px;
             height: 204.5px;
-            padding: 20px 16px 15px;
+            padding: 13px 16px 15px;
         }
 
         @media (min-width: 1280px) {
@@ -2746,6 +2861,10 @@ svg use {
 
         @media (min-width: 768px) {
             width: 125px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-left: 27px;
         }
 
         @media (min-width: 1280px) {
@@ -2823,6 +2942,7 @@ svg use {
 
     @media (min-width: 1280px) {
         margin-bottom: 25px;
+        padding-left: 27px;
     }
 
     li {
@@ -2894,7 +3014,7 @@ svg use {
         @media (min-width: 768px) and (max-width: 1279px) {
             max-width: 737px;
             width: 100%;
-            margin: 0 auto 28px;
+            margin: 0 auto 58px;
         }
 
         @media (min-width: 1280px) {
@@ -2915,7 +3035,7 @@ svg use {
         max-width: 737px;
         width: 100%;
         margin: 0 auto;
-        padding-top: 220px;
+        padding-top: 216px;
     }
 
     .popular-cat__column {
@@ -2936,12 +3056,23 @@ svg use {
         @media (min-width: 768px) {
             margin-bottom: 54px;
         }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            position: absolute;
+            top: -15px;
+            left: 17px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        padding-top: 70px;
     }
 }
 
 .cont-txt {
     color: #262626;
     font-size: 15px;
+    line-height: 24px;
 
     @media (min-width: 1280px) {
         font-size: 17px;
@@ -2953,6 +3084,12 @@ svg use {
 
     @media (min-width: 768px) {
         margin-bottom: 50px;
+    }
+
+    @media (min-width: 1280px) {
+        max-width: 522px;
+        width: 100%;
+        margin-bottom: 58px;
     }
 }
 
@@ -3027,7 +3164,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        align-items: center;
+        // align-items: center;
     }
 
     .about-us__item {
@@ -3051,6 +3188,8 @@ svg use {
             }
 
             @media (min-width: 1280px) {
+                padding-top: 58px;
+                padding-left: 8px;
                 width: calc(100% - 740px);
             }
         }
@@ -3068,9 +3207,12 @@ svg use {
 }
 
 .tags-list {
-    width: 1390px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 1279px) {
+        width: 1390px;
+    }
 
     li {
         margin-right: 10px;
