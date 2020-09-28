@@ -9,69 +9,101 @@
     span Парикмахерский инструмент
 
 
-.catcategory-cont.container
-    .sidebar
-        .category-block
-            .category-block__top
-                .category-block__title Категории
-                .category-block__count 13
+.catcategory-cont
+    .catcategory-cont__top.container
+        .sidebar
+            .category-block
+                .category-block__top
+                    .category-block__title Категории
+                    .category-block__count 13
 
-            ul.category-block__list
-                li
-                    a(href="#") Ножницы
-                li
-                    a(href="#") Комплекты ножниц
-                li
-                    a(href="#") Аксессуары для ножниц
-                li
-                    a(href="#") Машинки
-                li
-                    a(href="#") Машинки для создания локонов
-                li
-                    a(href="#") Щипцы для волос
-                li
-                    a(href="#") Фены
-                li
-                    a(href="#") Бритвы и лезвия
-                li
-                    a(href="#") Расходный материал
-                li
-                    a(href="#") Расчески, щетки, брашинги
-                li
-                    a(href="#") Принадлежности и аксессуары
-                li
-                    a(href="#") Наборы для парикмахера
-                li
-                    a(href="#") Инструменты для окрашивания
+                ul.category-block__list
+                    li
+                        a(href="#") Ножницы
+                    li
+                        a(href="#") Комплекты ножниц
+                    li
+                        a(href="#") Аксессуары для ножниц
+                    li
+                        a(href="#") Машинки
+                    li
+                        a(href="#") Машинки для создания локонов
+                    li
+                        a(href="#") Щипцы для волос
+                    li
+                        a(href="#") Фены
+                    li
+                        a(href="#") Бритвы и лезвия
+                    li
+                        a(href="#") Расходный материал
+                    li
+                        a(href="#") Расчески, щетки, брашинги
+                    li
+                        a(href="#") Принадлежности и аксессуары
+                    li
+                        a(href="#") Наборы для парикмахера
+                    li
+                        a(href="#") Инструменты для окрашивания
 
-    .catcategory-galleries
+        .catcategory-galleries
+            mixin catGalleryItem(title)
+                .catcategory-galleries__item
+                    if title
+                        h2(class="cont-title container")= title
+                    else
+                        h2.cont-title.container Ножницы
+
+                    .product-slider.swiper-container
+                        .swiper-wrapper
+                            +actionSliderMain("", "", "10 000 руб.")
+                            +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                            +actionSliderMain
+                            +actionSliderMain
+
+                        .swiper-button-next.swiper-button-next-bg
+                        .swiper-button-prev.swiper-button-prev-bg
+
+            +catGalleryItem
+            +catGalleryItem('Комплекты ножниц')
+            +catGalleryItem
+            +catGalleryItem('Машинки')
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+            +catGalleryItem
+
+    .container
+        .catcategory-galleries__about
+            .cont-txt
+                p Есть над чем задуматься: явные признаки победы институционализации в равной степени предоставлены сами себе. Имеется спорная точка зрения, гласящая примерно следующее: ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть указаны как претенденты на роль ключевых факторов. Значимость этих проблем настолько очевидна, что курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации переосмысления внешнеэкономических политик.
+
         .catcategory-galleries__item
-            h2.cont-title.container Ножницы
-            .product-slider.swiper-container
+            h2.cont-title Вам может понравится
+            .product-list-slider.swiper-container
                 .swiper-wrapper
-                    +actionSliderMain("", "", "10 000 руб.")
-                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
                     +actionSliderMain
+                    +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
                     +actionSliderMain
-                    +actionSliderMain("", "", "10 000 руб.")
-                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
-                    +actionSliderMain
-                    +actionSliderMain
-
-                .swiper-button-next.swiper-button-next-bg
-                .swiper-button-prev.swiper-button-prev-bg
+                    +actionSliderMain('action-tooltip_red', 'Sale', '10 600 руб.')
 
         .catcategory-galleries__item
-            h2.cont-title.container Комплекты ножниц
-            .product-slider.swiper-container
+            h2.cont-title Вы не давно смотрели
+            .product-list-slider.swiper-container
                 .swiper-wrapper
-                    +actionSliderMain("", "", "10 000 руб.")
-                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
                     +actionSliderMain
-                    +actionSliderMain
+                    +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
 
-                .swiper-button-next.swiper-button-next-bg
-                .swiper-button-prev.swiper-button-prev-bg
+            //- .product-list
+            //-     +productCard
+            //-     +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+            //-     +productCard
+            //-     +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
 
 
 

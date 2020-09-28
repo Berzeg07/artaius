@@ -129,15 +129,6 @@ $(document).ready(function () {
                 }
             }
         });
-        // productSlider.on('slideChange', function () {
-        //     $('.btn_buy').click(function () {
-        //         $(this).addClass('is-active');
-        //         $(this).html('В корзине');
-        //     });
-        //     $('.addfavor').click(function () {
-        //         $(this).toggleClass("is-active");
-        //     });
-        // });
     });
 
     activateFastReview();
@@ -274,6 +265,36 @@ $(document).ready(function () {
     }
 
     initBannerSlider();
+
+    $('.product-list-slider').each(function () {
+        var productListSlider = new Swiper(this, {
+            slidesPerView: 4,
+            spaceBetween: 45,
+            loop: false,
+            // navigation: {
+            //     nextEl: $(this).parent().find('.swiper-button-next'),
+            //     prevEl: $(this).parent().find('.swiper-button-prev'),
+            // },
+            breakpoints: {
+                499: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 6,
+                },
+                599: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 7,
+                },
+                767: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 7,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    });
 
     var newsSlider = new Swiper('.news-slider', {
         slidesPerView: 3.8,

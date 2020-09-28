@@ -66,7 +66,7 @@
 }
 
 .container {
-    max-width: 1390px;
+    max-width: 1398px;
     width: 100%;
     margin: 0 auto;
     padding: 0 19px;
@@ -1541,6 +1541,7 @@ svg use {
 .brends-links {
     padding-top: 11px;
     padding-right: 0;
+    padding-left: 15px;
 
     @media (max-width: 1279px) {
         display: none;
@@ -1961,7 +1962,7 @@ svg use {
         position: absolute;
         right: 0;
         top: 0;
-        // opacity: 0;
+        opacity: 0;
     }
 
     @media (min-width: 768px) {
@@ -2272,10 +2273,17 @@ svg use {
     }
 }
 
-// .product-slider {
-//     padding-left: 0;
-//     padding-right: 0;
-// }
+.product-list-slider {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 20px;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .product-card__new-price {
     color: #000000;
@@ -3260,7 +3268,7 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 27px;
-        left: 36px;
+        left: 52px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -3371,7 +3379,9 @@ svg use {
             margin-bottom: 46px;
         }
     }
+}
 
+.catcategory-cont__top {
     @media (min-width: 1280px) {
         display: flex;
         justify-content: space-between;
@@ -3419,5 +3429,37 @@ svg use {
 
     .swiper-button-prev-bg {
         left: 10px;
+    }
+}
+
+.catcategory-galleries__item {
+    margin-bottom: 23px;
+
+    .cont-title {
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 53px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 100px;
+    }
+}
+
+// .product-list {
+//     display: flex;
+//     justify-content: space-between;
+//     overflow-x: auto;
+// }
+
+.catcategory-galleries__about {
+    max-width: 1070px;
+    width: 100%;
+    margin-bottom: 80px;
+
+    @media (max-width: 1279px) {
+        display: none;
     }
 }
