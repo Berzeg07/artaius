@@ -14,6 +14,9 @@ $(document).ready(function () {
             $('body').append(reviewModal);
             $('.fastview').append(htmlModal);
             $('.fastview').fadeIn();
+            $('.addfavor').click(function () {
+                $(this).toggleClass("is-active");
+            });
             $('.select-refprod select').selectric();
             $('.overlay').fadeIn();
 
@@ -71,7 +74,7 @@ $(document).ready(function () {
             breakpoints: {
                 499: {
                     slidesPerView: 1.6,
-                    spaceBetween: 2,
+                    spaceBetween: 6,
                 },
                 599: {
                     slidesPerView: 2.3,
@@ -92,8 +95,49 @@ $(document).ready(function () {
                 $(this).addClass('is-active');
                 $(this).html('В корзине');
             });
-            // activateFastReview();
+            $('.addfavor').click(function () {
+                $(this).toggleClass("is-active");
+            });
         });
+    });
+
+    $('.product-slider').each(function () {
+        var productSlider = new Swiper(this, {
+            slidesPerView: 3,
+            spaceBetween: 45,
+            loop: false,
+            navigation: {
+                nextEl: $(this).parent().find('.swiper-button-next'),
+                prevEl: $(this).parent().find('.swiper-button-prev'),
+            },
+            breakpoints: {
+                499: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 6,
+                },
+                599: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 7,
+                },
+                767: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 7,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+        // productSlider.on('slideChange', function () {
+        //     $('.btn_buy').click(function () {
+        //         $(this).addClass('is-active');
+        //         $(this).html('В корзине');
+        //     });
+        //     $('.addfavor').click(function () {
+        //         $(this).toggleClass("is-active");
+        //     });
+        // });
     });
 
     activateFastReview();
@@ -160,6 +204,17 @@ $(document).ready(function () {
         //     deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
         // }
     });
+
+    function showSidebar() {
+        var screenWidth = $(window).width();
+        if (screenWidth < 1280) {
+            $('.category-block__top').click(function () {
+                $('.category-block__list').slideToggle();
+            });
+        }
+    }
+
+    showSidebar();
 
     function tabsScroll() {
         var screenWidth = $(window).width();
