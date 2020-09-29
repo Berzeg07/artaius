@@ -116,6 +116,65 @@ mixin filterCheck(id, txt)
         .catalogtop-mob__column
             button(type="button").catalogtop-mob__sort-btn Сортировка
 
+    .cat-sorting
+        span.cat-sorting__title Сортировать
+        .select.select_sorting
+            select
+                option по популярности
+                option цена дешевле
+                option цена дороже
+                option по новинкам
+                option по скидкам
+
+.product-cont.container
+    .product-list
+        +productCard
+        +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+        +productCard
+        +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
+        +productCard
+        +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+        +productCard
+        +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
+        +productCard
+        +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+        +productCard
+        .product-card.product-card_banner
+            .product-card__banner
+                a(href="#")
+                    img(src="img/prod-banner.jpg")
+
+                .product-card__banner-article Как выбрать брашинг? Советы профессионалов
+
+        +productCard
+        +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+        +productCard
+        +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
+.container
+    button(type="button").catbtn-more 
+        span Показать еще
+
+    .pagination
+        ul.pagination__links
+            li
+                a(href="#") 1
+            li
+                a(href="#") 2
+            li
+                a(href="#") 3
+            li
+                a(href="#") 4
+            li
+                span ...
+            li
+                a(href="#") 10
+
+        a(href="#").pagination__next >
+        a(href="#").pagination__last >>
+
 
 
 

@@ -56,6 +56,8 @@ $(document).ready(function () {
         });
     }
 
+    $('.select_sorting select').selectric();
+
     $('.addfavor').click(function () {
         $(this).toggleClass("is-active");
     });
