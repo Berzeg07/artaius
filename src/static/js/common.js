@@ -60,6 +60,28 @@ $(document).ready(function () {
         $(this).toggleClass("is-active");
     });
 
+    $('.filter-mob__list li span').click(function () {
+        $(this).parent().toggleClass('is-active');
+        $(this).next().slideToggle();
+    });
+
+    $('.filter-mob__sort li').click(function () {
+        $('.filter-mob__sort li').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
+    $('.catalogtop-mob__filter-btn').click(function () {
+        $('.filter-mob_checks').fadeIn();
+    });
+
+    $('.catalogtop-mob__sort-btn').click(function () {
+        $('.filter-mob_sort').fadeIn();
+    });
+
+    $('.filter-mob__close').click(function () {
+        $('.filter-mob').fadeOut();
+    });
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,

@@ -9,6 +9,25 @@
     a(href="#") Ножницы
     span Ножницы 5 категории
 
+mixin filterModal(id1, txt1, id2, txt2, id3, txt3)
+    .filter-block__modal
+        .filter-block__check
+            input(type="checkbox" id=id1)
+            label(for=id1).filter-block__label= txt1
+
+        .filter-block__check
+            input(type="checkbox" id=id2)
+            label(for=id2).filter-block__label= txt2
+
+        .filter-block__check
+            input(type="checkbox" id=id3)
+            label(for=id3).filter-block__label= txt3
+
+mixin filterCheck(id, txt)
+    .filter-block__check
+        input(type="checkbox" id=id)
+        label(for=id).filter-block__label= txt
+
 .catalog.container
     h1.cont-title.catalog__title Прямые ножницы 5+ класс
 
@@ -31,16 +50,32 @@
                 ul.filter-block__list
                     li
                         span Цена, Руб.
+                        .filter-block__modal.filter-block__modal_price
+                            .filter-price
+                                .filter-price__inp
+                                    input(type="text" placeholder="от").inp
+                                    input(type="text" placeholder="до").inp
+
+                                button(type="submit").filter-price__btn.btn-black Применить
                     li
                         span Модельный ряд
+                        +filterModal('1', '440А, HITACHI, Япония, твердость по Роквеллу: 55-57 ед.', '2', '440С, HITACHI, Япония, твердость по Роквеллу: 58-60 ед.', '3', 'VG 10, Hitachi, Япония, твердость по Роквеллу: 60-61 ед.')
+
                     li
                         span Длина лезвия
+                        +filterModal('4', 'test 1', '5', 'test2', '6', 'test3')
                     li
                         span Сталь
+                        +filterModal('7', 'test 1', '8', 'test2', '9', 'test3')
+
                     li
                         span Упор
+                        +filterModal('10', 'test 1', '11', 'test2', '12', 'test3')
+
                     li
                         span Длина лезвия
+                        +filterModal('13', 'test 1', '14', 'test2', '15', 'test3')
+
 
             .filter-block__item.filter-block__item_bottom
                 ul.filter-block__res
@@ -73,3 +108,95 @@
 
         .filter-block__column
             button(type="submit").filter-block__btn Применить фильтр
+
+    .catalogtop-mob
+        .catalogtop-mob__column
+            button(type="button").catalogtop-mob__filter-btn Фильтр
+
+        .catalogtop-mob__column
+            button(type="button").catalogtop-mob__sort-btn Сортировка
+
+
+
+
+.filter-mob.filter-mob_checks
+    form.filter-mob__form(action="#")
+        .filter-mob__title Прямые ножницы 5+ класс
+
+        button(type="button").filter-mob__close.btn-close
+
+        ul.filter-mob__list
+            li
+                span Цена, Руб.
+                .filter-price.filter-mob__item
+                    .filter-price__inp
+                        input(type="text" placeholder="от").inp
+                        input(type="text" placeholder="до").inp
+            li
+                span Модельный ряд
+                .filter-mob__item
+                    +filterCheck('16', 'Test 1')
+                    +filterCheck('17', 'Test 2')
+                    +filterCheck('18', 'Test 3')
+            li
+                span Длина лезвия
+                .filter-mob__item
+                    +filterCheck('19', 'Test 1')
+                    +filterCheck('20', 'Test 2')
+                    +filterCheck('21', 'Test 3')
+            li
+                span Сталь
+                .filter-mob__item
+                    +filterCheck('22', '440А, HITACHI, Япония, твердость по Роквеллу: 55-57 ед.')
+                    +filterCheck('23', '440С, HITACHI, Япония, твердость по Роквеллу: 58-60 ед.')
+                    +filterCheck('24', 'VG 10, Hitachi, Япония, твердость по Роквеллу: 60-61 ед.')
+            li
+                span Упор
+                .filter-mob__item
+                    +filterCheck('25', 'Test 1')
+                    +filterCheck('26', 'Test 2')
+                    +filterCheck('27', 'Test 3')
+
+        .filter-mob__btn-wrap
+            button(type="submit").btn-black.filter-mob__btn Применить фильтр
+
+.filter-mob.filter-mob_sort
+    form.filter-mob__form(action="#")
+        .filter-mob__title Прямые ножницы 5+ класс
+
+        button(type="button").filter-mob__close.btn-close
+
+        ul.filter-mob__sort
+            li
+                span Цена дешевле
+            li
+                span Цена дешевле
+            li
+                span Цена дороже
+            li
+                span По новинкам
+            li
+                span По скидкам
+            li
+                span По популярности
+            li
+                span По бренду
+            li
+                span По названию
+
+        .filter-mob__btn-wrap
+            button(type="submit").btn-black.filter-mob__btn Применить фильтр
+
+
+
+
+
+
+
+
+
+
+
+
+
+
