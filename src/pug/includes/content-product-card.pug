@@ -72,8 +72,101 @@
                             li
                                 +selectProduct('product-select', 'Выбрать упаковку')
                             li
+                                +selectProduct('product-select', 'Выбрать крепление')
 
                     .product-info__item
+                        .delivery
+                            .delivery__top
+                                .delivery__article Доставка в город:
+                                .delivery__city Москва
+
+                            .delivery__middle
+                                .delivery__title Курьерская доставка
+                                .delivery__article на следующий день - 400 ₽ 
+                                .delivery__action Бесплатно от 5000 ₽
+
+                            .delivery__bottom
+                                .delivery__title Самовывоз
+                                .delivery__article в день заказа по адресу: 3-я Парковая, д.41А, Бизнес-центр "На Парковой", 1 этаж
+                                .delivery__action Бесплатно
+
+                            a(href="#").delivery__link Подробнее о доставке
 
                 .product-info__bottom
+                    ul.product__add-basket
+                        li
+                            .product__price 7 450 руб.
+                        li
+                            button(type="button").btn В корзину
 
+                            a(href="#").buy-one-click Купить в 1 клик
+
+                    .product-action
+                        .product-action__article 
+                            |Чехол и масло для ножниц — 
+                            span в подарок
+
+    .product-specif
+        .product-specif__title Характеристики товара
+
+        .product-specif__columns
+            .column
+                .product-specif__item
+                    .product-specif__title Описание
+                    .product-specif__article 
+                        |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+
+                .product-specif__item
+                    .product-specif__title Состав
+                    .product-specif__article 
+                        |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+            .column
+                .product-specif__title Общие характеристики
+
+                ul.general-specif
+                    li
+                        .general-specif__title Артикул
+                        .general-specif__article 09-55
+                    li
+                        .general-specif__title Сталь
+                        .general-specif__article Hitachi Япония, 440А
+                    li
+                        .general-specif__title Бренд
+                        .general-specif__article Suntachi
+                    li
+                        .general-specif__title Серия
+                        .general-specif__article Suntachi Classic Gold
+                    li
+                        .general-specif__title Вид полотна
+                        .general-specif__article Клиновидный
+                    li
+                        .general-specif__title Упор
+                        .general-specif__article Съемный
+                    li
+                        .general-specif__title Ручка
+                        .general-specif__article Эргономика, 2 плоскости
+                    li
+                        .general-specif__title Размер колец
+                        .general-specif__article Верхние: 18-21 мм; Нижнее: 18-20 мм
+                    li
+                        .general-specif__title Виды срезов и техника
+                        .general-specif__article Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                    li
+                        .general-specif__title Страна производства
+                        .general-specif__article Южная Корея
+                    li
+                        .general-specif__title Категории
+                        .general-specif__article Прямые ножницы, Ножницы для правшей
+
+    .subscription-block
+        .subscription-block__title Получите скидку -10% на первый заказ
+
+        form.subscription-form(action="#")
+            input(type="text" placeholder="E-mail")
+            button(type="submit").subscription-form__btn.btn
+
+        .subscription-block__privacy
+            input(type="checkbox").privacy-check#privacyCheck
+            label(for="privacyCheck").privacy-label 
+                |Подтверждаю, что я ознакомлен (а) и согласен (на) с условиями 
+                a(href="#") политики конфиденциальности
