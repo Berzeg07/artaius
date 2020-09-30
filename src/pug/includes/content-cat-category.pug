@@ -1,108 +1,120 @@
-+brendsList
+.cat-category
+    +brendsList
 
-.catcategory-banner.container
-    img(src="img/cat-banner.jpg")
-    h1.cat-banner__title Парикмахерский<br> инструмент
+    .catcategory-banner.container
+        img(src="img/cat-banner.jpg")
+        h1.cat-banner__title Парикмахерский<br> инструмент
 
-.breadcrumbs.container
-    a(href="#") Главная
-    span Парикмахерский инструмент
+    .breadcrumbs.container
+        a(href="#") Главная
+        span Парикмахерский инструмент
 
 
-.catcategory-cont
-    .catcategory-cont__top.container
-        .sidebar
-            .category-block
-                .category-block__top
-                    .category-block__title Категории
-                    .category-block__count 13
+    .catcategory-cont
+        .catcategory-cont__top.container
+            .sidebar
+                .category-block
+                    .category-block__top
+                        .category-block__title Категории
+                        .category-block__count 13
 
-                ul.category-block__list
-                    li
-                        a(href="#") Ножницы
-                    li
-                        a(href="#") Комплекты ножниц
-                    li
-                        a(href="#") Аксессуары для ножниц
-                    li
-                        a(href="#") Машинки
-                    li
-                        a(href="#") Машинки для создания локонов
-                    li
-                        a(href="#") Щипцы для волос
-                    li
-                        a(href="#") Фены
-                    li
-                        a(href="#") Бритвы и лезвия
-                    li
-                        a(href="#") Расходный материал
-                    li
-                        a(href="#") Расчески, щетки, брашинги
-                    li
-                        a(href="#") Принадлежности и аксессуары
-                    li
-                        a(href="#") Наборы для парикмахера
-                    li
-                        a(href="#") Инструменты для окрашивания
+                    ul.category-block__list
+                        li
+                            a(href="#") Ножницы
+                        li
+                            a(href="#") Комплекты ножниц
+                        li
+                            a(href="#") Аксессуары для ножниц
+                        li
+                            a(href="#") Машинки
+                        li
+                            a(href="#") Машинки для создания локонов
+                        li
+                            a(href="#") Щипцы для волос
+                        li
+                            a(href="#") Фены
+                        li
+                            a(href="#") Бритвы и лезвия
+                        li
+                            a(href="#") Расходный материал
+                        li
+                            a(href="#") Расчески, щетки, брашинги
+                        li
+                            a(href="#") Принадлежности и аксессуары
+                        li
+                            a(href="#") Наборы для парикмахера
+                        li
+                            a(href="#") Инструменты для окрашивания
 
-        .catcategory-galleries
-            mixin catGalleryItem(title)
-                .catcategory-galleries__item
-                    if title
-                        h2(class="cont-title container")= title
-                    else
-                        h2.cont-title.container Ножницы
+            .catcategory-galleries
+                mixin catGalleryItem(title)
+                    .catcategory-galleries__item
+                        if title
+                            h2(class="cont-title")= title
+                        else
+                            h2.cont-title Ножницы
 
-                    .product-slider.swiper-container
-                        .swiper-wrapper
-                            +actionSliderMain("", "", "10 000 руб.")
-                            +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
-                            +actionSliderMain
-                            +actionSliderMain
+                        .product-slider.swiper-container
+                            .swiper-wrapper
+                                +actionSliderMain("", "", "10 000 руб.")
+                                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                                +actionSliderMain
+                                +actionSliderMain
 
-                        .swiper-button-next.swiper-button-next-bg
-                        .swiper-button-prev.swiper-button-prev-bg
+                            .swiper-button-next.swiper-button-next-bg
+                            .swiper-button-prev.swiper-button-prev-bg
 
-            +catGalleryItem
-            +catGalleryItem('Комплекты ножниц')
-            +catGalleryItem
-            +catGalleryItem('Машинки')
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
-            +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem('Комплекты ножниц')
+                +catGalleryItem
+                +catGalleryItem('Машинки')
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
+                +catGalleryItem
 
-    .container
-        .catcategory-galleries__about
-            .cont-txt
-                p Есть над чем задуматься: явные признаки победы институционализации в равной степени предоставлены сами себе. Имеется спорная точка зрения, гласящая примерно следующее: ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть указаны как претенденты на роль ключевых факторов. Значимость этих проблем настолько очевидна, что курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации переосмысления внешнеэкономических политик.
+        .container
+            .catcategory-galleries__about
+                .cont-txt
+                    p Есть над чем задуматься: явные признаки победы институционализации в равной степени предоставлены сами себе. Имеется спорная точка зрения, гласящая примерно следующее: ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть указаны как претенденты на роль ключевых факторов. Значимость этих проблем настолько очевидна, что курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации переосмысления внешнеэкономических политик.
 
-        .catcategory-galleries__item
-            h2.cont-title Вам может понравится
-            .product-list-slider.swiper-container
-                .swiper-wrapper
-                    +actionSliderMain
-                    +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-                    +actionSliderMain
-                    +actionSliderMain('action-tooltip_red', 'Sale', '10 600 руб.')
+        .product-cont.product-cont_item.container
+            h2.cont-title Вам может понравиться
+            .product-list
+                +productCard
+                +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+                +productCard
+                +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
 
-        .catcategory-galleries__item
-            h2.cont-title Вы не давно смотрели
-            .product-list-slider.swiper-container
-                .swiper-wrapper
-                    +actionSliderMain
-                    +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+        .product-cont.product-cont_item.container
+            h2.cont-title Вы недавно смотрели
+            .product-list
+                +productCard
+                +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+                +productCard
+                +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
 
-            //- .product-list
-            //-     +productCard
-            //-     +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-            //-     +productCard
-            //-     +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+            //- .catcategory-galleries__item
+            //-     h2.cont-title Вам может понравится
+            //-     .product-list-slider.swiper-container
+            //-         .swiper-wrapper
+            //-             +actionSliderMain
+            //-             +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+            //-             +actionSliderMain
+            //-             +actionSliderMain('action-tooltip_red', 'Sale', '10 600 руб.')
+
+            //- .catcategory-galleries__item
+            //-     h2.cont-title Вы не давно смотрели
+            //-     .product-list-slider.swiper-container
+            //-         .swiper-wrapper
+            //-             +actionSliderMain
+            //-             +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+
 
 
 

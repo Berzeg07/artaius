@@ -911,18 +911,6 @@ svg use {
     color: #A1A1A1;
 }
 
-.tags {
-    a {
-        display: inline-block;
-        background: #FEE9E1;
-        border-radius: 22px;
-        padding: 5px 19px;
-        color: #C19686;
-        font-size: 16px;
-        margin-bottom: 9px;
-    }
-}
-
 .tags_black {
     a {
         background: #2E2E2E;
@@ -1969,6 +1957,11 @@ svg use {
         opacity: 0;
     }
 
+    @media (max-width: 767px) {
+        width: 153px;
+        padding: 10px 5px 17px;
+    }
+
     @media (min-width: 768px) {
         width: 238px;
         padding-left: 14px;
@@ -1992,7 +1985,7 @@ svg use {
 
         @media (max-width: 767px) {
             font-size: 9px;
-            left: 16px;
+            left: 6px;
         }
 
         @media (min-width: 768px) and (max-width: 1279px) {
@@ -2024,8 +2017,9 @@ svg use {
     }
 
     @media (max-width: 767px) {
+        width: 120px;
         padding-top: 20px;
-        margin-bottom: 7px;
+        margin-bottom: 0px;
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -2052,11 +2046,12 @@ svg use {
 
 .product-card__brend {
     color: #9F9F9F;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     font-size: 10px;
 
     @media (min-width: 768px) {
         font-size: 12px;
+        margin-bottom: 7px;
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -2070,11 +2065,16 @@ svg use {
 
 .product-card__name {
     color: #000000;
-    margin-bottom: 23px;
+    margin-bottom: 7px;
     font-size: 12px;
+
+    @media (max-width: 767px) {
+        line-height: 17px;
+    }
 
     @media (min-width: 768px) {
         font-size: 15px;
+        margin-bottom: 23px;
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -2703,6 +2703,7 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 36px;
+        letter-spacing: 0.3px;
     }
 }
 
@@ -3215,6 +3216,10 @@ svg use {
     margin-bottom: 43px;
     scrollbar-width: none;
 
+    @media (max-width: 767px) {
+        padding-right: 0;
+    }
+
     @media (max-width: 1279px) {
         .tags-list {
             width: 1390px;
@@ -3234,17 +3239,20 @@ svg use {
         margin-right: 10px;
 
         a {
-            font-size: 10px;
+            font-size: 13px;
             margin-bottom: 5px;
+            display: inline-block;
+            background: #FEE9E1;
+            border-radius: 22px;
+            padding: 6px 19px;
+            color: #C19686;
+            margin-bottom: 9px;
 
             @media (min-width: 768px) {
                 margin-bottom: 10px;
                 font-size: 15px;
             }
 
-            @media (min-width: 1280px) {
-                font-size: 16px;
-            }
         }
     }
 }
@@ -3254,11 +3262,11 @@ svg use {
     margin-top: 25px;
 
     @media (max-width: 767px) {
-        padding-top: 70px;
+        padding-top: 56px;
     }
 
     @media (min-width: 768px) {
-        margin-top: 16px;
+        margin-top: 7px;
     }
 }
 
@@ -3269,8 +3277,13 @@ svg use {
     color: #286864;
     font-size: 20px;
     left: 15px;
-    top: 0;
+    top: -13px;
     z-index: 10;
+
+    @media (max-width: 767px) {
+        line-height: 25px;
+        letter-spacing: 0.7px;
+    }
 
     @media (min-width: 768px) {
         font-size: 27px;
@@ -3281,14 +3294,17 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 36px;
+        left: 70px;
+        top: 45%;
+        letter-spacing: 1px;
     }
 }
 
 .breadcrumbs {
     color: #858585;
     font-size: 10px;
-    padding-top: 16px;
-    margin-bottom: 18px;
+    padding-top: 20px;
+    margin-bottom: 20px;
 
     a {
         display: inline-block;
@@ -3306,7 +3322,16 @@ svg use {
     }
 
     @media (min-width: 768px) {
+        margin-bottom: 46px;
         font-size: 13px;
+    }
+}
+
+.cat-category {
+    .breadcrumbs {
+        @media (min-width: 1280px) {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -3315,11 +3340,15 @@ svg use {
     border-radius: 0px 0px 0px 26px;
     padding: 0 16px;
     position: relative;
+
+    @media (max-width: 1279px) {
+        padding: 0 2px;
+    }
 }
 
 .category-block__top {
     color: #000000;
-    padding: 19px 0px 19px 10px;
+    padding: 16px 0px 19px 10px;
     border-radius: 0px 0px 0px 26px;
     font-weight: 500;
     font-size: 15px;
@@ -3346,10 +3375,12 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 17px;
+        padding-top: 19px;
     }
 
     @media (min-width: 1280px) {
         font-size: 20px;
+        padding-top: 6px;
     }
 }
 
@@ -3384,6 +3415,11 @@ svg use {
         @media (max-width: 1279px) {
             margin-bottom: 46px;
         }
+
+        @media (min-width: 1280px) {
+            padding-top: 17px;
+            padding-left: 0;
+        }
     }
 }
 
@@ -3398,11 +3434,37 @@ svg use {
     @media (min-width: 1280px) {
         width: calc(100% - 290px);
     }
+
+    .product-slider {
+        @media (min-width: 1280px) {
+            padding-left: 41px;
+        }
+    }
+
+    .cont-title {
+        @media (min-width: 1280px) {
+            padding-left: 41px;
+        }
+    }
+}
+
+.catcategory-galleries__item {
+    @media (min-width: 1280px) {
+        margin-bottom: 80px;
+    }
+
+    .cont-title {
+        margin-bottom: 18px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 45px;
+        }
+    }
 }
 
 .category-block__list {
     font-size: 16px;
-    padding: 0px 10px 40px;
+    padding: 0px 12px 40px;
     color: #000000;
 
     @media (max-width: 1279px) {
@@ -3419,10 +3481,10 @@ svg use {
     }
 
     li {
-        margin-bottom: 15px;
+        margin-bottom: 21.4px;
 
         &:first-child {
-            padding-top: 20px;
+            padding-top: 22px;
             border-top: 1px solid #EFEFF9;
         }
     }
@@ -3435,22 +3497,10 @@ svg use {
 
     .swiper-button-prev-bg {
         left: 10px;
-    }
-}
 
-.catcategory-galleries__item {
-    margin-bottom: 23px;
-
-    .cont-title {
-        margin-bottom: 25px;
-
-        @media (min-width: 768px) {
-            margin-bottom: 53px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            left: -8px;
         }
-    }
-
-    @media (min-width: 1280px) {
-        margin-bottom: 100px;
     }
 }
 
@@ -3459,9 +3509,8 @@ svg use {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    // overflow-x: auto;
     .product-card {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
 
         @media (max-width: 767px) {
             width: 153px;
@@ -3469,11 +3518,11 @@ svg use {
         }
 
         @media (min-width: 768px) {
-            margin-bottom: 20px;
+            margin-bottom: 26px;
         }
 
         @media (min-width: 1280px) {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
     }
 }
@@ -3483,6 +3532,10 @@ svg use {
 
     a {
         display: inline-block;
+        position: absolute;
+        width: 306px;
+        top: -34px;
+        left: -18px;
     }
 }
 
@@ -3494,16 +3547,19 @@ svg use {
 
 .product-card__banner-article {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     position: absolute;
     color: white;
-    bottom: 20px;
+    bottom: 26px;
     left: 18px;
+    letter-spacing: 0.3px;
 }
 
 .product-cont {
-    padding-left: 5px;
-    padding-right: 5px;
+    @media (max-width: 767px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 .catcategory-galleries__about {
@@ -3518,17 +3574,11 @@ svg use {
 
 .filter-block__item_top {
     padding-top: 13px;
-
-    // padding-right: 52px;
-    @media (min-width: 1280px) {
-        margin-bottom: 40px;
-    }
 }
 
 .filter-block__item_bottom {
     display: flex;
     align-items: flex-start;
-    // margin-bottom: 55px;
 }
 
 .filter-block__list {
@@ -3544,8 +3594,18 @@ svg use {
     li {
         position: relative;
         margin-right: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         padding-bottom: 10px;
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            &:first-child {
+                margin-right: 14px;
+            }
+
+            &:nth-child(5) {
+                margin-right: 45px;
+            }
+        }
 
         @media (min-width: 1280px) {
             margin-right: 30px;
@@ -3602,10 +3662,10 @@ svg use {
 
 .filter-block__res-item {
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     display: inline-block;
-    padding: 7px 40px 7px 17px;
+    padding: 9px 40px 9px 17px;
     background: #000000;
     border-radius: 30px;
 
@@ -3657,8 +3717,12 @@ svg use {
     }
 }
 
-.catalog__title {
-    margin-bottom: 31px;
+.cont-title_catalog {
+    margin-bottom: 26px;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
 
     @media (min-width: 768px) {
         margin-bottom: 39px;
@@ -3669,12 +3733,12 @@ svg use {
     }
 }
 
-.catalog__tags {
+.tags_catalog {
     overflow-x: auto;
-    margin-bottom: 26px;
+    margin-bottom: 17px;
 
     @media (min-width: 768px) {
-        margin-bottom: 40px;
+        margin-bottom: 43px;
     }
 
     .tags-list {
@@ -3784,7 +3848,7 @@ svg use {
 
 .catalogtop-mob {
     width: 280px;
-    margin: 0 auto 31px;
+    margin: 0 auto 44px;
     display: flex;
     justify-content: space-between;
 
@@ -3801,7 +3865,6 @@ svg use {
     background: #000000;
     border-radius: 0px 20px;
     height: 40px;
-    line-height: 40px;
     color: white;
 
     &:after {
@@ -3814,7 +3877,7 @@ svg use {
 
 .catalogtop-mob__filter-btn {
     width: 130px;
-    padding-left: 60px;
+    padding-left: 42px;
 
     &:after {
         width: 15px;
@@ -3827,7 +3890,7 @@ svg use {
 
 .catalogtop-mob__sort-btn {
     width: 139px;
-    padding-left: 43px;
+    padding-left: 34px;
 
     &:after {
         width: 15px;
@@ -3962,11 +4025,22 @@ svg use {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 42px;
-    padding-top: 59px;
+    margin-bottom: 55px;
+    padding-top: 40px;
+
 
     @media (max-width: 767px) {
         display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        position: relative;
+        right: -19px;
+        padding-top: 53px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-right: 6px;
     }
 }
 
@@ -4013,16 +4087,21 @@ svg use {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 42px;
+    padding-top: 35px;
     margin-bottom: 80px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 94px;
+    }
 }
 
 .pagination__links {
     display: flex;
     align-items: baseline;
+    margin-right: 20px;
 
     li {
-        margin-right: 5px;
+        margin-right: 1px;
     }
 
     a {
@@ -4037,5 +4116,44 @@ svg use {
             background: black;
             color: white;
         }
+    }
+}
+
+.pagination__arrows {
+    display: inline-block;
+}
+
+.pagination__arrows_next {
+    width: 9px;
+    height: 14px;
+    background: url("../img/pug-arrow.svg") no-repeat center;
+    margin-right: 12px;
+}
+
+.pagination__arrows_last {
+    width: 14px;
+    height: 14px;
+    background: url("../img/pag-arrow-db.svg") no-repeat center;
+}
+
+.product-cont_item {
+    margin-bottom: 23px;
+
+    .cont-title {
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 64px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 62px;
+    }
+}
+
+.product-cont_watch {
+    @media (min-width: 1280px) {
+        margin-bottom: 28px;
     }
 }
