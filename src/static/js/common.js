@@ -1,62 +1,91 @@
 $(document).ready(function () {
 
-    function activateFastReview() {
-        $('.fastview-btn').click(function () {
-            var htmlModal = $(this).parents('.product-card').find('.fastview-item').html();
+    // function activateFastReview() {
+    $('.fastview-btn').click(function () {
+        var htmlModal = $(this).parents('.product-card').find('.fastview-item').html();
 
-            // $('.fastview').fadeOut();
-            // $('.fastview').remove();
-            // $('.select-refprod select').selectric('destroy');
-            // $('.select-refprod select').selectric();
+        // $('.fastview').fadeOut();
+        // $('.fastview').remove();
+        // $('.select-refprod select').selectric('destroy');
+        // $('.select-refprod select').selectric();
 
-            var reviewModal = $('<div class="fastview"></div>');
+        var reviewModal = $('<div class="fastview"></div>');
 
-            $('body').append(reviewModal);
-            $('.fastview').append(htmlModal);
-            $('.fastview').fadeIn();
-            $('.addfavor').click(function () {
-                $(this).toggleClass("is-active");
-            });
-            $('.select-refprod select').selectric();
-            $('.overlay').fadeIn();
-
-            var galleryThumbs = new Swiper('.fastview .fastview-gallery-thumb', {
-                spaceBetween: 10,
-                slidesPerView: 4,
-                observer: true,
-                observeParents: true,
-                loop: true,
-                freeMode: true,
-                loopedSlides: 5, //looped slides should be the same
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-            });
-
-            var galleryTop = new Swiper('.fastview .fastview-gallery-top', {
-                spaceBetween: 10,
-                loop: true,
-                observer: true,
-                observeParents: true,
-                loopedSlides: 5, //looped slides should be the same
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: galleryThumbs,
-                },
-            });
-
-            $('.fastview__close').click(function () {
-                $('.fastview').fadeOut();
-                $('.overlay').fadeOut();
-                $('.fastview').remove();
-                $('.select-refprod select').selectric('destroy');
-            });
+        $('body').append(reviewModal);
+        $('.fastview').append(htmlModal);
+        $('.fastview').fadeIn();
+        $('.addfavor').click(function () {
+            $(this).toggleClass("is-active");
         });
-    }
+        $('.select-refprod select').selectric();
+        $('.overlay').fadeIn();
+
+        var galleryThumbs = new Swiper('.fastview .fastview-gallery-thumb', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            observer: true,
+            observeParents: true,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+
+        var galleryTop = new Swiper('.fastview .fastview-gallery-top', {
+            spaceBetween: 10,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+
+        $('.fastview__close').click(function () {
+            $('.fastview').fadeOut();
+            $('.overlay').fadeOut();
+            $('.fastview').remove();
+            $('.select-refprod select').selectric('destroy');
+        });
+    });
+    // }
+
+    var galleryProductThumbs = new Swiper('.product-gallery-thumb', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        observer: true,
+        observeParents: true,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+
+    var galleryProductTop = new Swiper('.product-gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryProductThumbs,
+        },
+    });
 
     $('.select_sorting select').selectric();
+
+    $('.product-select select').selectric();
 
     $('.addfavor').click(function () {
         $(this).toggleClass("is-active");
@@ -155,7 +184,7 @@ $(document).ready(function () {
         });
     });
 
-    activateFastReview();
+    // activateFastReview();
 
     function selecticActivate() {
         $('.select_city select').selectric();

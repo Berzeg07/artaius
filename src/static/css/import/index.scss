@@ -110,7 +110,8 @@
     }
 }
 
-.select-refprod {
+.select-refprod,
+.product-select {
     width: 100%;
 
     .selectric {
@@ -2406,7 +2407,8 @@ svg use {
     z-index: 10;
 }
 
-.fastview-gallery-top {
+.fastview-gallery-top,
+.product-gallery-top {
     border: 1px solid #D8D8D8;
 }
 
@@ -4155,5 +4157,24 @@ svg use {
 .product-cont_watch {
     @media (min-width: 1280px) {
         margin-bottom: 28px;
+    }
+}
+
+.product-gallery-top {
+    max-width: 515px;
+    width: 100%;
+}
+
+.product-gallery-thumb {
+    max-width: 515px;
+    width: 100%;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-gallery-thumb__item {
+        width: 95px;
     }
 }

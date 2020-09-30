@@ -4,6 +4,37 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/img/svg/sprite.svg#" + name)
 
+//- Звезды рейтинга
+mixin starReyting
+	.reviews-reyting
+		ul.reviews-reyting__stars
+			li
+				+icon('star','star-icon')
+			li
+				+icon('star','star-icon')
+			li
+				+icon('star','star-icon')
+			li
+				+icon('star','star-icon')
+			li
+				+icon('star','star-icon')
+
+		a(href="#").reviews-reyting__article 3 отзыва
+
+//- Добавить в избраннное *
+mixin addFavor
+	.addfavor-block
+		.addfavor
+		.addfavor__txt В избранное
+
+//- Селекты *
+mixin selectProduct(classSelect, option)
+	div(class="select "+classSelect)
+		select
+			option= option
+			option Тест 1
+			option Тест 2
+
 //- Быстрый просмотр товара *
 mixin fastviewItem
 	.fastview-item
@@ -47,26 +78,11 @@ mixin fastviewItem
 
 			.fastview__item-right
 				.fastview__top-info
-					.reviews-reyting
-						ul.reviews-reyting__stars
-							li
-								+icon('star','star-icon')
-							li
-								+icon('star','star-icon')
-							li
-								+icon('star','star-icon')
-							li
-								+icon('star','star-icon')
-							li
-								+icon('star','star-icon')
-
-						a(href="#").reviews-reyting__article 3 отзыва
+					+starReyting
 
 					.fastview__status В наличии
 
-					.addfavor-block
-						.addfavor
-						.addfavor__txt В избранное
+					+addFavor
 
 				ul.fastview__specif
 					li

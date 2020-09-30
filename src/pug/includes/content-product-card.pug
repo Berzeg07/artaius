@@ -1,0 +1,79 @@
+.product.container
+    .breadcrumbs
+        a(href="#") Парикмахерский инструмент
+        a(href="#") Ножницы
+        span Ножницы 5 категории
+
+    .product__brend 
+        a(href="#") Suntachi
+
+    h1.product__title Прямые ножницы JY-TJ-70V TATOO
+
+    .product__main
+        .column
+            .product-gallery-top.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .product-gallery-top__item
+                            img(src="img/product.jpg")
+                    .swiper-slide
+                        .product-gallery-top__item
+                            img(src="img/product.jpg")
+                    .swiper-slide
+                        .product-gallery-top__item
+                            img(src="img/product.jpg")
+
+                .swiper-button-next.swiper-button-next-min
+                .swiper-button-prev.swiper-button-prev-min
+
+            .product-gallery-thumb.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .product-gallery-thumb__item
+                            img(src="img/product.jpg")
+                    .swiper-slide
+                        .product-gallery-thumb__item
+                            img(src="img/product.jpg")
+                    .swiper-slide
+                        .product-gallery-thumb__item
+                            img(src="img/product.jpg")
+        .column
+            .product-info
+                .product-info__top
+                    .product-info__item
+                        .product-info__status В наличии
+
+                        ul.product-info__column
+                            li
+                                +starReyting
+                            li
+                                +addFavor
+
+                        ul.product-info__list
+                            li
+                                span Артикул: 
+                                span 08-55
+                            li
+                                span Сталь: 
+                                span Hitachi
+                            li
+                                span Серия: 
+                                span Suntachi Classic Gold
+                            li
+                                span Вид полотна: 
+                                span филировочный
+                            li
+                                span Тип филировочных зубцов: 
+                                span изогнутые с просечкой
+
+                        a(href="#").product-info__link Смотреть все характеристики
+
+                        ul.product-info__select
+                            li
+                                +selectProduct('product-select', 'Выбрать упаковку')
+                            li
+
+                    .product-info__item
+
+                .product-info__bottom
+
