@@ -74,6 +74,10 @@ $(document).ready(function () {
         observer: true,
         observeParents: true,
         loopedSlides: 5, //looped slides should be the same
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -81,6 +85,10 @@ $(document).ready(function () {
         thumbs: {
             swiper: galleryProductThumbs,
         },
+    });
+
+    $('.delivery-btn').click(function () {
+        $('.delivery').slideToggle();
     });
 
     $('.select_sorting select').selectric();

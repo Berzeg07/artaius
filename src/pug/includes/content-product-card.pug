@@ -11,7 +11,8 @@
         h1.product__title Прямые ножницы JY-TJ-70V TATOO
 
         .product__main
-            .column
+            .product-status.product-status_mob В наличии
+            .column.column_left
                 .product-gallery-top.swiper-container
                     .swiper-wrapper
                         .swiper-slide
@@ -26,6 +27,7 @@
 
                     .swiper-button-next.swiper-button-next-min
                     .swiper-button-prev.swiper-button-prev-min
+                    .swiper-pagination
 
                 .product-gallery-thumb.swiper-container
                     .swiper-wrapper
@@ -38,11 +40,12 @@
                         .swiper-slide
                             .product-gallery-thumb__item
                                 img(src="img/product.jpg")
-            .column
+
+            .column.column_right
                 .product-info
                     .product-info__top
                         .product-info__item
-                            .product-info__status В наличии
+                            .product-status.product-status_desctop В наличии
 
                             ul.product-info__column
                                 li
@@ -76,6 +79,8 @@
                                     +selectProduct('product-select', 'Выбрать крепление')
 
                         .product-info__item
+                            button(type="button").delivery-btn Доставка
+
                             .delivery
                                 .delivery__top
                                     .delivery__article Доставка в город:
@@ -83,8 +88,8 @@
 
                                 .delivery__middle
                                     .delivery__title Курьерская доставка
-                                    .delivery__article на следующий день - 400 ₽ 
-                                    .delivery__action Бесплатно от 5000 ₽
+                                    .delivery__article на следующий день - 400 руб.
+                                    .delivery__action Бесплатно от 5000 руб.
 
                                 .delivery__bottom
                                     .delivery__title Самовывоз
@@ -97,12 +102,15 @@
                         ul.product__add-basket
                             li
                                 .product__price 7 450 руб.
+                                .product__price__old 6 450 руб.
                             li
-                                button(type="button").btn В корзину
+                                button(type="button").btn.product-addbasket В корзину
 
                                 a(href="#").buy-one-click Купить в 1 клик
 
                         .product-action
+                            .product-action__img
+                                img(src="img/action-img.png")
                             .product-action__article 
                                 |Чехол и масло для ножниц — 
                                 span в подарок
