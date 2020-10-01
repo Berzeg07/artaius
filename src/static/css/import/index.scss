@@ -2241,7 +2241,8 @@ svg use {
 }
 
 .tab-slider,
-.product-slider {
+.product-slider,
+.recom-slider {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 0px;
@@ -2419,7 +2420,7 @@ svg use {
     color: #139AD6;
 }
 
-.reviews-reyting__stars {
+.reviews-stars {
     display: flex;
     align-items: center;
 
@@ -2433,6 +2434,10 @@ svg use {
         width: 20px;
         height: 20px;
     }
+}
+
+.star-icon-grey {
+    color: #D4D4D4;
 }
 
 .reviews-reyting {
@@ -3797,6 +3802,21 @@ svg use {
     color: white;
 }
 
+.btn-black-cont {
+    font-size: 13px;
+    background: #000000;
+    border-radius: 0px 30px;
+    color: white;
+
+    @media (min-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 17px;
+    }
+}
+
 .filter-block__check {
     margin-bottom: 10px;
 
@@ -4060,7 +4080,7 @@ svg use {
     }
 }
 
-.catbtn-more {
+.btn-more {
     border: 1px solid #D0D0D0;
     width: 100%;
     height: 60px;
@@ -4150,7 +4170,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        margin-bottom: 62px;
+        margin-bottom: 100px;
     }
 }
 
@@ -4176,5 +4196,46 @@ svg use {
 
     .product-gallery-thumb__item {
         width: 95px;
+    }
+}
+
+.add-stars {
+    display: inline-block;
+    font-size: 0px;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .label1,
+    .label2,
+    .label3,
+    .label4,
+    .label5 {
+        margin-left: 2px;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        background: url(../img/star-gr.svg) no-repeat top center;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .radio1:checked~label,
+    .radio2:checked~label,
+    .radio3:checked~label,
+    .radio4:checked~label,
+    .radio5:checked~label {
+        background: url(../img/star-bl.svg) no-repeat top center;
+        background-size: contain;
+    }
+
+    .radio1:checked~.label1~label,
+    .radio2:checked~.label2~label,
+    .radio3:checked~.label3~label,
+    .radio4:checked~.label4~label,
+    .radio5:checked~.label5~label {
+        background: url(../img/star-gr.svg) no-repeat top center;
+        background-size: contain;
     }
 }

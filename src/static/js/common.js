@@ -184,6 +184,36 @@ $(document).ready(function () {
         });
     });
 
+    $('.recom-slider').each(function () {
+        var productSlider = new Swiper(this, {
+            slidesPerView: 4,
+            spaceBetween: 45,
+            loop: false,
+            navigation: {
+                nextEl: $(this).parent().find('.swiper-button-next'),
+                prevEl: $(this).parent().find('.swiper-button-prev'),
+            },
+            breakpoints: {
+                499: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 35,
+                },
+                599: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 7,
+                },
+                767: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 7,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    });
+
     // activateFastReview();
 
     function selecticActivate() {

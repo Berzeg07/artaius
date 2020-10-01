@@ -155,7 +155,7 @@
             +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
 
     .catalog-rule.container
-        button(type="button").catbtn-more 
+        button(type="button").btn-more 
             span Показать еще
 
         .pagination
@@ -176,21 +176,49 @@
             a(href="#").pagination__arrows.pagination__arrows_next 
             a(href="#").pagination__arrows.pagination__arrows_last
 
+    //- .product-cont.product-cont_item.container
+    //-     h2.cont-title Вам может понравиться
+    //-     .product-list
+    //-         +productCard
+    //-         +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+    //-         +productCard
+    //-         +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
+    //- .product-cont.product-cont_item.product-cont_watch.container
+    //-     h2.cont-title Вы недавно смотрели
+    //-     .product-list
+    //-         +productCard
+    //-         +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+    //-         +productCard
+    //-         +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+
     .product-cont.product-cont_item.container
         h2.cont-title Вам может понравиться
-        .product-list
-            +productCard
-            +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-            +productCard
-            +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+        .recom-slider.swiper-container
+            .swiper-wrapper
+                +actionSliderMain("", "", "10 000 руб.")
+                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                +actionSliderMain
+                +actionSliderMain
+                +actionSliderMain
 
-    .product-cont.product-cont_item.product-cont_watch.container
+
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
+
+    .product-cont.product-cont_item.container
         h2.cont-title Вы недавно смотрели
-        .product-list
-            +productCard
-            +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-            +productCard
-            +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+        .recom-slider.swiper-container
+            .swiper-wrapper
+                +actionSliderMain("", "", "10 000 руб.")
+                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                +actionSliderMain
+                +actionSliderMain
+                +actionSliderMain
+
+
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
 
 
     .filter-mob.filter-mob_checks

@@ -83,35 +83,39 @@
 
         .product-cont.product-cont_item.container
             h2.cont-title Вам может понравиться
-            .product-list
-                +productCard
-                +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-                +productCard
-                +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+            .recom-slider.swiper-container
+                .swiper-wrapper
+                    +actionSliderMain("", "", "10 000 руб.")
+                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                    +actionSliderMain
+                    +actionSliderMain
+
+                .swiper-button-next.swiper-button-next-bg
+                .swiper-button-prev.swiper-button-prev-bg
+            //- .product-list
+            //-     +productCard
+            //-     +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+            //-     +productCard
+            //-     +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
 
         .product-cont.product-cont_item.container
             h2.cont-title Вы недавно смотрели
-            .product-list
-                +productCard
-                +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-                +productCard
-                +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
+            .recom-slider.swiper-container
+                .swiper-wrapper
+                    +actionSliderMain("", "", "10 000 руб.")
+                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                    +actionSliderMain
+                    +actionSliderMain
 
-            //- .catcategory-galleries__item
-            //-     h2.cont-title Вам может понравится
-            //-     .product-list-slider.swiper-container
-            //-         .swiper-wrapper
-            //-             +actionSliderMain
-            //-             +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
-            //-             +actionSliderMain
-            //-             +actionSliderMain('action-tooltip_red', 'Sale', '10 600 руб.')
+                .swiper-button-next.swiper-button-next-bg
+                .swiper-button-prev.swiper-button-prev-bg
+            //- .product-list
+            //-     +productCard
+            //-     +productCard('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+            //-     +productCard
+            //-     +productCard('action-tooltip_red', 'Sale', '10 600 руб.')
 
-            //- .catcategory-galleries__item
-            //-     h2.cont-title Вы не давно смотрели
-            //-     .product-list-slider.swiper-container
-            //-         .swiper-wrapper
-            //-             +actionSliderMain
-            //-             +actionSliderMain('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+
 
 
 

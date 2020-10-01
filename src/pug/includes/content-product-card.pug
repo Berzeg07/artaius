@@ -1,172 +1,380 @@
-.product.container
-    .breadcrumbs
-        a(href="#") Парикмахерский инструмент
-        a(href="#") Ножницы
-        span Ножницы 5 категории
+.product
+    .container
+        .breadcrumbs
+            a(href="#") Парикмахерский инструмент
+            a(href="#") Ножницы
+            span Ножницы 5 категории
 
-    .product__brend 
-        a(href="#") Suntachi
+        .product__brend 
+            a(href="#") Suntachi
 
-    h1.product__title Прямые ножницы JY-TJ-70V TATOO
+        h1.product__title Прямые ножницы JY-TJ-70V TATOO
 
-    .product__main
-        .column
-            .product-gallery-top.swiper-container
-                .swiper-wrapper
-                    .swiper-slide
-                        .product-gallery-top__item
-                            img(src="img/product.jpg")
-                    .swiper-slide
-                        .product-gallery-top__item
-                            img(src="img/product.jpg")
-                    .swiper-slide
-                        .product-gallery-top__item
-                            img(src="img/product.jpg")
-
-                .swiper-button-next.swiper-button-next-min
-                .swiper-button-prev.swiper-button-prev-min
-
-            .product-gallery-thumb.swiper-container
-                .swiper-wrapper
-                    .swiper-slide
-                        .product-gallery-thumb__item
-                            img(src="img/product.jpg")
-                    .swiper-slide
-                        .product-gallery-thumb__item
-                            img(src="img/product.jpg")
-                    .swiper-slide
-                        .product-gallery-thumb__item
-                            img(src="img/product.jpg")
-        .column
-            .product-info
-                .product-info__top
-                    .product-info__item
-                        .product-info__status В наличии
-
-                        ul.product-info__column
-                            li
-                                +starReyting
-                            li
-                                +addFavor
-
-                        ul.product-info__list
-                            li
-                                span Артикул: 
-                                span 08-55
-                            li
-                                span Сталь: 
-                                span Hitachi
-                            li
-                                span Серия: 
-                                span Suntachi Classic Gold
-                            li
-                                span Вид полотна: 
-                                span филировочный
-                            li
-                                span Тип филировочных зубцов: 
-                                span изогнутые с просечкой
-
-                        a(href="#").product-info__link Смотреть все характеристики
-
-                        ul.product-info__select
-                            li
-                                +selectProduct('product-select', 'Выбрать упаковку')
-                            li
-                                +selectProduct('product-select', 'Выбрать крепление')
-
-                    .product-info__item
-                        .delivery
-                            .delivery__top
-                                .delivery__article Доставка в город:
-                                .delivery__city Москва
-
-                            .delivery__middle
-                                .delivery__title Курьерская доставка
-                                .delivery__article на следующий день - 400 ₽ 
-                                .delivery__action Бесплатно от 5000 ₽
-
-                            .delivery__bottom
-                                .delivery__title Самовывоз
-                                .delivery__article в день заказа по адресу: 3-я Парковая, д.41А, Бизнес-центр "На Парковой", 1 этаж
-                                .delivery__action Бесплатно
-
-                            a(href="#").delivery__link Подробнее о доставке
-
-                .product-info__bottom
-                    ul.product__add-basket
-                        li
-                            .product__price 7 450 руб.
-                        li
-                            button(type="button").btn В корзину
-
-                            a(href="#").buy-one-click Купить в 1 клик
-
-                    .product-action
-                        .product-action__article 
-                            |Чехол и масло для ножниц — 
-                            span в подарок
-
-    .product-specif
-        .product-specif__title Характеристики товара
-
-        .product-specif__columns
+        .product__main
             .column
-                .product-specif__item
-                    .product-specif__title Описание
-                    .product-specif__article 
-                        |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+                .product-gallery-top.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-gallery-top__item
+                                img(src="img/product.jpg")
+                        .swiper-slide
+                            .product-gallery-top__item
+                                img(src="img/product.jpg")
+                        .swiper-slide
+                            .product-gallery-top__item
+                                img(src="img/product.jpg")
 
-                .product-specif__item
-                    .product-specif__title Состав
-                    .product-specif__article 
-                        |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+                    .swiper-button-next.swiper-button-next-min
+                    .swiper-button-prev.swiper-button-prev-min
+
+                .product-gallery-thumb.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-gallery-thumb__item
+                                img(src="img/product.jpg")
+                        .swiper-slide
+                            .product-gallery-thumb__item
+                                img(src="img/product.jpg")
+                        .swiper-slide
+                            .product-gallery-thumb__item
+                                img(src="img/product.jpg")
             .column
-                .product-specif__title Общие характеристики
+                .product-info
+                    .product-info__top
+                        .product-info__item
+                            .product-info__status В наличии
 
-                ul.general-specif
-                    li
-                        .general-specif__title Артикул
-                        .general-specif__article 09-55
-                    li
-                        .general-specif__title Сталь
-                        .general-specif__article Hitachi Япония, 440А
-                    li
-                        .general-specif__title Бренд
-                        .general-specif__article Suntachi
-                    li
-                        .general-specif__title Серия
-                        .general-specif__article Suntachi Classic Gold
-                    li
-                        .general-specif__title Вид полотна
-                        .general-specif__article Клиновидный
-                    li
-                        .general-specif__title Упор
-                        .general-specif__article Съемный
-                    li
-                        .general-specif__title Ручка
-                        .general-specif__article Эргономика, 2 плоскости
-                    li
-                        .general-specif__title Размер колец
-                        .general-specif__article Верхние: 18-21 мм; Нижнее: 18-20 мм
-                    li
-                        .general-specif__title Виды срезов и техника
-                        .general-specif__article Скользящий, прямой точный, точечный, поинтинг, техника выкройки
-                    li
-                        .general-specif__title Страна производства
-                        .general-specif__article Южная Корея
-                    li
-                        .general-specif__title Категории
-                        .general-specif__article Прямые ножницы, Ножницы для правшей
+                            ul.product-info__column
+                                li
+                                    +starReyting
+                                li
+                                    +addFavor
 
-    .subscription-block
-        .subscription-block__title Получите скидку -10% на первый заказ
+                            ul.product-info__list
+                                li
+                                    span Артикул: 
+                                    span 08-55
+                                li
+                                    span Сталь: 
+                                    span Hitachi
+                                li
+                                    span Серия: 
+                                    span Suntachi Classic Gold
+                                li
+                                    span Вид полотна: 
+                                    span филировочный
+                                li
+                                    span Тип филировочных зубцов: 
+                                    span изогнутые с просечкой
 
-        form.subscription-form(action="#")
-            input(type="text" placeholder="E-mail")
-            button(type="submit").subscription-form__btn.btn
+                            a(href="#").product-info__link Смотреть все характеристики
 
-        .subscription-block__privacy
-            input(type="checkbox").privacy-check#privacyCheck
-            label(for="privacyCheck").privacy-label 
-                |Подтверждаю, что я ознакомлен (а) и согласен (на) с условиями 
-                a(href="#") политики конфиденциальности
+                            ul.product-info__select
+                                li
+                                    +selectProduct('product-select', 'Выбрать упаковку')
+                                li
+                                    +selectProduct('product-select', 'Выбрать крепление')
+
+                        .product-info__item
+                            .delivery
+                                .delivery__top
+                                    .delivery__article Доставка в город:
+                                    .delivery__city Москва
+
+                                .delivery__middle
+                                    .delivery__title Курьерская доставка
+                                    .delivery__article на следующий день - 400 ₽ 
+                                    .delivery__action Бесплатно от 5000 ₽
+
+                                .delivery__bottom
+                                    .delivery__title Самовывоз
+                                    .delivery__article в день заказа по адресу: 3-я Парковая, д.41А, Бизнес-центр "На Парковой", 1 этаж
+                                    .delivery__action Бесплатно
+
+                                a(href="#").delivery__link Подробнее о доставке
+
+                    .product-info__bottom
+                        ul.product__add-basket
+                            li
+                                .product__price 7 450 руб.
+                            li
+                                button(type="button").btn В корзину
+
+                                a(href="#").buy-one-click Купить в 1 клик
+
+                        .product-action
+                            .product-action__article 
+                                |Чехол и масло для ножниц — 
+                                span в подарок
+
+        .product-specif
+            .product-specif__title Характеристики товара
+
+            .product-specif__columns
+                .column
+                    .product-specif__item
+                        .product-specif__title Описание
+                        .product-specif__article 
+                            |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+
+                    .product-specif__item
+                        .product-specif__title Состав
+                        .product-specif__article 
+                            |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+                .column
+                    .product-specif__title Общие характеристики
+
+                    ul.general-specif
+                        li
+                            .general-specif__title Артикул
+                            .general-specif__article 09-55
+                        li
+                            .general-specif__title Сталь
+                            .general-specif__article Hitachi Япония, 440А
+                        li
+                            .general-specif__title Бренд
+                            .general-specif__article Suntachi
+                        li
+                            .general-specif__title Серия
+                            .general-specif__article Suntachi Classic Gold
+                        li
+                            .general-specif__title Вид полотна
+                            .general-specif__article Клиновидный
+                        li
+                            .general-specif__title Упор
+                            .general-specif__article Съемный
+                        li
+                            .general-specif__title Ручка
+                            .general-specif__article Эргономика, 2 плоскости
+                        li
+                            .general-specif__title Размер колец
+                            .general-specif__article Верхние: 18-21 мм; Нижнее: 18-20 мм
+                        li
+                            .general-specif__title Виды срезов и техника
+                            .general-specif__article Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                        li
+                            .general-specif__title Страна производства
+                            .general-specif__article Южная Корея
+                        li
+                            .general-specif__title Категории
+                            .general-specif__article Прямые ножницы, Ножницы для правшей
+
+        .subscription-block
+            .subscription-block__title Получите скидку -10% на первый заказ
+
+            form.subscription-form(action="#")
+                input(type="text" placeholder="E-mail")
+                button(type="submit").subscription-form__btn.btn
+
+            .subscription-block__privacy
+                input(type="checkbox").privacy-check#privacyCheck
+                label(for="privacyCheck").privacy-label 
+                    |Подтверждаю, что я ознакомлен (а) и согласен (на) с условиями 
+                    a(href="#") политики конфиденциальности
+
+
+        .reviews-block
+            .reviews-block__top
+                .reviews-block__heading Отзывы
+                .reviews-block__product на прямые ножницы JY-TJ-70V TATOO
+                button(type="button").btn-black-cont.reviews-block__btn Написать отзыв
+
+            .reviews
+                .column
+                    .reviews__profile a
+
+                .column
+                    .reviews__top
+                        .column
+                            ul.reviews-stars
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+
+                            .reviews__appraisal Потрясающие ножницы
+
+                        .column
+                            .reviews-gallery.swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="img/rev-sl-1.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-2.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-1.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-2.jpg")
+
+                    .reviews__item
+                        .reviews__dignity
+                            .reviews__item-title Достоинства
+                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+
+                        .reviews__limitations
+                            .reviews__item-title Достоинства
+                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+
+                    .reviews__bottom
+                        .reviews__auth Екатерина, 23.04.2020
+
+                        .reviews-like
+                            button(type="button").reviews-like__btn.reviews-like__btn_bad
+                                +icon('like-bad','like-bad')
+
+                            button(type="button").reviews-like__btn.reviews-like__btn_good
+                                +icon('like-good','like-good')
+
+            .reviews
+                .column
+                    .reviews__profile a
+
+                .column
+                    .reviews__top
+                        .column
+                            ul.reviews-stars
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star','star-icon')
+                                li
+                                    +icon('star-grey','star-icon-grey')
+                                li
+                                    +icon('star-grey','star-icon-grey')
+
+                            .reviews__appraisal На троечку
+
+                        .column
+                            .reviews-gallery.swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="img/rev-sl-1.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-2.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-1.jpg")
+                                    .swiper-slide
+                                        img(src="img/rev-sl-2.jpg")
+
+                    .reviews__item
+                        .reviews__dignity
+                            .reviews__item-title Достоинства
+                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+
+                        .reviews__limitations
+                            .reviews__item-title Достоинства
+                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+
+                    .reviews__bottom
+                        .reviews__auth Екатерина, 23.04.2020
+
+                        .reviews-like
+                            button(type="button").reviews-like__btn.reviews-like__btn_bad
+                                +icon('like-bad','like-bad')
+
+                            button(type="button").reviews-like__btn.reviews-like__btn_good
+                                +icon('like-good','like-good')
+            .reviews__more
+                button(type="button").btn-more 
+                    span Показать еще
+
+    form.addreview(action="#")
+        .addreview__title Мой отзыв о прямых ножницах 5+ класса
+        .addreview__cont
+            .addreview__item
+                ul.addreview__fields
+                    li
+                        .addreview__sub-title Общая оценка
+                        .add-stars
+                            input(type="radio" name="radio1" id="a1" class="radio1")
+                            input(type="radio" name="radio1" id="a2" class="radio2")
+                            input(type="radio" name="radio1" id="a3" class="radio3")
+                            input(type="radio" name="radio1" id="a4" class="radio4")
+                            input(type="radio" name="radio1" id="a5" class="radio5")
+
+                            label(for="a1" class="label1")
+                            label(for="a2" class="label2")
+                            label(for="a3" class="label3")
+                            label(for="a4" class="label4")
+                            label(for="a5" class="label5")
+                    li
+                        .addreview__sub-title Что вам понравилось
+                        input(type="text").addreview__inp
+                    li
+                        .addreview__sub-title Что не оправдало ваших ожиданий
+                        .addreview__comment
+                            .addreview__coment-title Ваш комментарий
+                            input(type="text").addreview__inp
+                    li
+                        .addreview__sub-title Общее впечатление
+                        input(type="text").addreview__inp
+                    li
+                        .addreview__sub-title Вы можете добавить ваше фото товара
+                        .addreview__file
+                            input(type="file" multiple)#addFile
+                            label(for="addFile") Прикрепить изображение
+
+            .addreview__item
+                button(type="submit").btn-black-cont Отправить
+
+                .addreview__privacy
+                    |Публикуя отзыв, вы подтверждаете, что ознакомлены и согласны с 
+                    a(href="#") условиями политики конфиденциальности 
+                    |и 
+                    a(href="#") публичной оферты
+
+            .addreview__item
+                .addreview__sub-title Какие из достоинств товара вы можете подтвердить?
+
+                ul.addreview__checks
+                    li
+                        input(type="checkbox")#ch1
+                        label(for="ch1") Удобные
+                    li
+                        input(type="checkbox")#ch2
+                        label(for="ch2") Острые
+                    li
+                        input(type="checkbox")#ch3
+                        label(for="ch3") Для домашнего использования
+                    li
+                        input(type="checkbox")#ch4
+                        label(for="ch4") Для профессионалов
+                    li
+                        input(type="checkbox")#ch5
+                        label(for="ch5") Маленькие
+
+    .product-cont.product-cont_item.container
+        h2.cont-title Вам может понравиться
+        .recom-slider.swiper-container
+            .swiper-wrapper
+                +actionSliderMain("", "", "10 000 руб.")
+                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                +actionSliderMain
+                +actionSliderMain
+                +actionSliderMain
+
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
+
+    .product-cont.product-cont_item.container
+        h2.cont-title Вы недавно смотрели
+        .recom-slider.swiper-container
+            .swiper-wrapper
+                +actionSliderMain("", "", "10 000 руб.")
+                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                +actionSliderMain
+                +actionSliderMain
+                +actionSliderMain
+
+            .swiper-button-next.swiper-button-next-bg
+            .swiper-button-prev.swiper-button-prev-bg
+
+
