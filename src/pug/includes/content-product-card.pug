@@ -44,7 +44,7 @@
             .column.column_right
                 .product-info
                     .product-info__top
-                        .product-info__item
+                        .product-info__item.product-info__item_left
                             .product-status.product-status_desctop В наличии
 
                             ul.product-info__column
@@ -78,7 +78,7 @@
                                 li
                                     +selectProduct('product-select', 'Выбрать крепление')
 
-                        .product-info__item
+                        .product-info__item.product-info__item_right
                             button(type="button").delivery-btn Доставка
 
                             .delivery
@@ -101,8 +101,12 @@
                     .product-info__bottom
                         ul.product__add-basket
                             li
-                                .product__price 7 450 руб.
-                                .product__price__old 6 450 руб.
+                                .product__price 
+                                    |7 450 
+                                    span руб.
+                                .product__price__old 
+                                    |6 450 
+                                    span руб.
                             li
                                 button(type="button").btn.product-addbasket В корзину
 
@@ -114,6 +118,21 @@
                             .product-action__article 
                                 |Чехол и масло для ножниц — 
                                 span в подарок
+
+        .delivery.delivery_laptop
+            .delivery__item.delivery__top
+                .delivery__article Доставка в город:
+                .delivery__city Москва
+
+            .delivery__item.delivery__middle
+                .delivery__title Курьерская доставка
+                .delivery__article на следующий день - 400 руб.
+                .delivery__action Бесплатно от 5000 руб.
+
+            .delivery__item.delivery__bottom
+                .delivery__title Самовывоз
+                .delivery__article в день заказа по адресу: 3-я Парковая, д.41А, Бизнес-центр "На Парковой", 1 этаж
+                .delivery__action Бесплатно
 
         .product-specif
             .product-specif__title Характеристики товара
