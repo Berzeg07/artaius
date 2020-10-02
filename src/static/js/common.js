@@ -125,7 +125,7 @@ $(document).ready(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
             spaceBetween: 45,
-            loop: true,
+            loop: false,
             observer: true,
             observeParents: true,
             navigation: {
@@ -324,7 +324,7 @@ $(document).ready(function () {
             var bannerSlider = new Swiper('.banner-block', {
                 slidesPerView: 1,
                 spaceBetween: 30,
-                loop: true,
+                loop: false,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,

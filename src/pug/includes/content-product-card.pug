@@ -140,63 +140,85 @@
             .product-specif__columns
                 .column
                     .product-specif__item
-                        .product-specif__title Описание
+                        .product-specif__sub-title Описание
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
 
                     .product-specif__item
-                        .product-specif__title Состав
+                        .product-specif__sub-title Состав
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
                 .column
-                    .product-specif__title Общие характеристики
+                    .product-specif__sub-title Общие характеристики
 
                     ul.general-specif
                         li
-                            .general-specif__title Артикул
-                            .general-specif__article 09-55
+                            .general-specif__title 
+                                span Артикул
+                            .general-specif__article 
+                                span 09-55
                         li
-                            .general-specif__title Сталь
-                            .general-specif__article Hitachi Япония, 440А
+                            .general-specif__title 
+                                span Сталь
+                            .general-specif__article 
+                                span Hitachi Япония, 440А
                         li
-                            .general-specif__title Бренд
-                            .general-specif__article Suntachi
+                            .general-specif__title 
+                                span Бренд
+                            .general-specif__article 
+                                span Suntachi
                         li
-                            .general-specif__title Серия
-                            .general-specif__article Suntachi Classic Gold
+                            .general-specif__title 
+                                span Серия
+                            .general-specif__article 
+                                span Suntachi Classic Gold
                         li
-                            .general-specif__title Вид полотна
-                            .general-specif__article Клиновидный
+                            .general-specif__title 
+                                span Вид полотна
+                            .general-specif__article 
+                                span Клиновидный
                         li
-                            .general-specif__title Упор
-                            .general-specif__article Съемный
+                            .general-specif__title 
+                                span Упор
+                            .general-specif__article 
+                                span Съемный
                         li
-                            .general-specif__title Ручка
-                            .general-specif__article Эргономика, 2 плоскости
+                            .general-specif__title 
+                                span Ручка
+                            .general-specif__article 
+                                span Эргономика, 2 плоскости
                         li
-                            .general-specif__title Размер колец
-                            .general-specif__article Верхние: 18-21 мм; Нижнее: 18-20 мм
+                            .general-specif__title 
+                                span Размер колец
+                            .general-specif__article 
+                                span Верхние: 18-21 мм; Нижнее: 18-20 мм
                         li
-                            .general-specif__title Виды срезов и техника
-                            .general-specif__article Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+                            .general-specif__title 
+                                span Виды срезов и техника
+                            .general-specif__article 
+                                span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
                         li
-                            .general-specif__title Страна производства
-                            .general-specif__article Южная Корея
+                            .general-specif__title 
+                                span Страна производства
+                            .general-specif__article 
+                                span Южная Корея
                         li
-                            .general-specif__title Категории
-                            .general-specif__article Прямые ножницы, Ножницы для правшей
+                            .general-specif__title 
+                                span Категории
+                            .general-specif__article 
+                                span Прямые ножницы, Ножницы для правшей
 
         .subscription-block
-            .subscription-block__title Получите скидку -10% на первый заказ
+            .subscription-block__title Получите скидку -10%<br> на первый заказ
 
             form.subscription-form(action="#")
                 input(type="text" placeholder="E-mail")
                 button(type="submit").subscription-form__btn.btn
 
-            .subscription-block__privacy
-                input(type="checkbox").privacy-check#privacyCheck
-                label(for="privacyCheck").privacy-label 
-                    |Подтверждаю, что я ознакомлен (а) и согласен (на) с условиями 
+            .check-block.subscription-block__privacy
+                input(type="checkbox" checked)#privacyCheck
+                label(for="privacyCheck")
+                    |Подтверждаю, что я ознакомлен и согласен с условиями 
                     a(href="#") политики конфиденциальности
 
 
