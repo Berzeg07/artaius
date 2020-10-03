@@ -121,6 +121,15 @@ $(document).ready(function () {
         $('.filter-mob').fadeOut();
     });
 
+    $('.reviews-like__btn').click(function () {
+        $(this).parent().children().removeClass('is-active');
+        $(this).addClass("is-active");
+    });
+
+    $('.reviews-like. reviews-like__btn').click(function () {
+
+    });
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
@@ -382,6 +391,20 @@ $(document).ready(function () {
                 991: {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                }
+            }
+        });
+    });
+
+    $('.reviews-gallery').each(function () {
+        var revGallerySlider = new Swiper(this, {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+            loop: true,
+            breakpoints: {
+                767: {
+                    slidesPerView: 4,
+                    spaceBetween: 7,
                 }
             }
         });

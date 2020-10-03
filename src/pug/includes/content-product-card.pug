@@ -140,16 +140,16 @@
             .product-specif__columns
                 .column
                     .product-specif__item
-                        .product-specif__sub-title Описание
+                        .product-specif__sub-title.cont-subtitle Описание
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
 
                     .product-specif__item
-                        .product-specif__sub-title Состав
+                        .product-specif__sub-title.cont-subtitle Состав
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
                 .column
-                    .product-specif__sub-title Общие характеристики
+                    .product-specif__sub-title.cont-subtitle  Общие характеристики
 
                     ul.general-specif
                         li
@@ -223,10 +223,12 @@
 
 
         .reviews-block
-            .reviews-block__top
-                .reviews-block__heading Отзывы
-                .reviews-block__product на прямые ножницы JY-TJ-70V TATOO
-                button(type="button").btn-black-cont.reviews-block__btn Написать отзыв
+            ul.reviews-block__top
+                li
+                    .reviews-block__heading.cont-subtitle Отзывы
+                    .reviews-block__product на прямые ножницы JY-TJ-70V TATOO
+                li
+                    button(type="button").btn-black-cont.reviews-block__btn Написать отзыв
 
             .reviews
                 .column
@@ -253,13 +255,17 @@
                             .reviews-gallery.swiper-container
                                 .swiper-wrapper
                                     .swiper-slide
-                                        img(src="img/rev-sl-1.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-1.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-2.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-2.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-1.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-1.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-2.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-2.jpg")
 
                     .reviews__item
                         .reviews__dignity
@@ -305,13 +311,17 @@
                             .reviews-gallery.swiper-container
                                 .swiper-wrapper
                                     .swiper-slide
-                                        img(src="img/rev-sl-1.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-1.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-2.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-2.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-1.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-1.jpg")
                                     .swiper-slide
-                                        img(src="img/rev-sl-2.jpg")
+                                        .reviews-gallery__item
+                                            img(src="img/rev-sl-2.jpg")
 
                     .reviews__item
                         .reviews__dignity
