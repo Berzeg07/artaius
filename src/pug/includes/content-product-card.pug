@@ -369,20 +369,20 @@
                         input(type="text").addreview__inp
                     li
                         .addreview__sub-title Что не оправдало ваших ожиданий
-                        .addreview__comment
-                            .addreview__coment-title Ваш комментарий
-                            input(type="text").addreview__inp
+                        textarea(placeholder="Ваш комментарий").addreview__inp.addreview__inp_comment
                     li
                         .addreview__sub-title Общее впечатление
                         input(type="text").addreview__inp
-                    li
-                        .addreview__sub-title Вы можете добавить ваше фото товара
-                        .addreview__file
-                            input(type="file" multiple)#addFile
-                            label(for="addFile") Прикрепить изображение
+
 
             .addreview__item
-                button(type="submit").btn-black-cont Отправить
+                .addreview__sub-title Вы можете добавить ваше фото товара
+                .addreview__file
+                    input(type="file" multiple)#addFile
+                    label(for="addFile").add-file Прикрепить изображение
+
+            .addreview__item
+                button(type="submit").btn-black-cont.addreview__btn Отправить
 
                 .addreview__privacy
                     |Публикуя отзыв, вы подтверждаете, что ознакомлены и согласны с 
@@ -395,20 +395,30 @@
 
                 ul.addreview__checks
                     li
-                        input(type="checkbox")#ch1
-                        label(for="ch1") Удобные
+                        .check-block
+                            input(type="checkbox")#ch1
+                            label(for="ch1")
+                                |Удобные
                     li
-                        input(type="checkbox")#ch2
-                        label(for="ch2") Острые
+                        .check-block
+                            input(type="checkbox")#ch2
+                            label(for="ch2")
+                                |Острые
                     li
-                        input(type="checkbox")#ch3
-                        label(for="ch3") Для домашнего использования
+                        .check-block
+                            input(type="checkbox")#ch3
+                            label(for="ch3")
+                                |Для домашнего использования
                     li
-                        input(type="checkbox")#ch4
-                        label(for="ch4") Для профессионалов
+                        .check-block
+                            input(type="checkbox")#ch4
+                            label(for="ch4")
+                                |Для профессионалов
                     li
-                        input(type="checkbox")#ch5
-                        label(for="ch5") Маленькие
+                        .check-block
+                            input(type="checkbox")#ch5
+                            label(for="ch5")
+                                |Маленькие
 
     .product-cont.product-cont_item.container
         h2.cont-title Вам может понравиться

@@ -126,10 +126,6 @@ $(document).ready(function () {
         $(this).addClass("is-active");
     });
 
-    $('.reviews-like. reviews-like__btn').click(function () {
-
-    });
-
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
