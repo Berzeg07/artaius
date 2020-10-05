@@ -104,9 +104,9 @@
                                 .product__price 
                                     |7 450 
                                     span руб.
-                                .product__price__old 
-                                    |6 450 
-                                    span руб.
+                                //- .product__price__old 
+                                //-     |6 450 
+                                //-     span руб.
                             li
                                 button(type="button").btn.product-addbasket В корзину
 
@@ -139,7 +139,7 @@
 
             .product-specif__columns
                 .column
-                    .product-specif__item
+                    .product-specif__item.product-specif__item_top
                         .product-specif__sub-title.cont-subtitle Описание
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
@@ -230,117 +230,103 @@
                 li
                     button(type="button").btn-black-cont.reviews-block__btn Написать отзыв
 
-            .reviews
-                .column
-                    .reviews__profile a
+            .reviews-block__items
+                .reviews
+                    .column
+                        .reviews__profile a
 
-                .column
-                    .reviews__top
-                        .column
-                            ul.reviews-stars
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
+                    .column
+                        .reviews__top
+                            .column.column_left
+                                ul.reviews-stars
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
 
-                            .reviews__appraisal Потрясающие ножницы
+                                .reviews__appraisal Потрясающие ножницы
 
-                        .column
-                            .reviews-gallery.swiper-container
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-1.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-2.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-1.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-2.jpg")
+                        .reviews__item
+                            .reviews__dignity
+                                .reviews__item-title Достоинства
+                                .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
 
-                    .reviews__item
-                        .reviews__dignity
-                            .reviews__item-title Достоинства
-                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+                            .reviews__limitations
+                                .reviews__item-title Недостатки
+                                .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
 
-                        .reviews__limitations
-                            .reviews__item-title Достоинства
-                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+                        .reviews__bottom
+                            .reviews__auth Екатерина, 23.04.2020
 
-                    .reviews__bottom
-                        .reviews__auth Екатерина, 23.04.2020
+                            .reviews-like
+                                button(type="button").reviews-like__btn.reviews-like__btn_bad
+                                    +icon('like-bad','like-bad')
 
-                        .reviews-like
-                            button(type="button").reviews-like__btn.reviews-like__btn_bad
-                                +icon('like-bad','like-bad')
+                                button(type="button").reviews-like__btn.reviews-like__btn_good
+                                    +icon('like-good','like-good')
 
-                            button(type="button").reviews-like__btn.reviews-like__btn_good
-                                +icon('like-good','like-good')
+                .reviews
+                    .column
+                        .reviews__profile a
 
-            .reviews
-                .column
-                    .reviews__profile a
+                    .column
+                        .reviews__top
+                            .column.column_left
+                                ul.reviews-stars
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star','star-icon')
+                                    li
+                                        +icon('star-grey','star-icon-grey')
+                                    li
+                                        +icon('star-grey','star-icon-grey')
 
-                .column
-                    .reviews__top
-                        .column
-                            ul.reviews-stars
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star','star-icon')
-                                li
-                                    +icon('star-grey','star-icon-grey')
-                                li
-                                    +icon('star-grey','star-icon-grey')
+                                .reviews__appraisal На троечку
 
-                            .reviews__appraisal На троечку
+                            .column.column_right
+                                .reviews-gallery.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-1.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-2.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-1.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-2.jpg")
 
-                        .column
-                            .reviews-gallery.swiper-container
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-1.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-2.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-1.jpg")
-                                    .swiper-slide
-                                        .reviews-gallery__item
-                                            img(src="img/rev-sl-2.jpg")
+                        .reviews__item
+                            .reviews__dignity
+                                .reviews__item-title Достоинства
+                                .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
 
-                    .reviews__item
-                        .reviews__dignity
-                            .reviews__item-title Достоинства
-                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+                            .reviews__limitations
+                                .reviews__item-title Недостатки
+                                .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
 
-                        .reviews__limitations
-                            .reviews__item-title Достоинства
-                            .reviews__article Ну для кутикулы конечно они толстоваты. Для ногтей на пальчиках ног подходят идеально, очень удобно ими работать , на ногтях на пальцах рук не могу посоветовать, работа будет не качественная. Что касается заточки, она хорошая, для использования так скажем дома , для себя подойдет.
+                        .reviews__bottom
+                            .reviews__auth Екатерина, 23.04.2020
 
-                    .reviews__bottom
-                        .reviews__auth Екатерина, 23.04.2020
+                            .reviews-like
+                                button(type="button").reviews-like__btn.reviews-like__btn_bad
+                                    +icon('like-bad','like-bad')
 
-                        .reviews-like
-                            button(type="button").reviews-like__btn.reviews-like__btn_bad
-                                +icon('like-bad','like-bad')
+                                button(type="button").reviews-like__btn.reviews-like__btn_good
+                                    +icon('like-good','like-good')
 
-                            button(type="button").reviews-like__btn.reviews-like__btn_good
-                                +icon('like-good','like-good')
             .reviews__more
                 button(type="button").btn-more 
                     span Показать еще

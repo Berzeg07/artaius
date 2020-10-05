@@ -2153,6 +2153,11 @@ svg use {
         @media (min-width: 768px) and (max-width: 1279px) {
             left: 15px;
         }
+
+        @media (min-width: 1280px) {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     @media (min-width: 768px) {
@@ -2446,7 +2451,7 @@ svg use {
 
     li {
         &:not(:last-child) {
-            margin-right: 1px;
+            margin-right: 2px;
         }
     }
 
@@ -2488,6 +2493,10 @@ svg use {
     font-size: 14px;
     color: #38B2AC;
     margin-left: 15px;
+
+    @media (min-width: 1600px) {
+        margin-left: 17px;
+    }
 }
 
 .fastview__top-info {
@@ -4292,6 +4301,7 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 23px;
+        margin-bottom: 8px;
     }
 }
 
@@ -4300,14 +4310,15 @@ svg use {
     font-size: 18px;
     margin-bottom: 15px;
 
-    @media (min-width: 768px) {
-        font-size: 25px;
-        margin-bottom: 44px;
-    }
+    // @media (min-width: 768px) {
+    //     font-size: 25px;
+    //     margin-bottom: 44px;
+    // }
 
     @media (min-width: 768px) {
         font-size: 30px;
         margin-bottom: 35px;
+        letter-spacing: 0.3px;
     }
 }
 
@@ -4353,7 +4364,7 @@ svg use {
     margin-bottom: 30px;
 
     @media (min-width: 768px) {
-        margin-bottom: 38px;
+        margin-bottom: 36px;
     }
 
     .addfavor__txt,
@@ -4403,10 +4414,11 @@ svg use {
     @media (min-width: 1280px) {
         max-width: 320px;
         width: 100%;
+        margin-bottom: 14px;
     }
 
     li {
-        margin-bottom: 18px;
+        margin-bottom: 9px;
     }
 }
 
@@ -4466,7 +4478,9 @@ svg use {
 
     @media (min-width: 1280px) {
         border-radius: 0px 0px 0px 47px;
-        padding: 30px 20px 39px 34px;
+        padding: 33px 20px 39px 34px;
+        position: relative;
+        top: -20px;
     }
 }
 
@@ -4513,7 +4527,7 @@ svg use {
     }
 
     @media (min-width: 992px) {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
 
     &:after {
@@ -4533,7 +4547,7 @@ svg use {
 
 .delivery__middle {
     @media (min-width: 992px) {
-        margin-bottom: 27px;
+        margin-bottom: 22px;
     }
 }
 
@@ -4546,16 +4560,24 @@ svg use {
 .delivery__article {
     font-size: 13px;
     color: #858585;
+
+    @media (min-width: 1280px) {
+        font-size: 15px;
+    }
 }
 
 .delivery__city,
 .delivery__title {
     font-weight: 500;
     font-size: 15px;
+
+    @media (min-width: 1280px) {
+        font-size: 16px;
+    }
 }
 
 .delivery__city {
-    padding-top: 7px;
+    padding-top: 3px;
 }
 
 .delivery__title {
@@ -4724,16 +4746,27 @@ svg use {
 .product-addbasket {
     width: 140px;
     margin-bottom: 15px;
+    border-radius: 0px 28px 0px;
 
     @media (min-width: 992px) {
         margin-bottom: 0;
         margin-right: 33px;
+    }
+
+    @media (min-width: 1600px) {
+        width: 188px;
+        height: 57px;
     }
 }
 
 .product-info__bottom {
     @media (min-width: 1280px) {
         display: flex;
+        padding-top: 13px;
+    }
+
+    @media (min-width: 1600px) {
+        padding-left: 26px;
     }
 }
 
@@ -4745,10 +4778,14 @@ svg use {
     @media (min-width: 768px) {
         font-size: 15px;
     }
+
+    @media (min-width: 1280px) {
+        font-size: 17px;
+    }
 }
 
 .product-action {
-    max-width: 282px;
+    width: 282px;
     height: 115px;
     background: #F7F7FB;
     border: 1px solid #2C7A7B;
@@ -4769,7 +4806,8 @@ svg use {
     }
 
     @media (min-width: 992px) {
-        bottom: 27px;
+        bottom: 31px;
+        height: 126px;
     }
 
     @media (min-width: 1280px) {
@@ -4782,10 +4820,20 @@ svg use {
     width: 95px;
     left: 14px;
     bottom: 11px;
+
+    @media (min-width: 992px) {
+        width: 125px;
+        bottom: 7px;
+        font-size: 17px;
+    }
 }
 
 .product-action__article {
     padding-left: 100px;
+
+    @media (min-width: 992px) {
+        padding-left: 116px;
+    }
 
     span {
         color: #38B2AC;
@@ -4800,6 +4848,10 @@ svg use {
     .product-info__item_left {
         @media (min-width: 600px) and (max-width: 767px) {
             width: 320px;
+        }
+
+        @media (min-width: 1600px) {
+            padding-left: 26px;
         }
     }
 
@@ -4907,7 +4959,7 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 25px;
-        margin-bottom: 49px;
+        margin-bottom: 52px;
     }
 
     @media (min-width: 1280px) {
@@ -4923,7 +4975,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        margin-bottom: 25px;
+        margin-bottom: 27px;
     }
 }
 
@@ -4950,21 +5002,24 @@ svg use {
     @media (min-width: 1280px) {
         width: 408px;
         line-height: 26px;
+        letter-spacing: -0.6px;
+    }
+}
+
+.product-specif__item_top {
+    @media (min-width: 1280px) {
+        margin-bottom: 83px;
     }
 }
 
 .product-specif {
     padding-top: 28px;
-    margin-bottom: 35px;
-
-    @media (min-width: 768px) {
-        padding-top: 50px;
-    }
+    margin-bottom: 42px;
 }
 
 .general-specif {
     li {
-        margin-bottom: 15px;
+        margin-bottom: 13.5px;
 
         @media (min-width: 768px) {
             display: flex;
@@ -5011,7 +5066,8 @@ svg use {
 
     @media (min-width: 768px) {
         width: calc(100% - 320px);
-        padding-left: 12px;
+        padding-left: 15px;
+        letter-spacing: 0.5px;
     }
 }
 
@@ -5030,6 +5086,10 @@ svg use {
                 &:first-child {
                     @media (min-width: 768px) {
                         margin-right: 73px;
+                    }
+
+                    @media (min-width: 1600px) {
+                        margin-right: 106px;
                     }
                 }
             }
@@ -5106,7 +5166,8 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        font-size: 27px;
+        font-size: 28px;
+        margin-bottom: 24px;
     }
 }
 
@@ -5122,7 +5183,7 @@ svg use {
     @media (min-width: 1280px) {
         position: absolute;
         margin-bottom: 0;
-        right: 166px;
+        right: 168px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -5140,6 +5201,11 @@ svg use {
 
         @media (min-width: 768px) {
             width: 342px;
+            padding-left: 27px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-right: 18px;
         }
     }
 }
@@ -5149,6 +5215,11 @@ svg use {
     width: 60px;
     height: 45px;
     background: #38B2AC url("../img/arrow-r-white.svg") no-repeat center;
+
+    @media (min-width: 768px) {
+        width: 75px;
+        border-radius: 0px 30px;
+    }
 }
 
 .subscription-block__privacy {
@@ -5178,8 +5249,13 @@ svg use {
     font-size: 18px;
     margin-bottom: 10px;
 
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (min-width: 768px) {
         font-size: 25px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 26px;
+        margin-bottom: 2px;
     }
 }
 
@@ -5192,7 +5268,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        margin-bottom: 57px;
+        margin-bottom: 54px;
     }
 }
 
@@ -5238,6 +5314,10 @@ svg use {
         display: flex;
     }
 
+    @media (min-width: 1280px) {
+        margin-bottom: 74px;
+    }
+
     .reviews-stars {
         @media (max-width: 767px) {
             position: absolute;
@@ -5279,9 +5359,16 @@ svg use {
     }
 
     @media (min-width: 768px) {
+        border-radius: 0px 22px 22px 22px;
         width: 68px;
         height: 68px;
         font-size: 34px;
+    }
+}
+
+.reviews__top {
+    .reviews-stars {
+        margin-bottom: 8px;
     }
 }
 
@@ -5296,9 +5383,13 @@ svg use {
 }
 
 .reviews-gallery {
-    max-width: 206px;
+    max-width: 250px;
     width: 100%;
     margin: 0;
+
+    @media (min-width: 768px) {
+        position: absolute;
+    }
 
     &:after {
         content: "";
@@ -5332,15 +5423,17 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 15px;
-    }
-
-    @media (min-width: 1280px) {
-        font-size: 18px;
+        margin-bottom: 12px;
     }
 }
 
 .reviews__article {
     margin-bottom: 25px;
+
+    @media (min-width: 1280px) {
+        line-height: 26px;
+        margin-bottom: 33px;
+    }
 }
 
 .reviews__auth {
@@ -5350,6 +5443,10 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 15px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-top: 7px;
     }
 }
 
@@ -5367,9 +5464,15 @@ svg use {
 }
 
 .reviews-like {
-    width: 60px;
+    width: 72px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 1280px) {
+        margin-right: 27px;
+        padding-top: 12px;
+    }
 }
 
 .reviews__bottom {
@@ -5379,12 +5482,12 @@ svg use {
 }
 
 .reviews-block {
-    max-width: 950px;
+    max-width: 980px;
     width: 100%;
     margin-bottom: 45px;
 
     @media (min-width: 768px) {
-        margin-bottom: 80px;
+        margin-bottom: 55px;
     }
 }
 
@@ -5408,12 +5511,12 @@ svg use {
     }
 }
 
-.reviews__top>.column {
-    &:first-child {
+.reviews__top {
+    .column_left {
         width: 370px;
     }
 
-    &:last-child {
+    .column_right {
         width: calc(100% - 400px);
         display: flex;
         justify-content: flex-end;
@@ -5432,10 +5535,13 @@ svg use {
     @media (min-width: 1280px) {
         margin-bottom: 89px;
         max-width: 1366px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        border-radius: 0px 0px 116px 0px;
     }
 
     @media (min-width: 1500px) {
-        max-width: 1615px;
+        max-width: 1598px;
         padding-left: 4.6%;
     }
 
@@ -5448,7 +5554,7 @@ svg use {
     }
 
     @media (min-width: 1900px) {
-        padding-left: 260px;
+        padding-left: 263px;
     }
 }
 
@@ -5465,6 +5571,7 @@ svg use {
     @media (min-width: 1280px) {
         font-size: 26px;
         margin-bottom: 62px;
+        letter-spacing: -0.2px;
     }
 }
 
@@ -5485,6 +5592,10 @@ svg use {
             display: flex;
             align-items: center;
             margin-bottom: 35px;
+
+            @media (min-width: 1280px) {
+                margin-bottom: 52px;
+            }
         }
 
         &:not(:first-child) {
@@ -5573,6 +5684,11 @@ svg use {
     @media (min-width: 1280px) {
         margin: 0;
         width: 100%;
+        height: 54px;
+        line-height: 54px;
+        padding-left: 61px;
+        font-size: 13px;
+        background: url("../img/file-icon-black.svg") no-repeat center left 13px;
     }
 }
 
@@ -5615,7 +5731,9 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        width: 390px;
+        width: 420px;
+        margin-left: 52px;
+        font-size: 13px;
     }
 
     a {
@@ -5627,7 +5745,7 @@ svg use {
     margin-top: 25px;
 
     li {
-        margin-bottom: 22px;
+        margin-bottom: 18px;
     }
 }
 
@@ -5660,6 +5778,7 @@ svg use {
                 display: flex;
                 width: 770px;
                 margin-bottom: 38px;
+                padding-top: 14px;
 
                 .addreview__sub-title {
                     width: 325px;
@@ -5689,7 +5808,8 @@ svg use {
 
             @media (min-width: 1280px) {
                 position: absolute;
-                right: 96px;
+                right: 81px;
+                top: 139px;
             }
 
             @media (min-width: 1600px) {
@@ -5703,5 +5823,25 @@ svg use {
     @media (min-width: 1280px) {
         width: 843px;
         margin-left: auto;
+        margin-right: 33px;
+    }
+}
+
+.product {
+    .breadcrumbs {
+        @media (min-width: 1280px) {
+            padding-top: 30px;
+            margin-bottom: 26px;
+        }
+    }
+}
+
+.reviews-block__items {
+    .reviews {
+        &:last-child {
+            @media (min-width: 1280px) {
+                margin-bottom: 62px;
+            }
+        }
     }
 }
