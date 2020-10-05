@@ -144,10 +144,12 @@
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
 
-                    .product-specif__item
+                    .product-specif__item.product-specif__item_bottom
                         .product-specif__sub-title.cont-subtitle Состав
                         .product-specif__article 
                             |Качественный профессиональный инструмент, созданный для филировки прядей и обладающий высокими эксплуатационными возможностями. Ножницы подойдут как для профессионального парикмахера, так и для начинающих специалистов.
+
+                        button(type="button").show-article Читать дальше
                 .column
                     .product-specif__sub-title.cont-subtitle  Общие характеристики
 
@@ -252,6 +254,22 @@
 
                                 .reviews__appraisal Потрясающие ножницы
 
+                            .column.column_right
+                                .reviews-gallery.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-1.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-2.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-1.jpg")
+                                        .swiper-slide
+                                            .reviews-gallery__item
+                                                img(src="img/rev-sl-2.jpg")
+
                         .reviews__item
                             .reviews__dignity
                                 .reviews__item-title Достоинства
@@ -292,21 +310,21 @@
 
                                 .reviews__appraisal На троечку
 
-                            .column.column_right
-                                .reviews-gallery.swiper-container
-                                    .swiper-wrapper
-                                        .swiper-slide
-                                            .reviews-gallery__item
-                                                img(src="img/rev-sl-1.jpg")
-                                        .swiper-slide
-                                            .reviews-gallery__item
-                                                img(src="img/rev-sl-2.jpg")
-                                        .swiper-slide
-                                            .reviews-gallery__item
-                                                img(src="img/rev-sl-1.jpg")
-                                        .swiper-slide
-                                            .reviews-gallery__item
-                                                img(src="img/rev-sl-2.jpg")
+                            //- .column.column_right
+                            //-     .reviews-gallery.swiper-container
+                            //-         .swiper-wrapper
+                            //-             .swiper-slide
+                            //-                 .reviews-gallery__item
+                            //-                     img(src="img/rev-sl-1.jpg")
+                            //-             .swiper-slide
+                            //-                 .reviews-gallery__item
+                            //-                     img(src="img/rev-sl-2.jpg")
+                            //-             .swiper-slide
+                            //-                 .reviews-gallery__item
+                            //-                     img(src="img/rev-sl-1.jpg")
+                            //-             .swiper-slide
+                            //-                 .reviews-gallery__item
+                            //-                     img(src="img/rev-sl-2.jpg")
 
                         .reviews__item
                             .reviews__dignity
@@ -405,31 +423,31 @@
                             input(type="checkbox")#ch5
                             label(for="ch5")
                                 |Маленькие
+    .product__recom
+        .product-gallery-wrap.container
+            h2.cont-title Вам может понравиться
+            .recom-slider.swiper-container
+                .swiper-wrapper
+                    +actionSliderMain("", "", "10 000 руб.")
+                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                    +actionSliderMain
+                    +actionSliderMain
+                    +actionSliderMain
 
-    .product-cont.product-cont_item.container
-        h2.cont-title Вам может понравиться
-        .recom-slider.swiper-container
-            .swiper-wrapper
-                +actionSliderMain("", "", "10 000 руб.")
-                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
-                +actionSliderMain
-                +actionSliderMain
-                +actionSliderMain
+                .swiper-button-next.swiper-button-next-bg
+                .swiper-button-prev.swiper-button-prev-bg
 
-            .swiper-button-next.swiper-button-next-bg
-            .swiper-button-prev.swiper-button-prev-bg
+        .product-gallery-wrap.container
+            h2.cont-title Вы недавно смотрели
+            .recom-slider.swiper-container
+                .swiper-wrapper
+                    +actionSliderMain("", "", "10 000 руб.")
+                    +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
+                    +actionSliderMain
+                    +actionSliderMain
+                    +actionSliderMain
 
-    .product-cont.product-cont_item.container
-        h2.cont-title Вы недавно смотрели
-        .recom-slider.swiper-container
-            .swiper-wrapper
-                +actionSliderMain("", "", "10 000 руб.")
-                +actionSliderMain("action-tooltip_blue", "Лучшие отзывы", "")
-                +actionSliderMain
-                +actionSliderMain
-                +actionSliderMain
-
-            .swiper-button-next.swiper-button-next-bg
-            .swiper-button-prev.swiper-button-prev-bg
+                .swiper-button-next.swiper-button-next-bg
+                .swiper-button-prev.swiper-button-prev-bg
 
 

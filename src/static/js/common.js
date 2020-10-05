@@ -126,6 +126,11 @@ $(document).ready(function () {
         $(this).addClass("is-active");
     });
 
+    $('.show-article').click(function () {
+        $(this).parent().find('.product-specif__article').addClass('height-auto');
+        $(this).addClass('hidden');
+    });
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
@@ -209,7 +214,7 @@ $(document).ready(function () {
             breakpoints: {
                 499: {
                     slidesPerView: 1.6,
-                    spaceBetween: 35,
+                    spaceBetween: 6,
                 },
                 599: {
                     slidesPerView: 2.3,

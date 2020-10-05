@@ -2032,9 +2032,9 @@ svg use {
     }
 
     @media (max-width: 767px) {
-        width: 120px;
-        padding-top: 20px;
-        margin-bottom: 0px;
+        width: 132px;
+        padding-top: 28px;
+        margin-bottom: 10px;
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -2078,9 +2078,10 @@ svg use {
     }
 }
 
+
 .product-card__name {
     color: #000000;
-    margin-bottom: 7px;
+    margin-bottom: 18px;
     font-size: 12px;
 
     @media (max-width: 767px) {
@@ -2436,6 +2437,7 @@ svg use {
     @media (max-width: 767px) {
         border: none;
         padding-bottom: 25px;
+        margin-bottom: 2px;
     }
 
     .swiper-button-next,
@@ -2488,6 +2490,10 @@ svg use {
     display: inline-block;
     font-size: 14px;
     margin-left: 11px;
+
+    @media (max-width: 767px) {
+        margin-left: 7px;
+    }
 }
 
 .fastview__status {
@@ -4231,6 +4237,10 @@ svg use {
 .product-gallery-top {
     max-width: 515px;
     width: 100%;
+
+    .swiper-pagination {
+        bottom: 14px;
+    }
 }
 
 .product-gallery-thumb {
@@ -4284,6 +4294,10 @@ svg use {
         background-size: contain;
         cursor: pointer;
 
+        @media (max-width: 767px) {
+            margin-left: 5px;
+        }
+
         @media (max-width: 1279px) {
             width: 22px;
             height: 22px;
@@ -4310,7 +4324,7 @@ svg use {
 }
 
 .product__brend {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     color: #858585;
     font-size: 12px;
 
@@ -4328,7 +4342,11 @@ svg use {
 .product__title {
     font-weight: 500;
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 36px;
+
+    @media (max-width: 767px) {
+        padding-right: 90px;
+    }
 
     @media (min-width: 768px) {
         font-size: 25px;
@@ -4345,6 +4363,10 @@ svg use {
 .product__main {
     position: relative;
     margin-bottom: 28px;
+
+    @media (max-width: 767px) {
+        margin: 0;
+    }
 }
 
 .product-status {
@@ -4354,7 +4376,7 @@ svg use {
 
     @media (max-width: 767px) {
         position: absolute;
-        top: 0;
+        top: -31px;
         right: 0;
         z-index: 10;
     }
@@ -4381,7 +4403,7 @@ svg use {
 .product-info__column {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     @media (min-width: 768px) {
         margin-bottom: 36px;
@@ -4439,6 +4461,10 @@ svg use {
 
     li {
         margin-bottom: 9px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -4447,6 +4473,10 @@ svg use {
     color: #38B2AC;
     margin-bottom: 20px;
     font-size: 13px;
+
+    @media (max-width: 767px) {
+        padding-top: 14px;
+    }
 
     @media (min-width: 768px) {
         font-size: 14px;
@@ -4768,6 +4798,10 @@ svg use {
             flex-direction: column;
             text-align: center;
 
+            @media (max-width: 767px) {
+                padding-top: 7px;
+            }
+
             @media (min-width: 600px) and (max-width: 767px) {
                 text-align: left;
             }
@@ -4785,7 +4819,8 @@ svg use {
 }
 
 .product-addbasket {
-    width: 140px;
+    width: 160px;
+    height: 42px;
     margin-bottom: 15px;
     border-radius: 0px 28px 0px;
 
@@ -4845,6 +4880,14 @@ svg use {
     margin-top: 33px;
     margin-bottom: 27px;
 
+    @media (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 36px;
+    }
+
     @media (min-width: 768px) {
         width: 310px;
         height: 128px;
@@ -4868,9 +4911,9 @@ svg use {
 
 .product-action__img {
     position: absolute;
-    width: 95px;
+    width: 100px;
     left: 14px;
-    bottom: 11px;
+    bottom: 6px;
 
     @media (min-width: 768px) {
         width: 115px;
@@ -4885,7 +4928,7 @@ svg use {
 }
 
 .product-action__article {
-    padding-left: 100px;
+    padding-left: 103px;
 
     @media (min-width: 768px) {
         padding-left: 115px;
@@ -5033,7 +5076,7 @@ svg use {
 }
 
 .product-specif__sub-title {
-    margin-bottom: 18px;
+    margin-bottom: 21px;
 
     @media (min-width: 768px) {
         margin-bottom: 35px;
@@ -5058,14 +5101,66 @@ svg use {
 }
 
 .product-specif__article {
+    font-size: 13px;
+    line-height: 22px;
+
     @media (min-width: 768px) {
         font-size: 15px;
         line-height: 26px;
     }
 }
 
+.product-specif__item_bottom {
+    .product-specif__article {
+        @media (max-width: 767px) {
+            height: 136px;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 40px;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 18%, rgba(255, 255, 255, 0.4) 72%);
+            }
+        }
+    }
+
+    .product-specif__article.height-auto {
+        height: auto;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.show-article {
+    color: #38B2AC;
+    font-size: 13px;
+    background: none;
+    margin-top: 21px;
+    padding: 0;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.show-article.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .product-specif__item {
     margin-bottom: 25px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 28px;
+    }
 
     @media (min-width: 768px) {
         width: 308px;
@@ -5159,6 +5254,10 @@ svg use {
 
     .column {
         &:first-child {
+            @media (max-width: 767px) {
+                margin-bottom: 40px;
+            }
+
             @media (min-width: 768px) and (max-width: 1279px) {
                 display: flex;
             }
@@ -5415,8 +5514,8 @@ svg use {
     .reviews-stars {
         @media (max-width: 767px) {
             position: absolute;
-            top: 8px;
-            left: 60px;
+            top: 14px;
+            left: 53px;
         }
     }
 }
@@ -5449,7 +5548,7 @@ svg use {
     text-transform: uppercase;
 
     @media (max-width: 767px) {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     @media (min-width: 768px) {
@@ -5504,6 +5603,10 @@ svg use {
         height: 100%;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.47942927170868344) 15%, rgba(255, 255, 255, 1) 85%);
         z-index: 10;
+
+        @media (max-width: 767px) {
+            width: 52px;
+        }
     }
 
     .swiper-slide {
@@ -5516,13 +5619,13 @@ svg use {
     }
 
     @media (max-width: 767px) {
-        margin-bottom: 13px;
+        margin-bottom: 25px;
     }
 }
 
 .reviews__item-title {
     font-size: 13px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     color: #858585;
 
     @media (min-width: 768px) {
@@ -5545,6 +5648,8 @@ svg use {
 
 .reviews__article {
     margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 23px;
 
     @media (min-width: 768px) {
         font-size: 15px;
@@ -5649,12 +5754,29 @@ svg use {
 .reviews__top {
     .column_left {
         width: 370px;
+
+        .reviews-stars {
+            svg {
+                @media (max-width: 767px) {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}
+
+.product-gallery-wrap {
+    .cont-title {
+        margin-bottom: 14px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 55px;
+        }
     }
 
-    .column_right {
-        width: calc(100% - 400px);
-        display: flex;
-        justify-content: flex-end;
+    @media (max-width: 767px) {
+        padding-right: 0;
     }
 }
 
@@ -5666,6 +5788,10 @@ svg use {
     border-radius: 0px 0px 60px 0px;
     padding: 33px 20px;
     margin-bottom: 66px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 46px;
+    }
 
     @media (min-width: 768px) and (max-width: 1279px) {
         padding: 41px 20px 41px 61px;
@@ -5745,6 +5871,18 @@ svg use {
             }
         }
 
+        &:nth-child(3) {
+            @media (max-width: 767px) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+
         &:not(:first-child) {
             @media (min-width: 1280px) {
                 display: flex;
@@ -5792,7 +5930,7 @@ svg use {
     border: none;
     background: none;
     border-bottom: 1px solid #DBDBDB;
-    height: 36px;
+    height: 28px;
     outline: none;
 
     @media (min-width: 768px) {
@@ -5808,6 +5946,11 @@ svg use {
     border-bottom: 3px solid #38B2AC;
     height: 40px;
     resize: none;
+
+    @media (max-width: 767px) {
+        height: 45px;
+        padding-top: 10px;
+    }
 
     @media (min-width: 768px) and (max-width: 1279px) {
         padding-top: 15px;
@@ -5897,7 +6040,11 @@ svg use {
 }
 
 .addreview__checks {
-    margin-top: 25px;
+    margin-top: 27px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 34px;
+    }
 
     @media (min-width: 768px) and (max-width: 1279px) {
         margin-bottom: 55px;
@@ -5908,6 +6055,12 @@ svg use {
 
         @media (min-width: 768px) and (max-width: 1279px) {
             margin-bottom: 17px;
+        }
+    }
+
+    label {
+        @media (max-width: 767px) {
+            font-size: 13px;
         }
     }
 }
@@ -5985,6 +6138,10 @@ svg use {
 .addreview__inp_txt {
     resize: none;
 
+    @media (max-width: 767px) {
+        height: 24px;
+    }
+
     @media (min-width: 768px) and (max-width: 1279px) {
         height: 54px;
         padding-top: 5px;
@@ -6001,6 +6158,11 @@ svg use {
 
 .product {
     .breadcrumbs {
+        @media (max-width: 767px) {
+            padding-top: 15px;
+            margin-bottom: 14px;
+        }
+
         @media (min-width: 768px) {
             margin-bottom: 24px;
         }
@@ -6009,6 +6171,18 @@ svg use {
             padding-top: 30px;
             margin-bottom: 26px;
         }
+    }
+}
+
+.product__recom {
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 70px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 100px;
     }
 }
 
