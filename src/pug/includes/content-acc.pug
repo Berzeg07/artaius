@@ -1,0 +1,57 @@
+.account
+    ul.account__top.container
+        li
+            .breadcrumbs
+                a(href="#") Главная
+                span Личный кабинет
+        li
+            a(href="#").acc-exit Выйти из аккаунта
+
+    .account__columns.container
+        .column
+            .acc-tabs
+                .acc-tabs__item(data-tab="#prof")
+                    .acc-tabs__img.acc-tabs__img-profile
+
+                    .acc-tabs__cont
+                        .acc-tabs__title Настройки профиля
+                        .acc-tabs__article Адрес, пароль
+
+                .acc-tabs__item(data-tab="#disc")
+                    .acc-tabs__img.acc-tabs__img-discounts
+                    .acc-tabs__cont
+                        .acc-tabs__title Программа лояльности
+                        .acc-tabs__article Скидки
+
+                .acc-tabs__item(data-tab="#hist")
+                    .acc-tabs__img.acc-tabs__img-hist
+
+                    .acc-tabs__cont
+                        .acc-tabs__title История заказов
+
+                .acc-tabs__item(data-tab="#fav")
+                    .acc-tabs__img.acc-tabs__img-favor
+
+                    .acc-tabs__cont
+                        .acc-tabs__title Избранное
+                        .acc-tabs__article 3 товара
+
+        .column
+            .acc-tabscont
+                .tab-profile.acc-tabscont__item#prof
+                    ul.tab-profile__top
+                        li
+                            .acc-tabscont__title Избранное
+                            .acc-tabscont__article Мы обязательно сообщим вам о скидках и акциях на избранные товары
+                        li
+                            button(type="button").tab-profile__btn Перенести все товары в корзину
+
+                    .product-list
+                        +productCardFavor
+                        +productCardFavor('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+                        +productCardFavor
+                        +productCardFavor('action-tooltip_red', 'Sale', '10 600 руб.')
+                        +productCardFavor
+                        +productCardFavor('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+
+

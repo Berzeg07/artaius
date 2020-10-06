@@ -146,11 +146,162 @@ mixin fastviewItem
 					li
 						button(type="button").btn.fastview__btn В корзину
 
+//- Быстрый просмотр товара (Избранное)*
+mixin fastviewItemFavor
+	.fastview-item
+		.fastview__brend 
+			|Suntachi
+			button(type="button").fastview__close
+
+		.fastview__title Прямые ножницы 5+ класс
+
+		.fastview__inner
+			.fastview__item-left
+				.fastview-gallery-top.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+
+					.swiper-button-next.swiper-button-next-min
+					.swiper-button-prev.swiper-button-prev-min
+
+				.fastview-gallery-thumb.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+						.swiper-slide
+							.fastview-gallery__item
+								img(src="img/fw-product.jpg")
+
+				.fastview__more-link
+					a(href="#") Больше информации о товаре
+
+			.fastview__item-right
+				.fastview__top-info
+					+starReyting
+
+					.fastview__status В наличии
+
+				ul.fastview__specif
+					li
+						span Артикул
+						span 09-55
+					li
+						span Сталь
+						span Hitachi Япония, 440А
+					li
+						span Бренд
+						span Suntachi
+					li
+						span Серия
+						span Suntachi Classic Gold
+					li
+						span Вид полотна
+						span Клиновидный
+					li
+						span Упор
+						span Съемный
+					li
+						span Ручка
+						span Эргономика, 2 плоскости
+					li
+						span Размер колец
+						span Верхние: 18-21 мм; Нижнее: 18-20 мм
+					li
+						span Виды срезов и техника
+						span Скользящий, прямой точный, точечный, поинтинг, техника выкройки
+					li
+						span Страна производства
+						span Южная Корея
+					li
+						span Категории
+						span Прямые ножницы, Ножницы для правшей
+
+				ul.fastview__columns
+					li
+						.select.select-refprod
+							select
+								option Выбрать упаковку
+								option Тест 1
+								option Тест 2
+					li
+						.select.select-refprod
+							select
+								option Выбрать крепление
+								option Тест 1
+								option Тест 2
+					li
+						.fastview__price-info
+							.fastview__price-new
+								.action-tooltip.action-tooltip_red Sale
+								.fastview__price-new 
+									|7 450  
+									span руб.
+
+							.fastview__price-old 
+								|8 320  
+								span руб.
+					li
+						button(type="button").btn.fastview__btn В корзину
+
 //- Карточка товара в слайдере *
 mixin productCard(tooltipClassColor, tooltipText, oldPrice)
 	.product-card
 		+fastviewItem
 		.addfavor
+		.product-card__img
+			a(href="#")
+				img(src="img/product-1.jpg")
+
+			button(type="button").fastview-btn Быстрый просмотр
+
+		if tooltipClassColor
+			div(class="action-tooltip "+tooltipClassColor)= tooltipText
+
+		.product-card__brend 
+			a(href="#") Suntachi Salon
+
+		.product-card__name
+			a(href="#") Прямые ножницы ZG-B PETROL 7 категория
+
+		ul.specif
+			li
+				span.specif__name Сталь: 
+				span.specif__article Hitachi Япония, 440С
+			li
+				span.specif__name Вид полотна: 
+				span.specif__article Филировочный
+
+		ul.product-card__column
+			li
+				button(type="button").btn.btn_buy Купить
+			li
+				ul.product-card__column-list
+					li
+						span Цена
+						if oldPrice
+							div(class="product-card__old-price")= oldPrice
+					li
+						.product-card__new-price 
+							|10 300 
+							span руб.
+
+//- Карточка товара в избранном (личный кабинет) *
+mixin productCardFavor(tooltipClassColor, tooltipText, oldPrice)
+	.product-card
+		+fastviewItemFavor
+		.addfavor-active
 		.product-card__img
 			a(href="#")
 				img(src="img/product-1.jpg")
