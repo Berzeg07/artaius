@@ -6447,7 +6447,7 @@ svg use {
     }
 }
 
-.tab-profile__top {
+.tab-favor__top {
     @media (min-width: 768px) and (max-width: 1279px) {
         display: flex;
         justify-content: space-between;
@@ -6500,7 +6500,7 @@ svg use {
     }
 }
 
-.tab-profile__btn {
+.tab-favor__btn {
     background: #DBE3FF;
     border-radius: 22px;
     width: 278px;
@@ -6919,6 +6919,47 @@ svg use {
     }
 }
 
+.empty-order {
+    @media (min-width: 600px) {
+        display: flex;
+    }
+}
+
+.empty-order__img {
+    position: relative;
+    width: 184px;
+
+    @media (max-width: 767px) {
+        margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+        top: -30px;
+        width: 270px;
+    }
+
+    @media (min-width: 1280px) {
+        width: auto;
+    }
+}
+
+.empty-order__article {
+    font-size: 13px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 44px;
+    }
+
+    @media (min-width: 768px) {
+        margin-right: 126px;
+        font-size: 16px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 24px;
+    }
+}
+
 
 
 
@@ -6926,6 +6967,7 @@ svg use {
 
 
 // Временно !!!!!!!!!!!!!!!!!
-.tab-profile {
+.tab-favor,
+.tab-myorders {
     display: none;
 }
