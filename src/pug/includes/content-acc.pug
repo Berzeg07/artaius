@@ -167,7 +167,7 @@ mixin orderProduct
                         .tab-profile__adress-block
                             ul.tab-profile__adress-item
                                 li
-                                    input(type="text" value="Санкт-Петербург, ул. Зеленая, д.5, к.1, кв. 34" disabled).tab-profile__adress
+                                    .tab-profile__adress Санкт-Петербург, ул. Зеленая, д.5, к.1, кв. 34
                                 li
                                     button(type="button").tab-profile__change-btn.editadress Изменить
 
@@ -175,17 +175,18 @@ mixin orderProduct
                             button(type="button").tab-profile__addadress-btn Добавить еще один адрес доставки
 
                         form.changepass(action="#")
-                            .changepass__title Сменить пароль
+                            .changepass__item
+                                .changepass__title Сменить пароль
 
-                            input(type="text" placeholder="Новый пароль").changepass__inp
+                                input(type="text" placeholder="Новый пароль").changepass__inp
 
-                            input(type="text" placeholder="Повторите пароль").changepass__inp
+                                input(type="text" placeholder="Повторите пароль").changepass__inp
 
-                            button(type="submit").btn Сохранить 
+                                button(type="submit").btn.changepass__btn Сохранить 
 
                     .tab-profile__column
                         .add-profilephoto
                             input(type="file")#addphoto
-                            label(for="addphoto")
+                            label(for="addphoto").addphoto-label
                                 .add-profilephoto__img
                                     img(src="img/add-photo.png")
