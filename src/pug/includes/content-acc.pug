@@ -1,3 +1,19 @@
+mixin orderProduct
+    .order-product
+        .order-product__img
+            img(src="img/product.jpg")
+
+        .order-product__info
+            .order-product__title Прямые ножницы класса 5+ дизайнерские
+
+            .order-product__articule Арт. 12-7896
+
+            .order-product__price
+                |2 800 
+                span руб.
+
+            a(href="#").order-product__link Оставить отзыв
+
 .account
     ul.account__top.container
         li
@@ -5,7 +21,7 @@
                 a(href="#") Главная
                 span Личный кабинет
         li
-            a(href="#").acc-exit Выйти из аккаунта
+            a(href="#").acc-exit.acc-exit_mob Выйти из аккаунта
 
     .account__columns.container
         .column
@@ -23,7 +39,7 @@
                         .acc-tabs__title Программа лояльности
                         .acc-tabs__article Скидки
 
-                .acc-tabs__item(data-tab="#hist")
+                .acc-tabs__item(data-tab="#myorders")
                     .acc-tabs__img.acc-tabs__img-hist
 
                     .acc-tabs__cont
@@ -35,6 +51,9 @@
                     .acc-tabs__cont
                         .acc-tabs__title Избранное
                         .acc-tabs__article 3 товара
+
+            .acc-exit_desc
+                a(href="#").acc-exit Выйти из аккаунта
 
         .column
             .acc-tabscont
@@ -53,5 +72,65 @@
                         +productCardFavor('action-tooltip_red', 'Sale', '10 600 руб.')
                         +productCardFavor
                         +productCardFavor('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
+
+                .tab-myorders.acc-tabscont__item#myorders
+                    .acc-tabscont__title Мои заказы
+
+                    .orders-block.orders-block_expect
+                        .orders-block__top
+                            .orders-block___num Заказ №897-654
+                            .orders-block__status.orders-block__status_expect Ожидает выдачи
+
+                        .orders-block__hidden
+                            ul.orders-block__info
+                                li
+                                    .orders-block__subtitle Дата доставки
+                                    .orders-block__article 9 июня 2020
+                                li
+                                    .orders-block__subtitle Способ доставки
+                                    .orders-block__article Самовывоз
+                                li
+                                    .pickup Московский проспект, д.8, к. 1, офис 38
+                                li
+                                    .orders-block__price 
+                                        |1 282 
+                                        span руб.
+
+                                    .orders-block__subtitle Оплата картой
+
+                            .orders-list.swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        +orderProduct
+                                    .swiper-slide
+                                        +orderProduct
+                                    .swiper-slide
+                                        +orderProduct
+                                    .swiper-slide
+                                        +orderProduct
+
+                    .orders-block.orders-block_done
+                        .orders-block__top
+                            .orders-block___num Заказ №897-654
+                            .orders-block__status.orders-block__status_done Получено
+
+                        .orders-block__hidden
+                            ul.orders-block__info
+                                li
+                                    .orders-block__subtitle Дата доставки
+                                    .orders-block__article 9 июня 2020
+                                li
+                                    .orders-block__subtitle Способ доставки
+                                    .orders-block__article Доставка курьероом
+                                li
+                                    .pickup Московский проспект, д.8, к. 1, офис 38
+                                li
+                                    .orders-block__price 
+                                        |1 282 
+                                        span руб.
+
+                                    .orders-block__subtitle Оплата картой
+
+
 
 
