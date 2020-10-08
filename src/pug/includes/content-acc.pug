@@ -57,6 +57,7 @@ mixin orderProduct
 
         .column
             .acc-tabscont
+                //- Избранное *
                 .tab-favor.acc-tabscont__item#favors
                     ul.tab-favor__top
                         li
@@ -73,6 +74,7 @@ mixin orderProduct
                         +productCardFavor
                         +productCardFavor('action-tooltip_blue', 'Лучшие отзывы', '10 600 руб.')
 
+                //- Мои заказы *
                 .tab-myorders.acc-tabscont__item#myorders
                     .acc-tabscont__title Мои заказы
 
@@ -136,7 +138,7 @@ mixin orderProduct
                         .empty-order__img
                             img(src="img/empty-order.png")
 
-
+                //- Профиль *
                 .tab-profile.acc-tabscont__item#prof
                     .tab-profile__column
                         ul.tab-profile__name-block
@@ -150,17 +152,17 @@ mixin orderProduct
                                 .tab-profile__subtitle Телефон
 
                                 .tab-profile__phone
-                                    a(href="tel:79114528912") +7 (911) 452-89-12
+                                    input(type="text" value="+7 (911) 452-89-12" disabled)
 
-                                button(type="button").tab-profile__change-btn.editphone Изменить
+                                button(type="button").tab-profile__change-btn.editcont Изменить
 
                             li
                                 .tab-profile__subtitle Почта
 
                                 .tab-profile__email
-                                    a(href="mailto:79114528912") user@mail.ru
+                                    input(type="text" value="user@mail.ru" disabled)
 
-                                button(type="button").tab-profile__change-btn.editemail Изменить
+                                button(type="button").tab-profile__change-btn.editcont Изменить
 
                         .tab-profile__subtitle Адрес доставки
 
@@ -171,8 +173,15 @@ mixin orderProduct
                                 li
                                     button(type="button").tab-profile__change-btn.editadress Изменить
 
+                            ul.tab-profile__adress-item
+                                li
+                                    .tab-profile__adress Санкт-Петербург, пр. Мира кв. 34
+                                    .tab-profile__adress-comment вход со двора, 5 этаж
+                                li
+                                    button(type="button").tab-profile__change-btn.editadress Изменить
+
                         .tab-profile__addadress-block    
-                            button(type="button").tab-profile__addadress-btn Добавить еще один адрес доставки
+                            button(type="button").tab-profile__addadress-btn.editadress Добавить еще один адрес доставки
 
                         form.changepass(action="#")
                             .changepass__item
@@ -188,5 +197,51 @@ mixin orderProduct
                         .add-profilephoto
                             input(type="file")#addphoto
                             label(for="addphoto").addphoto-label
-                                .add-profilephoto__img
-                                    img(src="img/add-photo.png")
+                                .addphoto-label__item
+                                    .add-profilephoto__img
+                                        img(src="img/add-photo.png")
+                                    span Добавить фото
+
+                //- Дисконтная программа *
+                .tab-discount.acc-tabscont__item#disc
+                    .acc-tabscont__title Дисконтная программа 
+
+                    .tab-discount__inner
+                        .tab-discount__column
+                            .tab-discount__cont.tab-discount__cont_top
+                                p Мы ценим наших клиентов и считаем, что каждая покупка должна вам приносить не только радость, но и выгоду!
+                                p Получайте и увеличивайте скидки, совершая покупки:
+
+                            ul.tab-discount__list
+                                li
+                                    span -5%
+                                    p при единовременной покупке на сумму от 5000 до 10 000 рублей
+                                li
+                                    span -10%
+                                    p при единовременной покупке на сумму от 10 001 до 30 000 рублей
+                                li
+                                    span -15%
+                                    p при единовременной покупке на сумму от 30 001 рубля
+
+                            a(href="#").tab-discount__link Положения о дисконтной программме
+
+                            .tab-discount__subtitle У вас уже есть дисконтная карта?
+
+                            .tab-discount__cont
+                                p Если у вас есть пластиковая дисконтная карта, то вы можете указать ее номер и воспользоваться вашей скидкой:
+
+                            form(action="#").tab-discount__form
+                                input(type="text" placeholder="Номер карты")
+                                button(type="submit").btn-black Сохранить
+
+                        .tab-discount__column
+                            ul.tab-discount__action
+                                li
+                                    .tab-discount__img
+                                        img(src="img/test.png")
+                                li
+                                    .tab-discount__subtitle Сейчас ваша скидка
+                                    .tab-discount__count 10%
+
+
+

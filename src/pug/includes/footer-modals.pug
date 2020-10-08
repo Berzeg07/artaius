@@ -1,1 +1,23 @@
 .overlay
+
+.modal-lk.modal-lk_addadress
+    form(action="#")
+        button(type="button").close-modal
+
+        .addadress-column-left
+            .modal-lk__title Введите адрес или выберите на карте
+
+            .modal-lk__inputs
+                input(type="text" placeholder="Адрес").modal-lk__inp
+                input(type="text" placeholder="Квартира").modal-lk__inp
+                input(type="text" placeholder="Этаж").modal-lk__inp
+                input(type="text" placeholder="Подъезд").modal-lk__inp
+                input(type="text" placeholder="Индекс").modal-lk__inp
+
+            textarea(placeholder="Комментарий").modal-lk__textarea
+
+            button(type="submit").btn-black.modal-lk__btn Привезти сюда
+
+        .addadress-column-right
+            .map-adress
+                img(src="img/map-adress.jpg")

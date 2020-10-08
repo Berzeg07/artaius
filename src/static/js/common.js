@@ -158,6 +158,28 @@ $(document).ready(function () {
         $(this).addClass('hidden');
     });
 
+    $('.editadress').click(function () {
+        $('.modal-lk_addadress').fadeIn();
+        $('.overlay').fadeIn();
+    });
+
+    $('.close-modal').click(function () {
+        $('.modal-lk_addadress').fadeOut();
+        $('.overlay').fadeOut();
+    });
+
+    $('.editcont').click(function () {
+        $(this).parent().find('input').removeAttr('disabled').focus();
+    });
+
+    $('.editname').click(function () {
+        $(this).parents('.tab-profile__name-block').find('input').removeAttr('disabled').focus();
+    });
+
+    $('.tab-profile__phone input, .tab-profile__email input, .tab-profile__name').focusout(function () {
+        $(this).attr('disabled', 'disabled');
+    });
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,
