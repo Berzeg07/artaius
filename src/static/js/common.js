@@ -180,6 +180,15 @@ $(document).ready(function () {
         $(this).attr('disabled', 'disabled');
     });
 
+    $('.acc-tabs .acc-tabs__item').click(function () {
+        $('.acc-tabs__item').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('data-tab');
+        $('.acc-tabscont__item').not(tab).css({ 'display': 'none' });
+        $(tab).fadeIn(400);
+    });
+    $('.acc-tabs .acc-tabs__item:nth-child(3)').click();
+
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
             slidesPerView: 4,

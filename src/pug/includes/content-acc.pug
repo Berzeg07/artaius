@@ -58,7 +58,7 @@ mixin orderProduct
         .column
             .acc-tabscont
                 //- Избранное *
-                .tab-favor.acc-tabscont__item#favors
+                .tab-favor.acc-tabscont__item#fav
                     ul.tab-favor__top
                         li
                             .acc-tabscont__title Избранное
@@ -187,9 +187,9 @@ mixin orderProduct
                             .changepass__item
                                 .changepass__title Сменить пароль
 
-                                input(type="text" placeholder="Новый пароль").changepass__inp
+                                input(type="text" placeholder="Новый пароль").changepass__inp.changepass__inp_new
 
-                                input(type="text" placeholder="Повторите пароль").changepass__inp
+                                input(type="text" placeholder="Повторите пароль").changepass__inp.changepass__inp_old
 
                                 button(type="submit").btn.changepass__btn Сохранить 
 
@@ -227,7 +227,7 @@ mixin orderProduct
 
                             .tab-discount__subtitle У вас уже есть дисконтная карта?
 
-                            .tab-discount__cont
+                            .tab-discount__cont.tab-discount__cont_bottom
                                 p Если у вас есть пластиковая дисконтная карта, то вы можете указать ее номер и воспользоваться вашей скидкой:
 
                             form(action="#").tab-discount__form
