@@ -187,7 +187,34 @@ $(document).ready(function () {
         $('.acc-tabscont__item').not(tab).css({ 'display': 'none' });
         $(tab).fadeIn(400);
     });
-    $('.acc-tabs .acc-tabs__item:nth-child(3)').click();
+    $('.acc-tabs .acc-tabs__item:first-child').click();
+
+    $(".switch-counter .switch-counter__btn").on("click", function () {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        if ($button.text() == "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        }
+        else {
+            if (oldValue > 1) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+
+        $button.parent().find("input").val(newVal);
+
+        if (newVal == 1) {
+            $button.parent().find('.switch-counter__btn_minus').addClass('disabled');
+        } else {
+            $button.parent().find('.switch-counter__btn_minus').removeClass('disabled');
+        }
+    });
+
+    $('.purchase__delete').click(function () {
+        $(this).parents('.purchase').remove();
+    });
 
     $('.tab-slider').each(function () {
         var actionSlider = new Swiper(this, {
