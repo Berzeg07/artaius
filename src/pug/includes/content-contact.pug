@@ -1,0 +1,78 @@
+.contacts.container
+    .breadcrumbs
+        a(href="#") Главная
+        span Контакты
+
+    .contacts__columns
+        .column
+            h1.contacts__title Контакты
+
+            .contacts__place Мы находимся:
+
+            ul.our-office
+                li
+                    .our-office__city г. Москва, ул. 3-я Парковая, д.41А
+                    .our-office__time Время работы: Пн - Пт с 10:00 до 18:00
+                    .our-office__phone Телефон офиса: +7 (499) 163-12-00
+                li
+                    .our-office__adress 
+                        span Как до нас добраться: <br>
+                        |Мы находимся в бизнес-центре “На Парковой”, этаж 1, помещение 2, комната №46а
+
+        .column
+            .contacts__map
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A164747396a4f050c82061a5f46fbde016e878fdcc48d888116671d0147edd8e7&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
+    ul.contact-list
+        li
+            .contact-list__title.contact-list__title_phone Звоните:
+
+            ul.phone-list
+                li
+                    a(href="tel:74991631200") +7 (499) 163-12-00
+                li
+                    a(href="tel:79067193347") +7 (906) 719-33-47
+                li
+                    a(href="tel:79061326570") +7 (906) 132-65-70
+                li
+                    button(type="button").btn.phone-list__btn Перезвоните мне
+
+        li
+            .contact-list__title.contact-list__title_letter Пишите:
+
+            .contact-list__email 
+                a(href="mailto:sales@artarius.ru") sales@artarius.ru
+
+            .contact-list__whatsapp Whatsapp
+        li
+            .contact-list__title.contact-list__title_subscribe Подписывайтесь:
+
+            .subcsribe.subcsribe__inst
+                a(href="#")
+                    .subcsribe__article Профиль Instagram
+                    .subcsribe__adress @suntachi_russia
+
+            .subcsribe.subcsribe__vk
+                a(href="#")
+                    .subcsribe__article Группа ВК
+                    .subcsribe__adress vk.com/artaius2008
+
+    .subscription-block
+        .subscription-block__title Получите скидку -10%<br> на первый заказ
+
+        form.subscription-form(action="#")
+            input(type="text" placeholder="E-mail")
+            button(type="submit").subscription-form__btn.btn
+
+        .check-block.subscription-block__privacy
+            input(type="checkbox" checked)#privacyCheck
+            label(for="privacyCheck")
+                |Подтверждаю, что я ознакомлен и согласен с условиями 
+                a(href="#") политики конфиденциальности
+
+    .legalinfo
+        h2.legalinfo__title Юридическая информация
+        .legalinfo__company OOO «Артайус»
+        .legalinfo__ogrn 
+            b ОГРН: 
+            |1 117 746 141 435
