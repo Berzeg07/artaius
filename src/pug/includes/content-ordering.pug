@@ -1,0 +1,138 @@
+.ordering
+    .container
+        .breadcrumbs
+            a(href="#") Главная
+            span Личный кабинет
+
+        h2.lk-title.ordering__title Оформление заказа
+
+    .ordering__columns.container
+        .column           
+            .delivmethod.ordering__block
+                .ordering__block__title.delivmethod__title-top Способ доставки
+                .delivmethod__city
+                    |Ваш город: 
+                    span Москва
+
+                ul.delivery-typelist
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__title Самовывоз
+                            .delivery-typelist__subtitle завтра (28 августа)
+                            .delivery-typelist__article 3-я Парковая, д.41А, бизнес-центр "На Парковой"
+                            .delivery-typelist__pricing Бесплатно
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__title Курьерская доставка
+                            .delivery-typelist__subtitle завтра (28 августа)
+                            .delivery-typelist__article 
+                                |в пределах МКАД — 400 руб. <br>
+                                |до 10 км от МКАД — 600 руб.
+                            .delivery-typelist__pricing Бесплатно от 5000 руб.
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__title Почтой России
+                            .delivery-typelist__subtitle от 3 до 30 дней
+                            .delivery-typelist__article 
+                                a(href="#") Подробнее о тарифе
+                            .delivery-typelist__pricing Бесплатно от 3000 руб.
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__title Boxberry
+                            .delivery-typelist__subtitle завтра (28 августа)
+                            .delivery-typelist__article 
+                                |Курьером или доставка в пункт самовывоза
+                            .delivery-typelist__pricing 600 руб.
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__title СДЭК
+                            .delivery-typelist__subtitle завтра (28 августа)
+                            .delivery-typelist__article 
+                                |Курьером или доставка в пункт самовывоза
+                            .delivery-typelist__pricing 360 руб.
+
+                .ordering__block__title.delivmethod__title-bottom Выберите адрес доставки
+
+                ul.delivery-typelist.delivery-typelist_checkadress
+                    li
+                        .delivmethod__about-shipping
+                            b Выбрать адрес доставки или пункт выдачи
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__place Доставка по адресу
+                            .delivery-typelist__article Россия, г. Санкт-Петербург, ул. Караванная, д. 18
+                            .delivery-typelist__comment Вход со двора 
+                    li
+                        .delivery-typelist__item
+                            .delivery-typelist__place Пункт выдачи СДЭК
+                            .delivery-typelist__article 
+                                |Россия, г. Санкт-Петербург, Богатырский пр., д. 6
+                            .delivery-typelist__days Пн-Пт: 10:00 — 21:00
+
+            .ordering__block.ordering__block_recipient
+                .ordering__block__title Получатель
+
+                ul.ordering-data
+                    li
+                        input(type="text" placeholder="Ф.И.О. по паспорту").ordering-data__inp.ordering-data__inp-name
+                    li
+                        input(type="text" placeholder="+7 (___) ___-__-__").ordering-data__inp.ordering-data__inp-contact
+                        .ordering-data__article По этому номеру телефона мы свяжемся с вами для подтверждения заказа
+                    li
+                        input(type="text" placeholder="Email").ordering-data__inp.ordering-data__inp-email
+                        .ordering-data__article На эту почту будет отправлен трэк-номер для отслеживания заказа
+
+            .ordering__block.ordering__block_payment
+                .ordering__block__title Способ оплаты
+
+                ul.ordering-checklist
+                    li
+                        .check-block.ordering-check
+                            input(type="radio" name="typeRadio")#online
+                            label(for="online") Оплата онлайн
+                            .ordering-check__article Оплатить сейчас банковской картой или Яндекс.Деньгами
+                    li
+                        .check-block.ordering-check
+                            input(type="radio" name="typeRadio")#uponreceipt
+                            label(for="uponreceipt") Оплата онлайн
+                    li
+                        .check-block.ordering-check
+                            input(type="radio" name="typeRadio")#cash
+                            label(for="cash") Наличными курьеру
+
+        .column
+            form(action="#").purchase-form
+                .purchase-form__title Ваша корзина
+
+                ul.basket-totalinfo
+                    li
+                        span Товаров в корзине
+                        span 3 шт
+                    li
+                        span На общую сумму
+                        span 32 290 
+                            i руб.
+                    li
+                        span Вы экономите
+                        span.basket-total__econom - 2 300 
+                            i руб.
+
+                ul.basket-totalblock
+                    li 
+                        |Итого
+                    li 
+                        .basket-totalblock__price 32 000 
+                            span руб.
+
+                button(type="submit").purchase-form__btn.btn Подтвердить заказ
+
+                .purchase-form__privacy 
+                    |Нажимая на кнопку «Подтвердить заказ», вы подтверждаете, что ознакомлены и согласны с условиями политики конфиденциальности и публичной оферты
+
+            .promocode
+                .promocode__title Промокод
+                .promocode__article У вас дисконтная карта? <br>Введите 10-значный код <br>и воспользуйтесь вашей скидкой!
+                form(action="#").promocode__form
+                    input(type="text" placeholder="Код купона")
+                    button(type="submit")
+
