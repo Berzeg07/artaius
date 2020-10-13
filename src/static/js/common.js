@@ -372,11 +372,34 @@ $(document).ready(function () {
         $(this).next().slideToggle();
     });
 
+    $('.deliveryserv__switch').click(function () {
+        $(this).toggleClass('is-active');
+        if ($(this).hasClass('is-active')) {
+            $('.deliveryserv__item_map').css('display', 'none');
+            $('.deliveryserv__item_list').fadeIn();
+            $(this).text('Показать на карте');
+        } else {
+            $(this).text('Показать списком');
+            $('.deliveryserv__item_list').css('display', 'none');
+            $('.deliveryserv__item_map').fadeIn();
+        }
+    });
+
     $('.brends-list__modal').mCustomScrollbar({
         axis: 'y',              // вертикальный скролл 
         theme: 'dark',  // тема 
         // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
         setHeight: 264,         // высота блока (переписывает CSS) 
+        // mouseWheel: {
+        //     deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
+        // }
+    });
+
+    $('.delivery-list').mCustomScrollbar({
+        axis: 'y',              // вертикальный скролл 
+        theme: 'dark',  // тема 
+        // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+        setHeight: 360,         // высота блока (переписывает CSS) 
         // mouseWheel: {
         //     deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
         // }
