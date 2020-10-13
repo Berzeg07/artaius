@@ -9484,10 +9484,42 @@ svg use {
 .shippingpage__top {
     margin-bottom: 43px;
 
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1100px) {
+        margin-bottom: 148px;
+    }
+
     .column {
+        &:first-child {
+            @media (min-width: 768px) {
+                width: calc(100% - 257px);
+                padding-right: 60px;
+            }
+
+            @media (min-width: 1100px) {
+                width: calc(100% - 316px);
+            }
+
+            @media (min-width: 1280px) {
+                width: 805px;
+            }
+        }
+
         &:last-child {
             @media (max-width: 767px) {
                 display: none;
+            }
+
+            @media (min-width: 768px) {
+                width: 257px;
+            }
+
+            @media (min-width: 1100px) {
+                width: 316px;
             }
         }
     }
@@ -9510,6 +9542,12 @@ svg use {
     padding-left: 41px;
     padding-right: 88px;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        padding-right: 0;
+        margin-bottom: 45px;
+        padding-left: 52px;
+    }
 
     &:after {
         content: "";
@@ -9546,9 +9584,16 @@ svg use {
     @media (min-width: 376px) {
         width: 191px;
     }
+
+    @media (min-width: 768px) {
+        margin-left: 52px;
+    }
 }
 
 .shippinginfo__item {
+    position: relative;
+    font-size: 13px;
+    line-height: 20px;
     padding-bottom: 25px;
     margin-bottom: 30px;
     border-bottom: 3px solid #F4F1FF;
@@ -9556,19 +9601,26 @@ svg use {
     @media (min-width: 768px) {
         padding-bottom: 36px;
         margin-bottom: 37px;
+        font-size: 18px;
+        line-height: 28px;
     }
 
     @media (min-width: 1280px) {
         margin-bottom: 44px;
+        padding-left: 250px;
     }
-}
 
-.shippinginfo__item {
-    font-size: 13px;
-    line-height: 20px;
+    .shippinginfo__img {
+        @media (min-width: 768px) {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
 
-    @media (min-width: 768px) {
-        font-size: 18px;
+        @media (min-width: 1280px) {
+            right: auto;
+            left: 0;
+        }
     }
 }
 
@@ -9602,12 +9654,42 @@ svg use {
 }
 
 .shippinginfo__columns {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1100px) {
+        align-items: center;
+    }
+
     .column {
         &:first-child {
             margin-bottom: 25px;
 
+            @media (min-width: 768px) {
+                padding-top: 35px;
+                width: calc(100% - 305px);
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 1100px) {
+                width: calc(100% - 660px);
+                padding-top: 0;
+            }
+
             .shippinginfo__action {
                 padding-top: 25px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 768px) {
+                width: 305px;
+            }
+
+            @media (min-width: 1100px) {
+                width: 660px;
             }
         }
     }
@@ -9681,6 +9763,13 @@ svg use {
     }
 }
 
+.shippinginfo__item_pickup {
+    @media (min-width: 1100px) {
+        padding-top: 13px;
+        border-top: 3px solid #F4F1FF;
+    }
+}
+
 .shippinginfo__item_sdek {
     .shippinginfo__article {
         margin-bottom: 16px;
@@ -9706,6 +9795,12 @@ svg use {
                 margin-bottom: 28px;
             }
         }
+    }
+}
+
+.deliveryserv {
+    @media (min-width: 1280px) {
+        padding-bottom: 70px;
     }
 }
 
@@ -9735,12 +9830,24 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        display: none;
+        color: #000000;
+        margin-bottom: 12px;
     }
 }
 
 .delivery-list {
+    height: 360px;
     margin-bottom: 24px;
+
+    @media (min-width: 1100px) {
+        height: 649px;
+    }
+
+    ul {
+        @media (min-width: 1100px) {
+            padding-top: 55px;
+        }
+    }
 
     li {
         padding-bottom: 21px;
@@ -9810,10 +9917,42 @@ svg use {
 }
 
 .paymentmetods__columns {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .column {
+        &:first-child {
+            @media (min-width: 768px) {
+                width: 231px;
+            }
+
+            @media (min-width: 1100px) {
+                width: calc(100% - 274px);
+            }
+
+            @media (min-width: 1280px) {
+                width: calc(100% - 307px);
+            }
+        }
+
         &:last-child {
             @media (max-width: 767px) {
                 display: none;
+            }
+
+            @media (min-width: 768px) {
+                width: 274px;
+            }
+
+            @media (min-width: 1100px) {
+                position: relative;
+                top: -50px;
+            }
+
+            @media (min-width: 1280px) {
+                width: 307px;
             }
         }
     }
@@ -9852,8 +9991,23 @@ svg use {
 .paymentdetail-list {
     padding-bottom: 40px;
 
+    @media (min-width: 1100px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
     li {
         margin-bottom: 28px;
+
+        @media (min-width: 768px) {
+            &:not(:last-child) {
+                margin-bottom: 55px;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            width: 30%;
+        }
     }
 }
 
@@ -9870,4 +10024,68 @@ svg use {
     font-weight: 500;
     font-size: 13px;
     padding: 0;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.our-location {
+    height: 156px;
+
+    @media (min-width: 768px) {
+        height: 308px;
+    }
+}
+
+.shippinginfo__item_pochtarossii,
+.shippinginfo__item_sdek,
+.shippinginfo__item_boxbery {
+    .shippinginfo__list {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        li {
+            @media (min-width: 768px) {
+                width: 320px;
+            }
+
+            @media (min-width: 1280px) {
+                width: 427px;
+            }
+
+            &:first-child {
+                @media (min-width: 768px) {
+                    margin-right: 94px;
+                }
+
+                @media (min-width: 1280px) {
+                    margin-right: 150px;
+                }
+            }
+        }
+    }
+}
+
+.deliveryserv__inner {
+    @media (min-width: 1100px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .deliveryserv__item {
+        &:first-child {
+            @media (min-width: 1100px) {
+                width: calc(100% - 783px);
+                padding-right: 5px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 1100px) {
+                width: 783px;
+            }
+        }
+    }
 }
