@@ -164,7 +164,7 @@ $(document).ready(function () {
     });
 
     $('.close-modal').click(function () {
-        $('.modal-lk_addadress').fadeOut();
+        $('.modal-lk, .modal').fadeOut();
         $('.overlay').fadeOut();
     });
 
@@ -178,6 +178,11 @@ $(document).ready(function () {
 
     $('.tab-profile__phone input, .tab-profile__email input, .tab-profile__name').focusout(function () {
         $(this).attr('disabled', 'disabled');
+    });
+
+    $('.modal-pickup__item').click(function () {
+        $('.modal-pickup__item').removeClass('is-active');
+        $(this).addClass('is-active');
     });
 
     $('.acc-tabs .acc-tabs__item').click(function () {
@@ -350,6 +355,8 @@ $(document).ready(function () {
         $(this).next().addClass('is-active');
     });
 
+    $(".phoneinp").mask("+7 (999) 999-99-99");
+
     $('.mob-menu__back').click(function () {
         $(this).parent().removeClass('is-active');
     });
@@ -395,7 +402,7 @@ $(document).ready(function () {
         // }
     });
 
-    $('.delivery-list').mCustomScrollbar({
+    $('.delivery-list, .modal-pickup').mCustomScrollbar({
         axis: 'y',              // вертикальный скролл 
         theme: 'dark',  // тема 
         // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
@@ -574,5 +581,129 @@ $(document).ready(function () {
         $(tab).fadeIn(400);
     });
     $('.tabs-btn span:first-child').click();
+
+    $('.modal-tablist button').click(function () {
+        $('.modal-tablist button').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('data-tab');
+        $('.modal-lk__tab').not(tab).css({ 'display': 'none' });
+        $(tab).fadeIn(400);
+    });
+    $('.modal-tablist button:first-child').click();
+
+    $('.delivmethod__about-shipping').click(function () {
+        $('.modal-lk_check').fadeIn();
+        $('.overlay').fadeIn();
+    });
+
+    $('.delivery-type').click(function () {
+        $('.delivery-type').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
+    $('.delivery-method').click(function () {
+        $('.delivery-method').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
+    ymaps.ready(init);
+
+    function init() {
+        var center = [55.59113656911934, 37.88662649999996];
+        var myMap = new ymaps.Map('mappickup', {
+            center: center,
+            controls: [],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark(center, {
+            // Свойства.
+            // Содержимое иконки, балуна и хинта.
+            balloonContent: 'улица Ивана Франко, 4к4',
+            hintContent: 'улица Ивана Франко, 4к4'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // iconImageHref: 'img/map-ic.png',
+            // iconImageSize: [42, 42]
+            // preset: 'twirl#violetIcon'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+
+        //=======================================================
+
+        var center2 = [55.59113656911934, 37.88662649999996];
+        var myMap2 = new ymaps.Map('adressmap', {
+            center: center2,
+            controls: [],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        myMap2.behaviors.disable('scrollZoom');
+
+        var myPlacemark2 = new ymaps.Placemark(center2, {
+            // Свойства.
+            // Содержимое иконки, балуна и хинта.
+            balloonContent: 'улица Ивана Франко, 4к4',
+            hintContent: 'улица Ивана Франко, 4к4'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // iconImageHref: 'img/map-ic.png',
+            // iconImageSize: [42, 42]
+            // preset: 'twirl#violetIcon'
+        });
+
+        myMap2.geoObjects.add(myPlacemark2);
+
+        //=======================================================
+
+        var center3 = [55.59113656911934, 37.88662649999996];
+        var myMap3 = new ymaps.Map('addAdress', {
+            center: center3,
+            controls: [],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        myMap3.behaviors.disable('scrollZoom');
+
+        var myPlacemark3 = new ymaps.Placemark(center3, {
+            // Свойства.
+            // Содержимое иконки, балуна и хинта.
+            balloonContent: 'улица Ивана Франко, 4к4',
+            hintContent: 'улица Ивана Франко, 4к4'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // iconImageHref: 'img/map-ic.png',
+            // iconImageSize: [42, 42]
+            // preset: 'twirl#violetIcon'
+        });
+
+        myMap3.geoObjects.add(myPlacemark3);
+    }
+
+    // Тестовый вызов модалок !!!!!!!!!!!!!!!!!!!!!!!
+
+    // $(".test1").click(function () {
+    //     $('.modal-lk_addadress').fadeIn();
+    // });
+
+    // $(".test2").click(function () {
+    //     $('.modal-lk_check').fadeIn();
+    // });
+
 
 });

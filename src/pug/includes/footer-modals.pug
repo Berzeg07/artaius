@@ -1,5 +1,7 @@
+//- Затемнение фона при выводе окна *
 .overlay
 
+//- Ввод адреса в личном кабинете *
 .modal-lk.modal-lk_addadress
     form(action="#")
         button(type="button").close-modal
@@ -19,5 +21,144 @@
             button(type="submit").btn-black.modal-lk__btn Привезти сюда
 
         .addadress-column-right
-            .map-adress
-                img(src="img/map-adress.jpg")
+            .map-adress#addAdress
+                //- img(src="img/map-adress.jpg")
+
+//- Выбор способа доставки в личном кабинете *
+.modal-lk.modal-lk_check
+    button(type="button").close-modal
+
+    .modal-tablist
+        button(type="button" data-tab="#addadress") Курьером
+        button(type="button" data-tab="#addpickup") Самовывоз
+
+    .modal-lk__tab#addadress
+        .addadress-column-left
+            form(action="#")
+                .modal-lk__title Введите адрес или выберите на карте
+
+                .modal-lk__inputs
+                    input(type="text" placeholder="Адрес").modal-lk__inp
+                    input(type="text" placeholder="Квартира").modal-lk__inp
+                    input(type="text" placeholder="Этаж").modal-lk__inp
+                    input(type="text" placeholder="Подъезд").modal-lk__inp
+                    input(type="text" placeholder="Индекс").modal-lk__inp
+
+                textarea(placeholder="Комментарий").modal-lk__textarea
+
+                button(type="submit").btn-black.modal-lk__btn Привезти сюда
+
+        .addadress-column-right
+            .map-adress#adressmap
+                //- img(src="img/map-adress.jpg")
+
+    .modal-lk__tab#addpickup
+        .addadress-column-left
+            form(action="#")
+                .modal-lk__title Выберите пункт самовывоза
+                .modal-pickupwrap
+                    .modal-pickup
+                        ul.modal-pickup__list
+                            li
+                                .modal-pickup__item пр-т Богатырский, 35, корп. 1
+                            li 
+                                .modal-pickup__item ул. Елецкая, 3
+                            li
+                                .modal-pickup__item пр. Энгельса, 18
+                            li 
+                                .modal-pickup__item ул. Планерная, 63/1
+                            li
+                                .modal-pickup__item пр-кт Среднеохтинский,, 25/19, литер А, пом. 10-Н
+                            li 
+                                .modal-pickup__item ул. Гаванская, 42, лит. А, пом. 15Н
+                            li
+                                .modal-pickup__item ул. Торфяная дорога, 2, корп. 1, 2.1/1
+                            li 
+                                .modal-pickup__item пр. Энгельса, 18
+                            li 
+                                .modal-pickup__item ул. Планерная, 63/1
+                            li
+                                .modal-pickup__item пр-кт Среднеохтинский,, 25/19, литер А, пом. 10-Н
+                            li 
+                                .modal-pickup__item ул. Гаванская, 42, лит. А, пом. 15Н
+                            li
+                                .modal-pickup__item ул. Торфяная дорога, 2, корп. 1, 2.1/1
+                            li 
+                                .modal-pickup__item пр. Энгельса, 18
+
+                    button(type="submit").btn-black.modal-lk__btn Заберу отсюда
+
+        .addadress-column-right
+            .map-adress#mappickup
+                //- img(src="img/map-adress.jpg")
+
+//- Окно с вводом номера *
+.modal.modal-basket#modalphone
+    form(action="#")
+        button(type="button").close-modal
+        .modal__title Оформление заказа
+        .modal-breadcrumbs
+            a(href="#") Корзина
+            a(href="#") Вход
+            span Доставка
+
+        .modal__inpblock
+            input(type="text" placeholder="+7 (___) ___-__-__").modal__inp.phoneinp
+
+        button(type="submit").btn.modal-basket__btn Войти и оформить заказ
+
+        .modal__article
+            |Для оформления заказа в Artarius используется телефон, вы получите бесплатное SMS с кодом для подтверждения. 
+            |После этого вы сможете заполнить адрес доставки и закончить оформление заказа. 
+            |Вы также можете авторизоваться используя 
+            a(href="#") электронную почту.
+
+        .modal__subtitle или войти через
+
+        .social-auth
+            a(href="#")
+                img(src="img/vk-auth.svg" width="54" height="54")
+            a(href="#")
+                img(src="img/google-auth.svg" width="54" height="54")
+            a(href="#")
+                img(src="img/yandex-auth.svg" width="54" height="54")
+
+//- Окно с вводом SMS *
+.modal.modal-basket#modalsms
+    form(action="#")
+        button(type="button").close-modal
+        .modal__title Оформление заказа
+        .modal-breadcrumbs
+            a(href="#") Корзина
+            a(href="#") Вход
+            span Доставка
+
+        .modal__inpblock
+            input(type="text" placeholder="+7 (___) ___-__-__").modal__inp.phoneinp
+            input(type="text" placeholder="Код из SMS").modal__inp.smsinp
+
+            ul.sms-status
+                li
+                    a(href="#") Не получили SMS?
+                li
+                    |Отправить повторно через:  
+                    span.sms-status__count 124
+
+        button(type="submit").btn.modal-basket__btn Войти и оформить заказ
+
+        .modal__article
+            |Для оформления заказа в Artarius используется телефон, вы получите бесплатное SMS с кодом для подтверждения. 
+            |После этого вы сможете заполнить адрес доставки и закончить оформление заказа. 
+            |Вы также можете авторизоваться используя 
+            a(href="#") электронную почту.
+
+        .modal__subtitle или войти через
+
+        .social-auth
+            a(href="#")
+                img(src="img/vk-auth.svg" width="54" height="54")
+            a(href="#")
+                img(src="img/google-auth.svg" width="54" height="54")
+            a(href="#")
+                img(src="img/yandex-auth.svg" width="54" height="54")
+
