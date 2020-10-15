@@ -162,3 +162,97 @@
             a(href="#")
                 img(src="img/yandex-auth.svg" width="54" height="54")
 
+//- Окно авторизации и регистрации *
+.modal.modalauth#modalauth
+    button(type="button").close-modal
+    .modalauth__tablink
+        button(type="button" data-tab="#logintab").modal__title Вход
+        button(type="button" data-tab="#regtab").modal__title Зарегистрироваться
+
+    .modalauth__tab.modalauth__tab_reg#regtab
+        form(action="#").formreg
+            ul.modalauth__inplist
+                li
+                    input(type="text" placeholder="Email").modal__inp
+                li
+                    input(type="password" placeholder="Пароль").modal__inp.modal__inp_pass
+                    button(type="button").passbtn
+                li
+                    input(type="password" placeholder="Повторите пароль").modal__inp.modal__inp_pass
+                li
+                    input(type="text" placeholder="Номер телефона").modal__inp.phoneinp.modal__inp_error
+                    .input-error Пожалуйста, укажите верный номер
+                li
+                    input(type="text" placeholder="Имя и Фамилия").modal__inp
+
+            button(type="submit").btn.formreg__btn Зарегистрироваться
+
+    .modalauth__tab.modalauth__tab_login#logintab
+        form(action="#").formlogin
+            ul.modalauth__inplist
+                li
+                    .formlogin__tab-email
+                        input(type="text" placeholder="Email").modal__inp
+
+                    .formlogin__tab-phone
+                        input(type="text" placeholder="Номер телефона").modal__inp.phoneinp
+                li
+                    input(type="password" placeholder="Пароль").modal__inp.modal__inp_pass
+                    button(type="button").passbtn
+
+            ul.formlogin__columns
+                li
+                    .check-block
+                        input(type="checkbox" checked)#remembercheck
+                        label(for="remembercheck") Запомнить меня
+                li
+                    button(type="button").forgotpass Забыли пароль?
+
+            ul.formlogin__columns
+                li
+                    button(type="submit").btn.formlogin__btn Войти
+                li
+                    button(type="button").switchinp Войти по номеру телефона
+
+    .modal__subtitle или войти через
+    .social-auth
+        a(href="#")
+            img(src="img/vk-auth.svg" width="54" height="54")
+        a(href="#")
+            img(src="img/google-auth.svg" width="54" height="54")
+        a(href="#")
+            img(src="img/yandex-auth.svg" width="54" height="54")
+
+//- Окно восттановления пароля *
+.modal.modalpassrestore#modapassrestore
+    button(type="button").close-modal
+
+    form(action="#").formpassrestore
+        .modal__title Восстановление пароля
+
+        input(type="text" placeholder="Email").modal__inp
+
+        button(type="submit").btn.formpassrestore__btn Отправить
+
+//- Окно отправки подвтерждения на почту *
+.modal.modalfinish
+    button(type="button").close-modal
+
+    form.formfinish(action="#")
+        .modal__title Самое сложное позади!
+        .modalfinish__article Мы отправили вам письмо. Пожалуйста, подтвердите адрес электронной почты, перейдя по ссылке.
+
+        ul.formfinish__columns
+            li
+                button(type="submit").btn.formfinish__btn Отправить еще раз
+            li
+                span Не пришло письмо?
+
+
+
+
+
+
+
+
+

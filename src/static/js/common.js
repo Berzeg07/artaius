@@ -591,6 +591,15 @@ $(document).ready(function () {
     });
     $('.modal-tablist button:first-child').click();
 
+    $('.modalauth__tablink button').click(function () {
+        $('.modalauth__tablink button').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('data-tab');
+        $('.modalauth__tab').not(tab).css({ 'display': 'none' });
+        $(tab).fadeIn(400);
+    });
+    $('.modalauth__tablink button:first-child').click();
+
     $('.delivmethod__about-shipping').click(function () {
         $('.modal-lk_check').fadeIn();
         $('.overlay').fadeIn();
@@ -604,6 +613,38 @@ $(document).ready(function () {
     $('.delivery-method').click(function () {
         $('.delivery-method').removeClass('is-active');
         $(this).addClass('is-active');
+    });
+
+    $('.passbtn').click(function () {
+        $(this).toggleClass('is-active');
+
+        if ($(this).hasClass('is-active')) {
+            $(this).parent().find('input').attr('type', 'text');
+        } else {
+            $(this).parent().find('input').attr('type', 'password');
+        }
+    });
+
+    $('.switchinp').click(function () {
+        $(this).toggleClass('is-active');
+        if ($(this).hasClass('is-active')) {
+            $('.formlogin__tab-email').css('display', 'none');
+            $('.formlogin__tab-phone').fadeIn();
+        } else {
+            $('.formlogin__tab-phone').css('display', 'none');
+            $('.formlogin__tab-email').fadeIn();
+        }
+    });
+
+    $('.login a').click(function (e) {
+        e.preventDefault();
+        $('#modalauth').fadeIn();
+        $('.overlay').fadeIn();
+    });
+
+    $('.forgotpass').click(function () {
+        $('.modal').removeAttr('style');
+        $('.modalpassrestore').fadeIn();
     });
 
     ymaps.ready(init);

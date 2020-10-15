@@ -7539,6 +7539,10 @@ svg use {
     height: 16px;
     background: url("../img/close-modal.svg") no-repeat center;
     z-index: 10;
+
+    &:hover {
+        background: url("../img/close-modal-bl.svg") no-repeat center;
+    }
 }
 
 .modal-lk__title {
@@ -10218,6 +10222,10 @@ svg use {
 
 .modal {
     position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
     max-width: 681px;
     width: 100%;
     background: #FFFFFF;
@@ -10249,23 +10257,7 @@ svg use {
     }
 }
 
-.modal-main {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    @media (max-width: 767px) {
-        height: 100vh;
-        overflow-y: auto;
-    }
-}
-
 .modal-basket {
-    top: 0;
-    right: 0;
-    height: 100vh;
-    overflow-y: auto;
-
     @media (max-width: 1279px) {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -10395,4 +10387,268 @@ svg use {
 
 .modal {
     display: none;
+}
+
+.modalauth__tablink {
+    display: flex;
+    align-items: center;
+    margin-bottom: 51px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 38px;
+    }
+
+    button {
+        background: none;
+        padding: 0;
+        opacity: 0.3;
+
+        &:first-child {
+            margin-right: 35px;
+
+            @media (min-width: 1280px) {
+                margin-right: 54px;
+            }
+        }
+    }
+
+    button.is-active {
+        opacity: 1;
+    }
+}
+
+.modalauth__inplist {
+    max-width: 405px;
+    width: 100%;
+    margin-bottom: 26px;
+
+    li {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+
+            @media (min-width: 1280px) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+}
+
+.formreg__btn {
+    font-size: 15px;
+    width: 205px;
+
+    @media (max-width: 375px) {
+        width: 100%;
+    }
+}
+
+.modalauth__tab_reg {
+    margin-bottom: 35px;
+}
+
+.passbtn {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 22px;
+    background: url("../img/eye-close.svg") no-repeat center;
+    background-size: contain;
+}
+
+.passbtn.is-active {
+    background: url("../img/eye-open.svg") no-repeat center;
+}
+
+.input-error {
+    position: absolute;
+    font-size: 10px;
+    left: 22px;
+    padding-top: 2px;
+}
+
+.modal__inp_error {
+    border: 2px solid #38B2AC;
+}
+
+.formlogin__columns {
+    max-width: 405px;
+    width: 100%;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .check-block {
+        label {
+            padding-left: 30px;
+
+            @media (max-width: 767px) {
+                font-size: 13px;
+                padding-top: 2px;
+            }
+        }
+    }
+}
+
+.forgotpass,
+.switchinp {
+    font-weight: 400;
+    font-size: 13px;
+    background: none;
+}
+
+.switchinp.is-active {
+    color: #64B6AC;
+}
+
+.formlogin__btn {
+    width: 170px;
+
+    @media (max-width: 767px) {
+        width: 82px;
+    }
+}
+
+.modalauth__tab_login {
+    margin-bottom: 78px;
+}
+
+.formlogin__tab-phone,
+.modalauth__tab {
+    display: none;
+}
+
+.modalauth,
+.modalpassrestore,
+.modalfinish {
+    @media (max-width: 767px) {
+        padding-top: 66px;
+        padding-bottom: 30px;
+    }
+
+    @media (min-width: 1280px) {
+        background: white url("../img/modal-auth-bg.png") no-repeat top left;
+    }
+
+    .modal__title {
+        @media (max-width: 767px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.formpassrestore__btn {
+    width: 170px;
+    margin-top: 17px;
+}
+
+.modalpassrestore {
+    .modal__inp {
+        max-width: 405px;
+        width: 100%;
+    }
+
+    .modal__title {
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: 1280px) {
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 249px;
+            height: 316px;
+            background: url("../img/zm-bg.png") no-repeat center;
+            background-size: contain;
+        }
+    }
+
+    form {
+        height: 100%;
+
+        @media (max-width: 1279px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (min-width: 1280px) {
+            padding-top: 100px;
+        }
+    }
+}
+
+.modalfinish {
+    .modal__title {
+        margin-bottom: 21px;
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        padding-top: 339px;
+    }
+
+    form {
+        max-width: 414px;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 1279px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 410px;
+            height: 411px;
+            background: url("../img/bg-letter.png") no-repeat center;
+        }
+    }
+}
+
+.modalfinish__article {
+    font-size: 15px;
+    margin-bottom: 26px;
+}
+
+.formfinish__btn {
+    width: 184px;
+    font-size: 15px;
+}
+
+.formfinish__columns {
+    @media (min-width: 600px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        @media (min-width: 600px) {
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        font-size: 15px;
+        color: #858585;
+    }
 }
