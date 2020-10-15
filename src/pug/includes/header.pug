@@ -69,7 +69,7 @@
                     a(href="#").login-icon
                         +icon('login-icon','login-icon login-icon-grey')
                 li
-                    .basket
+                    .basket.basketheader
                         a(href="#").basket__item
                             +icon('basket','basket-icon basket-icon-grey')
 
@@ -78,7 +78,9 @@
                                 |8 967 
                                 <span>&#8381;</span>
 
-                            .sub-info 3 товара          
+                            .sub-info 3 товара  
+
+                    +basketModal      
 
     .header__bottom
         .container
@@ -658,7 +660,8 @@
             li
                 .basket
                     a(href="#").basket__item
-                        img(src="img/basket.svg")
+                        +icon('basket','basket-icon basket-icon-grey')
+                        //- img(src="img/basket.svg")
 
                     .basket__item
                         .basket__price 

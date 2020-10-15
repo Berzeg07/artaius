@@ -561,6 +561,110 @@ mixin dropdownMenuDesctop
 					a(href="#") Брашинги
 					a(href="#") Фен Dyson
 
+mixin basketModal
+	.modalbasket
+		.modalbasket__inner
+			button(type="button").close-modal
+
+			.modalbasket__top
+				.modalbasket__title Корзина
+				.modalbasket__count 2 товара
+
+			.modalbasket__columns
+				.modalbasket__column
+					.modalbasket__img
+						img(src="img/modal-basket.jpg" width="113" height="64")
+
+					ul.modalbasket__info
+						li
+							.modalbasket__name Suntuchi Парикмахерские ножницы прямые 5,5"
+							.modalbasket__prices
+								.modalbasket__price-new 
+									|3 456 
+									span руб.
+						li
+							.switch-counter.modalbasket__counter
+								button(type="button").switch-counter__btn.switch-counter__btn_minus -
+								input(type="text" value="3" disabled="disabled")
+								button(type="button").switch-counter__btn.switch-counter__btn_plus +
+
+				.modalbasket__column
+					.modalbasket__img
+						img(src="img/modal-basket.jpg" width="113" height="64")
+
+					ul.modalbasket__info
+						li
+							.modalbasket__name Suntuchi Парикмахерские ножницы прямые 5,5"
+							.modalbasket__prices
+								.modalbasket__price-old 
+									|3 456 
+									span руб. 
+								.modalbasket__price-new 
+									|3 456 
+									span руб.
+						li
+							.switch-counter.modalbasket__counter
+								button(type="button").switch-counter__btn.switch-counter__btn_minus -
+								input(type="text" value="3" disabled="disabled")
+								button(type="button").switch-counter__btn.switch-counter__btn_plus +
+
+				.modalbasket__column
+					.modalbasket__img
+						img(src="img/modal-basket.jpg" width="113" height="64")
+
+					ul.modalbasket__info
+						li
+							.modalbasket__name Suntuchi Парикмахерские ножницы прямые 5,5"
+							.modalbasket__prices
+								.modalbasket__price-old 
+									|3 456 
+									span руб. 
+								.modalbasket__price-new 
+									|3 456 
+									span руб.
+						li
+							.switch-counter.modalbasket__counter
+								button(type="button").switch-counter__btn.switch-counter__btn_minus -
+								input(type="text" value="3" disabled="disabled")
+								button(type="button").switch-counter__btn.switch-counter__btn_plus +
+
+				.modalbasket__column
+					.modalbasket__img
+						img(src="img/modal-basket.jpg" width="113" height="64")
+
+					ul.modalbasket__info
+						li
+							.modalbasket__name Suntuchi Парикмахерские ножницы прямые 5,5"
+							.modalbasket__prices
+								.modalbasket__price-old 
+									|3 456 
+									span руб. 
+								.modalbasket__price-new 
+									|3 456 
+									span руб.
+						li
+							.switch-counter.modalbasket__counter
+								button(type="button").switch-counter__btn.switch-counter__btn_minus -
+								input(type="text" value="3" disabled="disabled")
+								button(type="button").switch-counter__btn.switch-counter__btn_plus +
+
+			ul.modalbasket__bottom
+				li
+					.modalbasket__total-block
+						b Итого 
+						span.modalbasket__total 8 950 
+						span руб. 
+
+					.modalbasket__benefit 
+						|выгода 450 
+						span руб.
+				li
+					.modalbasket__link 
+						a(href="#").btn Открыть корзину
+
+					.modalbasket__buyoneclick 
+						a(href="#") Купить в один клик 
+
 mixin dropDownMenuLaptop
 	.dropdownmenu.dropdownmenu_laptop
 		.dropdownmenu__inner
@@ -1004,3 +1108,5 @@ mixin brendsList
 			li
 				a(href="#") я
 				+brendsModal
+
+

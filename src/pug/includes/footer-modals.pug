@@ -248,6 +248,25 @@
             li
                 span Не пришло письмо?
 
+//- Окно обратной связи *
+.feedbackmodal
+    form.feedback-form(action="#")
+        button(type="button").close-modal
+
+        .feedbackmodal__title Оставьте свой номер и мы перезвоним 
+
+        input(type="text" placeholder="Имя").modal__inp
+
+        input(type="text" placeholder="Номер телефона").modal__inp.phoneinp
+
+        button(type="submit").btn.feedback-form__btn Отправить
+
+
+
+
+
+
+
 
 
 

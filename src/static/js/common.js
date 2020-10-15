@@ -164,8 +164,13 @@ $(document).ready(function () {
     });
 
     $('.close-modal').click(function () {
-        $('.modal-lk, .modal').fadeOut();
+        $('.modal-lk, .modal, .feedbackmodal').fadeOut();
         $('.overlay').fadeOut();
+        $('.modalbasket').removeClass('is-active');
+    });
+
+    $('.basketheader').hover(function () {
+        $('.modalbasket').addClass('is-active');
     });
 
     $('.editcont').click(function () {
@@ -345,6 +350,7 @@ $(document).ready(function () {
         $(this).find('.dropdownmenu_laptop').fadeIn();
     });
 
+
     $(window).resize(function () {
         if (window.matchMedia('(min-width: 1280px)').matches) {
             $('.menu-laptop').removeAttr('style');
@@ -402,7 +408,7 @@ $(document).ready(function () {
         // }
     });
 
-    $('.delivery-list, .modal-pickup').mCustomScrollbar({
+    $('.delivery-list, .modal-pickup, .modalbasket__columns').mCustomScrollbar({
         axis: 'y',              // вертикальный скролл 
         theme: 'dark',  // тема 
         // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
