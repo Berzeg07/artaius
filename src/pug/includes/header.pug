@@ -40,68 +40,75 @@
                     a(href="#") Вход / Регистрация
                     //- span / 
                     //- a(href="#") Регистрация
+    .header__laptop
+        .header__middle.container
+            .column
+                button(type="button").burger
 
-    .header__middle.container
-        .column
-            button(type="button").burger
+                .logo.logo_header
+                    img(src="img/logo.svg")
 
-            .logo.logo_header
-                img(src="img/logo.svg")
+                form.search.search_header.searchdesc(action="#" method="POST")
+                    input(type="text" placeholder="Начните поиск").search__inp
+                    button(type="submit").search__btn 
+                        span Найти
 
-            form.search.search_header(action="#" method="POST")
+            .column
+                ul.header__phone
+                    li
+                        a(href="tel:78126699665").phone-link.phone-link_header +7 (812) 669-96-65
+                    li
+                        .sub-info Пн — Вс: 10:30 — 19:00
+
+                ul.header__basket
+                    li
+                        a(href="#").favor-link
+                            +icon('favor','favor-icon favor-grey')
+
+                    li
+                        a(href="#").login-icon
+                            +icon('login-icon','login-icon login-icon-grey')
+                    li
+                        .basket.basketheader
+                            a(href="#").basket__item
+                                .basket-full
+                                +icon('basket','basket-icon basket-icon-grey')
+
+                            .basket__item
+                                .basket__price 
+                                    |8 967 
+                                    <span>&#8381;</span>
+
+                                .sub-info 3 товара  
+
+                        +basketModal    
+
+        .mobile-search  
+            form.search(action="#" method="POST")
                 input(type="text" placeholder="Начните поиск").search__inp
                 button(type="submit").search__btn 
                     span Найти
 
-        .column
-            ul.header__phone
-                li
-                    a(href="tel:78126699665").phone-link.phone-link_header +7 (812) 669-96-65
-                li
-                    .sub-info Пн — Вс: 10:30 — 19:00
+        .header__bottom
+            .container
+                button(type="button").catalog-btn Каталог
 
-            ul.header__basket
-                li
-                    a(href="#").favor-link
-                        +icon('favor','favor-icon favor-grey')
-
-                li
-                    a(href="#").login-icon
-                        +icon('login-icon','login-icon login-icon-grey')
-                li
-                    .basket.basketheader
-                        a(href="#").basket__item
-                            +icon('basket','basket-icon basket-icon-grey')
-
-                        .basket__item
-                            .basket__price 
-                                |8 967 
-                                <span>&#8381;</span>
-
-                            .sub-info 3 товара  
-
-                    +basketModal      
-
-    .header__bottom
-        .container
-            button(type="button").catalog-btn Каталог
-
-            ul.main-nav
-                li
-                    a(href="#") Парикмахерский инструмент
-                    +dropdownMenuDesctop
-                li
-                    a(href="#") Для волос
-                    +dropdownMenuDesctop
-                li  
-                    a(href="#") Для лица
-                    +dropdownMenuDesctop
-                li
-                    a(href="#").main-nav__action Акции
-                li  
-                    a(href="#").main-nav__popular Популярные
-                li
-                    a(href="#") Мастера рекомендуют
+                ul.main-nav
+                    li
+                        a(href="#") Парикмахерский инструмент
+                        +dropdownMenuDesctop
+                    li
+                        a(href="#") Для волос
+                        +dropdownMenuDesctop
+                    li  
+                        a(href="#") Для лица
+                        +dropdownMenuDesctop
+                    li
+                        a(href="#").main-nav__action Акции
+                    li  
+                        a(href="#").main-nav__popular Популярные
+                    li
+                        a(href="#") Мастера рекомендуют
 
 .menu-laptop
     .menu-laptop__inner
