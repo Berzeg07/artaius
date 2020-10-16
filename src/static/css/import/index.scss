@@ -413,7 +413,7 @@ svg use {
     }
 
     @media (max-width: 599px) {
-        padding-bottom: 10px;
+        padding-bottom: 9px;
     }
 
     @media (min-width: 600px) and (max-width: 767px) {
@@ -711,7 +711,7 @@ svg use {
 }
 
 .mobile-search {
-    padding-top: 36px;
+    padding-top: 32px;
 
     @media (min-width: 600px) {
         display: none;
@@ -8338,6 +8338,9 @@ svg use {
 
     @media (min-width: 1280px) {
         padding-top: 28px;
+        padding-left: 31px;
+        padding-right: 8px;
+        margin-bottom: 7px;
     }
 }
 
@@ -8353,8 +8356,13 @@ svg use {
 
 .basket-totalinfo {
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     border-bottom: 1px solid #E8E8E8;
+
+    @media (min-width: 1280px) {
+        padding-bottom: 35px;
+        margin-bottom: 42px;
+    }
 
     li {
         display: flex;
@@ -8380,6 +8388,10 @@ svg use {
 
         &:not(:last-child) {
             margin-bottom: 16px;
+
+            @media (min-width: 1280px) {
+                margin-bottom: 14px;
+            }
         }
     }
 }
@@ -8394,6 +8406,7 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 19px;
+        margin-bottom: 28px;
     }
 }
 
@@ -8409,6 +8422,7 @@ svg use {
 
     @media (min-width: 1280px) {
         height: 53px;
+        font-size: 20px;
     }
 }
 
@@ -8635,17 +8649,39 @@ svg use {
     }
 }
 
+.ordering {
+    @media (min-width: 768px) {
+        padding-bottom: 76px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-bottom: 36px;
+    }
+
+    .breadcrumbs {
+        padding-top: 6px;
+        margin-bottom: 11px;
+
+        @media (min-width: 768px) {
+            padding-top: 20px;
+            margin-bottom: 17px;
+        }
+    }
+}
+
 .ordering__block {
     background: #F7F7FB;
     padding: 19px 9px 13px;
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
-        padding: 19px 22px 24px;
+        padding: 29px 22px 24px 26px;
+        margin-bottom: 17px;
     }
 
     @media (min-width: 1280px) {
         padding: 19px 15px 24px;
+        margin-bottom: 24px;
     }
 
     @media (min-width: 1390px) {
@@ -8658,6 +8694,10 @@ svg use {
     font-weight: 500;
     font-size: 18px;
 
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+
     @media (min-width: 1280px) {
         font-size: 20px;
     }
@@ -8665,10 +8705,10 @@ svg use {
 
 .delivmethod__city {
     position: relative;
-    padding-left: 47px;
+    padding-left: 39px;
     font-size: 15px;
-    margin-bottom: 24px;
-    margin-top: 26px;
+    margin-bottom: 20px;
+    margin-top: 16px;
 
     span {
         color: #858585;
@@ -8681,6 +8721,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
+        padding-left: 50px;
         font-size: 16px;
         margin-bottom: 38px;
         margin-top: 28px;
@@ -8753,6 +8794,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
+        height: 190px;
         width: 268px;
         padding: 18px 15px 25px;
     }
@@ -8810,7 +8852,7 @@ svg use {
     color: #858585;
 
     @media (min-width: 768px) {
-        margin-bottom: 15px;
+        margin-bottom: 21px;
         font-size: 14px;
     }
 
@@ -8821,15 +8863,18 @@ svg use {
 }
 
 .delivery-typelist__article {
+    line-height: 16px;
     font-size: 11px;
     color: #535353;
 
     @media (min-width: 768px) {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 19px;
     }
 
     @media (min-width: 1280px) {
         font-size: 16px;
+        line-height: 22px;
     }
 }
 
@@ -8839,12 +8884,18 @@ svg use {
     font-size: 11px;
     margin-top: auto;
 
+    @media (max-width: 374px) {
+        font-size: 9px;
+    }
+
     @media (min-width: 768px) {
         font-size: 14px;
+        margin-top: 18px;
     }
 
     @media (min-width: 1280px) {
         font-size: 16px;
+        margin-top: auto;
     }
 }
 
@@ -8858,8 +8909,9 @@ svg use {
     }
 
     @media (min-width: 1280px) {
-        padding-top: 63px;
+        padding-top: 42px;
         margin-bottom: 53px;
+        font-size: 18px;
     }
 }
 
@@ -8872,12 +8924,12 @@ svg use {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
     line-height: 16px;
     cursor: pointer;
     background: white;
     border: 1px solid #E9E9F7;
     border-radius: 3px;
+    padding: 42px 20px 0px;
 
     b {
         font-weight: 450;
@@ -8885,6 +8937,7 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 14px;
+        padding-top: 20px;
     }
 
     @media (min-width: 1280px) {
@@ -8902,17 +8955,21 @@ svg use {
     &:after {
         content: "";
         position: absolute;
-        top: 18px;
-        left: 50%;
+        top: 20px;
+        left: 49%;
         transform: translateX(-50%);
-        width: 16px;
-        height: 19px;
+        width: 20px;
+        height: 21px;
         background: url("../img/local-black.svg") no-repeat center;
         background-size: contain;
 
+        @media (min-width: 768px) {
+            top: 35px;
+        }
+
         @media (min-width: 1280px) {
-            width: 37px;
-            height: 44px;
+            width: 42px;
+            height: 52px;
         }
 
         @media (min-width: 1390px) {
@@ -9025,6 +9082,7 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 11px;
+        padding-left: 7px;
     }
 
     @media (min-width: 1280px) {
@@ -9037,7 +9095,7 @@ svg use {
     padding-bottom: 25px;
 
     .ordering__block__title {
-        margin-bottom: 29px;
+        margin-bottom: 26px;
 
         @media (min-width: 768px) {
             margin-bottom: 39px;
@@ -9048,7 +9106,7 @@ svg use {
 .ordering-check {
     label {
         font-size: 13px;
-        padding-left: 30px;
+        padding-left: 38px;
 
         @media (min-width: 768px) {
             font-size: 15px;
@@ -9059,6 +9117,8 @@ svg use {
         }
 
         &:after {
+            width: 20px;
+            height: 20px;
             background: #FFFFFF;
             border: 1px solid #38B2AC;
         }
@@ -9073,7 +9133,7 @@ svg use {
     color: #535353;
     font-size: 10px;
     padding-top: 11px;
-    padding-left: 30px;
+    padding-left: 37px;
 
     @media (min-width: 768px) {
         font-size: 11px;
@@ -9088,10 +9148,10 @@ svg use {
 
 .ordering-checklist {
     li {
-        margin-bottom: 29px;
+        margin-bottom: 25px;
 
         &:first-child {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
     }
 }
@@ -9104,6 +9164,7 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 12px;
+        padding-top: 21px;
     }
 }
 
@@ -9115,6 +9176,10 @@ svg use {
     @media (min-width: 768px)and (max-width: 1279px) {
         padding-left: 0;
     }
+
+    @media (min-width: 1390px) {
+        padding-left: 87px;
+    }
 }
 
 .promocode__title {
@@ -9122,7 +9187,7 @@ svg use {
     color: #139AD6;
     font-weight: 500;
     font-size: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 
     @media (min-width: 768px)and (max-width: 1279px) {
         padding-left: 42px;
@@ -9141,9 +9206,20 @@ svg use {
         width: 22px;
         height: 22px;
         background: url("../img/promo-icon.svg") no-repeat center;
+        background-size: contain;
 
         @media (min-width: 768px)and (max-width: 1279px) {
             left: 0;
+        }
+
+        @media (min-width: 1280px) {
+            width: 29px;
+            height: 29px;
+        }
+
+        @media (min-width: 1390px) {
+            left: -55px;
+            margin-bottom: 17px;
         }
     }
 }
@@ -9151,6 +9227,7 @@ svg use {
 .promocode__article {
     font-size: 14px;
     margin-bottom: 29px;
+    line-height: 20px;
 
     @media (min-width: 1280px) {
         margin-bottom: 10px;
