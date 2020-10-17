@@ -1149,7 +1149,7 @@ svg use {
 .mob-menu {
     position: fixed;
     max-width: 375px;
-    top: 51px;
+    top: 50px;
     width: 100%;
     left: -100%;
     background: white;
@@ -9398,6 +9398,22 @@ svg use {
     }
 }
 
+.contacts {
+    .breadcrumbs {
+        padding-top: 6px;
+        margin-bottom: 11px;
+
+        @media (min-width: 768px) {
+            padding-top: 20px;
+            margin-bottom: 34px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-bottom: 58px;
+        }
+    }
+}
+
 .contacts__title {
     font-weight: 500;
     font-size: 18px;
@@ -9420,15 +9436,17 @@ svg use {
     padding-left: 25px;
 
     @media (min-width: 768px) {
-        margin-bottom: 38px;
+        margin-bottom: 40px;
         font-size: 20px;
-        padding-left: 36px;
+        padding-left: 42px;
+        letter-spacing: 0.6px;
     }
 
     @media (min-width: 1280px) {
-        padding-left: 38px;
+        padding-left: 42px;
         margin-bottom: 54px;
         font-size: 26px;
+        letter-spacing: 0.9px;
     }
 
     &:after {
@@ -9462,6 +9480,7 @@ svg use {
     @media (min-width: 768px) {
         font-size: 16px;
         line-height: 24px;
+        letter-spacing: 0.3px;
     }
 
     @media (min-width: 1280px) {
@@ -9471,10 +9490,10 @@ svg use {
 
     li {
         &:first-child {
-            margin-bottom: 30px;
+            margin-bottom: 27px;
 
             @media (min-width: 768px) {
-                margin-bottom: 35px;
+                margin-bottom: 38px;
             }
 
             @media (min-width: 1280px) {
@@ -9486,12 +9505,42 @@ svg use {
 
 .our-office__city {
     color: #000000;
+
+    @media (min-width: 768px) {
+        margin-bottom: 9px;
+    }
 }
 
 .our-office__time,
 .our-office__phone,
 .our-office__adress span {
     color: #858585;
+}
+
+.our-office__adress {
+    line-height: 20px;
+
+    @media (min-width: 768px) {
+        line-height: 26px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-right: 70px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-right: 80px;
+        line-height: 28px;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 6px;
+        }
+    }
 }
 
 .contacts__map {
@@ -9507,22 +9556,79 @@ svg use {
 }
 
 .contact-list {
-    padding-top: 39px;
+    padding-top: 44px;
 
     @media (min-width: 768px) {
-        padding-top: 113px;
+        padding-top: 116px;
         display: flex;
-        justify-content: space-between;
     }
 
     @media (min-width: 1280px) {
-        padding-right: 100px;
+        padding-right: 87px;
         padding-top: 104px;
+        margin-bottom: 63px;
+    }
+
+    .subcsribe__inst {
+        @media (min-width: 768px) {
+            margin-bottom: 39px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-bottom: 31px;
+        }
+    }
+
+    .subcsribe__vk {
+        &:after {
+            @media (min-width: 768px) {
+                top: 1px;
+            }
+        }
     }
 }
 
 .contact-list>li {
-    margin-bottom: 39px;
+    &:first-child {
+        @media (min-width: 768px) {
+            margin-right: 76px;
+        }
+
+        @media (min-width: 992px) {
+            margin-right: 160px;
+        }
+
+        @media (min-width: 1280px) {
+            margin-right: 250px;
+        }
+
+        @media (min-width: 1390px) {
+            margin-right: 324px;
+        }
+    }
+
+    &:nth-child(2) {
+        margin-right: 90px;
+
+        @media (min-width: 992px) {
+            margin-right: 0;
+        }
+    }
+
+    &:last-child {
+        @media (min-width: 992px) and (max-width: 1389px) {
+            margin-left: auto;
+            margin-right: 50px;
+        }
+
+        @media (min-width: 1390px) {
+            margin-left: auto;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 39px;
+    }
 }
 
 .contact-list__title {
@@ -9549,11 +9655,23 @@ svg use {
     }
 }
 
+.subscription-block_contact {
+    margin-bottom: 55px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 86px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 150px;
+    }
+}
+
 .contact-list__title_phone {
     padding-left: 30px;
 
     @media (min-width: 768px) {
-        padding-left: 44px;
+        padding-left: 52px;
     }
 
     @media (min-width: 1280px) {
@@ -9567,13 +9685,15 @@ svg use {
         background-size: contain;
 
         @media (min-width: 768px) {
-            width: 24px;
-            height: 23px;
+            width: 30px;
+            height: 26px;
+            left: 4px;
         }
 
         @media (min-width: 1280px) {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 30px;
+            left: 2px;
         }
     }
 }
@@ -9582,7 +9702,7 @@ svg use {
     padding-left: 30px;
 
     @media (min-width: 768px) {
-        padding-left: 44px;
+        padding-left: 55px;
     }
 
     @media (min-width: 1280px) {
@@ -9596,13 +9716,13 @@ svg use {
         background-size: contain;
 
         @media (min-width: 768px) {
-            width: 24px;
-            height: 23px;
+            width: 30px;
+            height: 29px;
         }
 
         @media (min-width: 1280px) {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 30px;
         }
     }
 }
@@ -9616,18 +9736,43 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 20px;
+        padding-left: 4px;
     }
 
     li {
-        margin-bottom: 13px;
+        &:not(:last-child) {
+            margin-bottom: 13px;
 
-        @media (min-width: 768px) {
-            margin-bottom: 21px;
+            @media (min-width: 768px) {
+                margin-bottom: 21px;
+            }
+
+            @media (min-width: 1280px) {
+                margin-bottom: 18px;
+            }
         }
 
-        @media (min-width: 1280px) {
-            margin-bottom: 18px;
+        &:last-child {
+            padding-top: 8px;
+
+            @media (min-width: 768px) {
+                padding-top: 0;
+            }
         }
+    }
+}
+
+.contact-list__title_subscribe {
+    padding-top: 16px;
+    margin-bottom: 19px;
+
+    @media (min-width: 768px) {
+        padding-top: 0;
+        margin-bottom: 42px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 37px;
     }
 }
 
@@ -9642,6 +9787,11 @@ svg use {
 
     @media (min-width: 768px) {
         width: 187px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-top: 5px;
+        margin-left: 8px;
     }
 }
 
@@ -9682,6 +9832,10 @@ svg use {
         padding-left: 42px;
     }
 
+    @media (min-width: 1280px) {
+        padding-left: 40px;
+    }
+
     &:after {
         content: "";
         position: absolute;
@@ -9709,6 +9863,11 @@ svg use {
         width: 28px;
         height: 26px;
     }
+
+    @media (min-width: 1280px) {
+        top: 6px;
+        left: -9px;
+    }
 }
 
 .subcsribe__vk:after {
@@ -9720,6 +9879,13 @@ svg use {
     @media (min-width: 768px) {
         width: 30px;
         height: 18px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 38px;
+        height: 25px;
+        top: 3px;
+        left: -12px;
     }
 }
 
@@ -9761,6 +9927,11 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 18px;
+        margin-bottom: 83px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 125px;
     }
 }
 
@@ -9771,7 +9942,8 @@ svg use {
 
     @media (min-width: 768px) {
         font-size: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 43px;
+        letter-spacing: 0.5px;
     }
 
     @media (min-width: 1280px) {
