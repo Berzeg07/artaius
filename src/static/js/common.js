@@ -667,6 +667,20 @@ $(document).ready(function () {
         $('.modalpassrestore').fadeIn();
     });
 
+    $('.phone-list__btn').click(function () {
+        $('.feedbackmodal').fadeIn();
+        $('.overlay').fadeIn();
+    });
+
+    $('.changecity-btn').click(function () {
+        $('.addcitymodal').fadeIn();
+        $('.overlay').fadeIn();
+    });
+
+    $('.sctolltop-btn').click(function () {
+        $('body,html').animate({ scrollTop: 0 }, 800);
+    });
+
     ymaps.ready(init);
 
     function init() {
@@ -754,6 +768,35 @@ $(document).ready(function () {
         });
 
         myMap3.geoObjects.add(myPlacemark3);
+
+        //=======================================================
+
+        var center4 = [55.59113656911934, 37.88662649999996];
+        var myMap4 = new ymaps.Map('delivMap', {
+            center: center4,
+            controls: [],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        myMap4.behaviors.disable('scrollZoom');
+
+        var myPlacemark4 = new ymaps.Placemark(center4, {
+            // Свойства.
+            // Содержимое иконки, балуна и хинта.
+            balloonContent: 'улица Ивана Франко, 4к4',
+            hintContent: 'улица Ивана Франко, 4к4'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // iconImageHref: 'img/map-ic.png',
+            // iconImageSize: [42, 42]
+            // preset: 'twirl#violetIcon'
+        });
+
+        myMap4.geoObjects.add(myPlacemark4);
     }
 
     // Тестовый вызов модалок !!!!!!!!!!!!!!!!!!!!!!!
