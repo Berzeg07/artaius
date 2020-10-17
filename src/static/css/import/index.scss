@@ -8107,14 +8107,17 @@ svg use {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-bottom: 99px;
     margin-bottom: 15px;
     border-bottom: 1px solid #C4C4C4;
+
+    @media (min-width: 768px) {
+        padding-bottom: 26px;
+    }
 }
 
 .purchase__info {
-    width: calc(100% - 78px);
-    padding-bottom: 65px;
+    width: calc(100% - 84px);
 
     @media (min-width: 600px) {
         padding-left: 29px;
@@ -8126,8 +8129,30 @@ svg use {
         padding-bottom: 0;
     }
 
+    .switch-counter {
+        @media (min-width: 768px) {
+            width: 92px;
+        }
+
+        input {
+            @media (min-width: 768px) {
+                width: 42px;
+            }
+        }
+    }
+
     li {
         width: 174px;
+
+        &:first-child {
+            position: relative;
+            padding-top: 31px;
+
+            @media (min-width: 768px) {
+                padding-top: 38px;
+                margin-bottom: 24px;
+            }
+        }
 
         @media (min-width: 400px) {
             width: 250px;
@@ -8154,10 +8179,10 @@ svg use {
             justify-content: space-between;
             position: absolute;
             width: 100%;
-            left: 0;
-            bottom: 14px;
+            left: 5px;
+            bottom: 30px;
 
-            @media (min-width: 992px) {
+            @media (min-width: 768px) {
                 position: static;
             }
 
@@ -8172,8 +8197,9 @@ svg use {
 }
 
 .purchase__tooltip {
-    position: static;
-    margin-bottom: 13px;
+    top: 5px;
+    left: 0;
+    font-size: 9px;
 }
 
 .purchase__brend {
@@ -8332,15 +8358,16 @@ svg use {
     border-radius: 0px 0px 0px 25px;
 
     @media (min-width: 768px) {
+        margin-bottom: 28px;
         padding-left: 20px;
         padding-right: 19px;
     }
 
     @media (min-width: 1280px) {
         padding-top: 28px;
-        padding-left: 31px;
-        padding-right: 8px;
-        margin-bottom: 7px;
+        // padding-left: 31px;
+        // padding-right: 8px;
+        margin-bottom: 19px;
     }
 }
 
@@ -8427,18 +8454,24 @@ svg use {
 }
 
 .purchase-action {
+    position: relative;
     height: 157px;
     display: flex;
     align-items: center;
     border: 2px solid #2C7A7B;
     border-radius: 6px;
-    padding-left: 23px;
+    padding-left: 20px;
     padding-right: 13px;
     margin: 0 auto;
     background: #F7F7FB;
 
     @media (max-width: 767px) {
         width: 280px;
+    }
+
+    @media (min-width: 768px) {
+        height: 146px;
+        padding-top: 13px;
     }
 
     @media (min-width: 1280px) {
@@ -8459,6 +8492,16 @@ svg use {
 
     span {
         color: #858585;
+    }
+}
+
+.purchase-action__img {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        position: absolute;
+        width: 86px;
+        height: 118px;
+        right: 10px;
+        top: 13px;
     }
 }
 
@@ -8488,8 +8531,17 @@ svg use {
 }
 
 .basket-cont {
-    padding-top: 16px;
     padding-bottom: 57px;
+
+    .breadcrumbs {
+        padding-top: 6px;
+        margin-bottom: 11px;
+
+        @media (min-width: 768px) {
+            padding-top: 0;
+            margin-bottom: 17px;
+        }
+    }
 
     @media (min-width: 768px) {
         padding-top: 21px;
@@ -8535,10 +8587,10 @@ svg use {
 .basket-cont__top {
     display: flex;
     align-items: center;
-    margin-bottom: 34px;
+    margin-bottom: 29px;
 
     @media (min-width: 768px) {
-        margin-bottom: 63px;
+        margin-bottom: 57px;
     }
 }
 
@@ -8554,10 +8606,15 @@ svg use {
 }
 
 .purchase__img {
-    width: 60px;
+    width: 64px;
 
     @media (min-width: 600px) {
         width: 75px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-left: 16px;
+        margin-top: 14px;
     }
 
     @media (min-width: 992px) {
@@ -8575,10 +8632,18 @@ svg use {
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 768px) {
+        right: 14px;
+    }
+
     .addfavor {
         @media (max-width: 991px) {
             margin-top: 20px;
             order: 2;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 25px;
         }
 
         @media (min-width: 992px) {
@@ -8604,9 +8669,21 @@ svg use {
 }
 
 .basket-cont__columns {
+    @media (max-width: 767px) {
+        padding: 0 9px;
+    }
+
     @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
+    }
+
+    .column {
+        &:first-child {
+            @media (max-width: 767px) {
+                padding: 0 10px;
+            }
+        }
     }
 }
 
