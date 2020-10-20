@@ -287,12 +287,24 @@
 }
 
 .favor-link {
+    position: relative;
+
     @media (max-width: 767px) {
         .favor-icon {
             width: 18px;
             height: 17px;
         }
     }
+}
+
+.favor-link__active {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10em;
+    background: #000000;
 }
 
 .basket-icon {
@@ -691,7 +703,7 @@ svg use {
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #2C7A7B url("../img/lupa.svg") no-repeat center;
+            background: url("../img/lupa.svg") no-repeat center;
             width: 15px;
             height: 15px;
             background-size: contain;
@@ -1433,6 +1445,10 @@ svg use {
         font-weight: 450;
         font-size: 23px;
 
+        &:hover {
+            color: #38B2AC;
+        }
+
         @media (max-width: 767px) {
             font-size: 18px;
         }
@@ -1658,6 +1674,14 @@ svg use {
     align-items: center;
     color: #858585;
     font-size: 15px;
+}
+
+.brends-list {
+    a {
+        &:hover {
+            color: #38B2AC;
+        }
+    }
 }
 
 .brends-links__all {
@@ -2102,6 +2126,7 @@ svg use {
         position: absolute;
         right: 0;
         top: 0;
+        transition: 0.5s;
         opacity: 0;
     }
 
@@ -2149,7 +2174,8 @@ svg use {
 
         @media (min-width: 1280px) {
             .fastview-btn {
-                display: block;
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
@@ -2189,7 +2215,9 @@ svg use {
     font-size: 12px;
     line-height: 14px;
     color: #000000;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 .product-card__brend {
@@ -2272,7 +2300,7 @@ svg use {
     font-size: 16px;
 
     &:hover {
-        background: #2C7A7B;
+        background: #185B5B;
     }
 }
 
@@ -2558,7 +2586,12 @@ svg use {
     width: 20px;
     height: 20px;
     background: url("../img/close-grey.svg") no-repeat center;
+    background-size: contain;
     z-index: 10;
+
+    &:hover {
+        background: url("../img/close-black.svg") no-repeat center;
+    }
 }
 
 .fastview-gallery-top,
@@ -2640,6 +2673,13 @@ svg use {
 .addfavor-block {
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        .addfavor__txt {
+            color: black;
+        }
+    }
 }
 
 .addfavor__txt {
@@ -2659,7 +2699,8 @@ svg use {
 }
 
 .addfavor,
-.addfavor-active {
+.addfavor-active,
+.addfavor-block__heart {
     width: 20px;
     height: 19px;
     background: url("../img/favor.svg") no-repeat center;
@@ -2678,7 +2719,8 @@ svg use {
     cursor: pointer;
 }
 
-.addfavor.is-active {
+.addfavor.is-active,
+.addfavor-block__heart.is-active {
     background: url("../img/favor-active.svg") no-repeat center;
     background-size: contain;
 }
@@ -2787,13 +2829,15 @@ svg use {
 
     @media (min-width: 1280px) {
         margin-bottom: 150px;
-        max-width: 1730px;
+        // max-width: 1730px;
+        max-width: 1551px;
         width: 100%;
         padding: 67px 0px 37px 70px;
+        margin: 0 auto 66px;
     }
 
     @media (min-width: 1600px) {
-        padding: 67px 0px 37px 107px;
+        padding: 67px 60px 37px 107px;
     }
 
     @media (min-width: 1600px) {
@@ -2870,6 +2914,23 @@ svg use {
 
     @media (min-width: 1280px) {
         margin-bottom: 120px;
+    }
+}
+
+.news-slider {
+    .swiper-button-next {
+        right: 7px;
+        top: 38%;
+
+        @media (max-width: 1279px) {
+            display: none;
+        }
+
+        @media (min-width: 1600px) {}
+    }
+
+    @media (min-width: 1600px) {
+        padding-right: 18px;
     }
 }
 
@@ -2996,6 +3057,10 @@ svg use {
         border: 1px solid #F0F0F0;
         padding: 14px 8px 26px;
         margin-bottom: 15px;
+
+        &:hover {
+            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.14);
+        }
 
         &:nth-child(1),
         &:nth-child(2),
@@ -3446,6 +3511,11 @@ svg use {
             color: #C19686;
             margin-bottom: 9px;
 
+            &:hover {
+                background: #FFCAB6;
+                color: #EE916E;
+            }
+
             @media (min-width: 768px) {
                 margin-bottom: 10px;
                 font-size: 15px;
@@ -3578,7 +3648,17 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 20px;
-        padding-top: 6px;
+        padding-top: 24px;
+    }
+}
+
+.catcategory-cont__bottom {
+    .product-gallery-wrap {
+        &:first-child {
+            @media (min-width: 1280px) {
+                margin-bottom: 100px;
+            }
+        }
     }
 }
 
@@ -3734,6 +3814,42 @@ svg use {
         width: 306px;
         top: -34px;
         left: -18px;
+        overflow: hidden;
+
+        .product-card__banner-img {
+            display: block;
+            position: relative;
+            border-radius: 63px 0px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                transition: 0.5s;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(9.45deg, #000000 -0.05%, rgba(0, 0, 0, 0) 88.15%);
+                z-index: 10;
+                transition: 0.5s;
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .product-card__banner-img:after {
+                opacity: 1;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
     }
 }
 
@@ -3751,6 +3867,7 @@ svg use {
     bottom: 26px;
     left: 18px;
     letter-spacing: 0.3px;
+    z-index: 20;
 }
 
 .product-cont {
@@ -3889,6 +4006,14 @@ svg use {
     color: #858585;
     font-size: 13px;
     margin-top: 8px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.filter-block__clear.is-active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .filter-block {
@@ -3952,7 +4077,7 @@ svg use {
     width: 209px;
     background: #FFFFFF;
     box-shadow: 0px 4px 27px rgba(0, 0, 0, 0.2);
-    padding: 24px 15px 14px 0px;
+    padding: 24px 15px 14px 9px;
     z-index: 10;
     display: none;
 }
@@ -4060,8 +4185,11 @@ svg use {
     margin-bottom: 10px;
 }
 
-.filter-block__label {
-    font-size: 13px;
+.check-block {
+    .filter-block__label {
+        font-size: 13px;
+        padding-left: 30px;
+    }
 }
 
 .catalogtop-mob {
@@ -5545,6 +5673,10 @@ svg use {
     height: 45px;
     background: #38B2AC url("../img/arrow-r-white.svg") no-repeat center;
 
+    &:hover {
+        background: #2C7A7B url("../img/arrow-r-white.svg") no-repeat center;
+    }
+
     @media (min-width: 768px) {
         width: 75px;
         border-radius: 0px 30px;
@@ -6049,7 +6181,7 @@ svg use {
                     width: 283px;
                 }
 
-                .addreview__inp {
+                .textarea-block {
                     width: calc(100% - 283px);
                 }
             }
@@ -6065,6 +6197,20 @@ svg use {
             }
         }
     }
+}
+
+.textarea-block {
+    position: relative;
+}
+
+.textarea-block__article {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 13px;
+    color: #38B2AC;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .addreview__inp {
@@ -6085,9 +6231,14 @@ svg use {
 }
 
 .addreview__inp_comment {
-    border-bottom: 3px solid #38B2AC;
+    padding-top: 15px;
+    border-bottom: 1px solid #38B2AC;
     height: 40px;
     resize: none;
+
+    &:focus {
+        border-bottom: 3px solid #38B2AC;
+    }
 
     @media (max-width: 767px) {
         height: 45px;
@@ -6101,6 +6252,10 @@ svg use {
     @media (min-width: 1280px) {
         height: 50px;
     }
+}
+
+.addreview__inp_comment:focus+.textarea-block__article {
+    opacity: 1;
 }
 
 .addreview__file {
@@ -8077,7 +8232,10 @@ svg use {
         }
 
         @media (min-width: 1280px) {
-            width: 141px;
+            width: 194px;
+            position: relative;
+            top: -32px;
+            left: -5px;
         }
     }
 }
@@ -11006,6 +11164,16 @@ svg use {
     }
 }
 
+.formreg,
+.formlogin,
+.formpassrestore {
+    input {
+        &:focus {
+            border: 2px solid #38B2AC;
+        }
+    }
+}
+
 .modalauth__tab_reg {
     margin-bottom: 35px;
 }
@@ -11030,10 +11198,6 @@ svg use {
     font-size: 10px;
     left: 22px;
     padding-top: 2px;
-}
-
-.modal__inp_error {
-    border: 2px solid #38B2AC;
 }
 
 .formlogin__columns {
@@ -11410,6 +11574,12 @@ svg use {
     padding-top: 15px;
     font-size: 15px;
     color: #38B2AC;
+
+    a {
+        &:hover {
+            color: #286864;
+        }
+    }
 }
 
 .feedbackmodal {
@@ -11600,4 +11770,8 @@ svg use {
     &:hover {
         background: #F0F0F0;
     }
+}
+
+.recallbtn {
+    cursor: pointer;
 }

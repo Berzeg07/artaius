@@ -21,7 +21,7 @@
 
             .column
                 .social
-                    .social__title Связаться с нами
+                    .social__title.recallbtn Связаться с нами
 
                     ul.social-list.social-list_header
                         li
@@ -63,6 +63,7 @@
                 ul.header__basket
                     li
                         a(href="#").favor-link
+                            .favor-link__active
                             +icon('favor','favor-icon favor-grey')
 
                     li
@@ -660,6 +661,7 @@
         ul.header__basket.sticky-panel__basket
             li
                 a(href="#").favor-link
+                    .favor-link__active
                     img(src="img/favor.svg")
             li
                 a(href="#").login-icon

@@ -373,7 +373,9 @@
                         input(type="text").addreview__inp
                     li
                         .addreview__sub-title Что не оправдало ваших ожиданий
-                        textarea(placeholder="Ваш комментарий").addreview__inp.addreview__inp_comment
+                        .textarea-block
+                            textarea.addreview__inp.addreview__inp_comment
+                            .textarea-block__article Ваш комментарий
                     li
                         .addreview__sub-title Общее впечатление
                         textarea.addreview__inp.addreview__inp_txt
@@ -449,5 +451,6 @@
 
                 .swiper-button-next.swiper-button-next-bg
                 .swiper-button-prev.swiper-button-prev-bg
+
 
 

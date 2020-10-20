@@ -2,6 +2,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    outline: none;
 }
 
 blockquote,
@@ -60,4 +61,19 @@ input,
 select,
 textarea {
     font-family: inherit;
+    outline: none;
+}
+
+input,
+.subscription-form input {
+    &:focus {
+        color: black;
+        border: 1px solid #38B2AC;
+    }
+}
+
+.search__btn {
+    &:hover {
+        background: #185B5B;
+    }
 }

@@ -1,6 +1,57 @@
 $(document).ready(function () {
 
-    // function activateFastReview() {
+    $(function () {
+        $(document).mouseup(function (e) { // событие клика по веб-документу
+            var div = $(".modalbasket"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                div.removeClass('is-active') // скрываем его
+            }
+        });
+    });
+
+    var inputs = document.querySelectorAll('.filter-block__check input');
+    var lab;
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('change', function () {
+            if (this.checked) {
+                lab = this.parentNode.textContent;
+                var li = document.createElement('li');
+                li.innerHTML = '<div class="filter-block__res-item">' + '<span>' + lab + '</span>' + '<div class="filter-block__res-del"></div>' + '</div>';
+                var div = document.querySelector('.filter-block__res');
+                div.appendChild(li);
+                $('.filter-block__clear').addClass('is-active');
+
+                $('.filter-block__res-del').click(function () {
+                    $(this).parents('li').remove();
+                    var checkChildren = $(".filter-block__res").children();
+                    if (checkChildren.length == 0) {
+                        $('.filter-block__clear').removeClass('is-active');
+                        for (var i = 0; i < inputs.length; i++) {
+                            inputs[i].checked = false;
+                        }
+                    }
+                });
+            }
+            removeFilter();
+        });
+    }
+
+    function removeFilter() {
+        $('.filter-block__clear').click(function () {
+            $(".filter-block__res li").remove();
+            $(this).removeClass('is-active');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].checked = false;
+            }
+        });
+    }
+
+    $('.overlay').click(function () {
+        $('.modal, .modal-lk, .feedbackmodal, .addcitymodal').fadeOut();
+        $(this).fadeOut();
+    });
+
     $('.fastview-btn').click(function () {
         var htmlModal = $(this).parents('.product-card').find('.fastview-item').html();
 
@@ -53,8 +104,11 @@ $(document).ready(function () {
             $('.fastview').remove();
             $('.select-refprod select').selectric('destroy');
         });
+
+        $('.addfavor-block').click(function () {
+            $(this).find('.addfavor-block__heart').toggleClass("is-active");
+        });
     });
-    // }
 
     var galleryProductThumbs = new Swiper('.product-gallery-thumb', {
         spaceBetween: 10,
@@ -113,6 +167,32 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.reviews-block__btn').click(function () {
+        var plansoffset = $(".addreview").offset().top;
+        $("html, body").animate({
+            scrollTop: plansoffset
+        }, 500);
+    });
+
+    $('.order-product__link').click(function () {
+        localStorage.scrollComment = 'true';
+    });
+
+    function scrollToComment() {
+        var checkDiv = document.querySelector('.addreview');
+        if (checkDiv != undefined) {
+            if (localStorage.scrollComment == 'true') {
+                var plansoffset = $(".addreview").offset().top;
+                $("html, body").animate({
+                    scrollTop: plansoffset
+                }, 500);
+                localStorage.scrollComment = 'false';
+            }
+        }
+    }
+
+    scrollToComment();
 
     $('.delivery-btn').click(function () {
         $('.delivery').slideToggle();
@@ -238,8 +318,8 @@ $(document).ready(function () {
             observer: true,
             observeParents: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.tab-next',
+                prevEl: '.tab-prev',
             },
             breakpoints: {
                 499: {
@@ -553,12 +633,15 @@ $(document).ready(function () {
     });
 
     var newsSlider = new Swiper('.news-slider', {
-        slidesPerView: 3.8,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 20,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
         },
         breakpoints: {
             599: {
@@ -581,10 +664,10 @@ $(document).ready(function () {
                 slidesPerView: 2.6,
                 spaceBetween: 10,
             },
-            1899: {
-                slidesPerView: 3.2,
-                spaceBetween: 10,
-            }
+            // 1899: {
+            //     slidesPerView: 3.2,
+            //     spaceBetween: 10,
+            // }
         },
     });
 
@@ -667,7 +750,7 @@ $(document).ready(function () {
         $('.modalpassrestore').fadeIn();
     });
 
-    $('.phone-list__btn').click(function () {
+    $('.phone-list__btn, .recallbtn').click(function () {
         $('.feedbackmodal').fadeIn();
         $('.overlay').fadeIn();
     });
@@ -770,33 +853,35 @@ $(document).ready(function () {
         myMap3.geoObjects.add(myPlacemark3);
 
         //=======================================================
+        var checkDiv = document.querySelector('#delivMap');
+        if (checkDiv) {
+            var center4 = [55.59113656911934, 37.88662649999996];
+            var myMap4 = new ymaps.Map('delivMap', {
+                center: center4,
+                controls: [],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
 
-        var center4 = [55.59113656911934, 37.88662649999996];
-        var myMap4 = new ymaps.Map('delivMap', {
-            center: center4,
-            controls: [],
-            zoom: 16
-        }, {
-            searchControlProvider: 'yandex#search'
+            });
 
-        });
+            myMap4.behaviors.disable('scrollZoom');
 
-        myMap4.behaviors.disable('scrollZoom');
+            var myPlacemark4 = new ymaps.Placemark(center4, {
+                // Свойства.
+                // Содержимое иконки, балуна и хинта.
+                balloonContent: 'улица Ивана Франко, 4к4',
+                hintContent: 'улица Ивана Франко, 4к4'
+            }, {
+                // Опции.
+                iconLayout: 'default#image',
+                // iconImageHref: 'img/map-ic.png',
+                // iconImageSize: [42, 42]
+                // preset: 'twirl#violetIcon'
+            });
 
-        var myPlacemark4 = new ymaps.Placemark(center4, {
-            // Свойства.
-            // Содержимое иконки, балуна и хинта.
-            balloonContent: 'улица Ивана Франко, 4к4',
-            hintContent: 'улица Ивана Франко, 4к4'
-        }, {
-            // Опции.
-            iconLayout: 'default#image',
-            // iconImageHref: 'img/map-ic.png',
-            // iconImageSize: [42, 42]
-            // preset: 'twirl#violetIcon'
-        });
-
-        myMap4.geoObjects.add(myPlacemark4);
+            myMap4.geoObjects.add(myPlacemark4);
+        }
     }
 
     // Тестовый вызов модалок !!!!!!!!!!!!!!!!!!!!!!!
