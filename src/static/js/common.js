@@ -1,5 +1,70 @@
 $(document).ready(function () {
 
+    function previewShow() {
+        var maxFileSize = 2 * 1024 * 1024; // (байт) Максимальный размер файла (2мб)
+        var queue = {};
+        var form = $('form#uploadImages');
+        var imagesList = $('#uploadImagesList');
+
+        var itemPreviewTemplate = imagesList.find('.item.template').clone();
+        itemPreviewTemplate.removeClass('template');
+        imagesList.find('.item.template').remove();
+
+
+        $('#addImages').on('change', function () {
+            var files = this.files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+
+                if (!file.type.match(/image\/(jpeg|jpg|png|gif)/)) {
+                    alert('Фотография должна быть в формате jpg, png или gif');
+                    continue;
+                }
+
+                if (file.size > maxFileSize) {
+                    alert('Размер фотографии не должен превышать 2 Мб');
+                    continue;
+                }
+
+                preview(files[i]);
+            }
+
+            this.value = '';
+        });
+
+        // Создание превью
+        function preview(file) {
+            var reader = new FileReader();
+            reader.addEventListener('load', function (event) {
+                var img = document.createElement('img');
+
+                var itemPreview = itemPreviewTemplate.clone();
+
+                itemPreview.find('.img-wrap img').attr('src', event.target.result);
+                itemPreview.data('id', file.name);
+
+                imagesList.append(itemPreview);
+
+                queue[file.name] = file;
+
+            });
+            reader.readAsDataURL(file);
+        }
+
+        // Удаление фотографий
+        // imagesList.on('click', '.delete-link', function () {
+        //     var item = $(this).closest('.item'),
+        //         id = item.data('id');
+
+        //     delete queue[id];
+
+        //     item.remove();
+        // });
+    }
+
+
+
     $(function () {
         $(document).mouseup(function (e) { // событие клика по веб-документу
             var div = $(".modalbasket"); // тут указываем ID элемента
@@ -272,6 +337,9 @@ $(document).ready(function () {
 
     $('.addcitymodal__inp').on('input', function () {
         $('.addcitymodal__hidden').fadeIn();
+        $(this).focusout(function () {
+            $('.addcitymodal__hidden').fadeOut();
+        });
     });
 
     $('.acc-tabs .acc-tabs__item').click(function () {
@@ -512,6 +580,24 @@ $(document).ready(function () {
         // }
     });
 
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.userphoto img').attr('src', e.target.result);
+                $('.userphoto').addClass('is-active');
+                $('.add-profilephoto__txt').addClass('hide');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#addphoto").change(function () {
+        readURL(this);
+    });
+
     function showSidebar() {
         var screenWidth = $(window).width();
         if (screenWidth < 1280) {
@@ -524,6 +610,9 @@ $(document).ready(function () {
                 $(this).toggleClass('is-active');
                 $(this).next().slideToggle();
             });
+        }
+        if (screenWidth > 1279) {
+            previewShow();
         }
     }
 
@@ -755,7 +844,7 @@ $(document).ready(function () {
         $('.overlay').fadeIn();
     });
 
-    $('.changecity-btn').click(function () {
+    $('.changecity-btn, .delivmethod__addcity').click(function () {
         $('.addcitymodal').fadeIn();
         $('.overlay').fadeIn();
     });

@@ -65,7 +65,8 @@ textarea {
 }
 
 input,
-.subscription-form input {
+.subscription-form input,
+.modal-lk__textarea {
     &:focus {
         color: black;
         border: 1px solid #38B2AC;

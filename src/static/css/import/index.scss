@@ -3653,6 +3653,10 @@ svg use {
 }
 
 .catcategory-cont__bottom {
+    @media (min-width: 1280px) {
+        margin-bottom: 137px;
+    }
+
     .product-gallery-wrap {
         &:first-child {
             @media (min-width: 1280px) {
@@ -4116,6 +4120,14 @@ svg use {
     background: #000000;
     border-radius: 3px;
     color: white;
+
+    &:hover {
+        background: #3F3F3F;
+    }
+
+    &:active {
+        background: #000000;
+    }
 }
 
 .btn-black-cont {
@@ -4130,6 +4142,14 @@ svg use {
 
     @media (min-width: 1280px) {
         font-size: 17px;
+    }
+
+    &:hover {
+        background: #3F3F3F;
+    }
+
+    &:active {
+        background: #000000;
     }
 }
 
@@ -5864,6 +5884,7 @@ svg use {
     }
 
     @media (min-width: 1280px) {
+        position: static;
         max-width: 250px;
         width: 100%;
     }
@@ -6271,10 +6292,17 @@ svg use {
     line-height: 47px;
     border: 1px solid #D0D0D0;
     font-size: 11px;
-    color: #38B2AC;
+    color: #000000;
     padding-left: 45px;
-    background: url("../img/file-icon.svg") no-repeat center left 13px;
+    background: url("../img/file-icon-black.svg") no-repeat center left 13px;
     margin: 22px 0px;
+    cursor: pointer;
+
+    &:hover {
+        color: #38B2AC;
+        background: url("../img/file-icon.svg") no-repeat center left 13px;
+    }
+
 
     @media (min-width: 1280px) {
         margin: 0;
@@ -6283,7 +6311,35 @@ svg use {
         line-height: 54px;
         padding-left: 61px;
         font-size: 13px;
-        background: url("../img/file-icon-black.svg") no-repeat center left 13px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.uploadImagesList {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: 180px;
+    overflow: hidden;
+
+    // overflow-x: auto;
+    @media (max-width: 1279px) {
+        display: none;
+    }
+
+    li {
+        min-width: 50px;
+        height: 39px;
+        overflow: hidden;
+        display: block;
+        margin-right: 9px;
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+        }
     }
 }
 
@@ -6480,6 +6536,38 @@ svg use {
 
     @media (min-width: 1280px) {
         margin-bottom: 100px;
+    }
+
+    .product-gallery-wrap {
+        &:first-child {
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: 1280px) {
+                margin-bottom: 111px;
+            }
+        }
+    }
+}
+
+.catalog__recom {
+    padding-bottom: 50px;
+
+    .product-gallery-wrap {
+        &:first-child {
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: 1280px) {
+                margin-bottom: 111px;
+            }
+        }
     }
 }
 
@@ -6746,6 +6834,10 @@ svg use {
 .acc-exit {
     font-size: 10px;
     color: #38B2AC;
+
+    &:hover {
+        color: black;
+    }
 
     @media (min-width: 768px) {
         font-size: 13px;
@@ -7495,6 +7587,11 @@ svg use {
     height: 50px;
     border-bottom: 1px solid #C4C4C4;
 
+    &:focus {
+        border: none;
+        border-bottom: 2px solid #C4C4C4;
+    }
+
     @media (min-width: 768px) {
         font-size: 16px;
     }
@@ -7630,6 +7727,32 @@ svg use {
             bottom: -28px;
         }
     }
+}
+
+.userphoto {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 122px;
+    height: 122px;
+    border-radius: 10em;
+    overflow: hidden;
+    opacity: 0;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.userphoto.is-active {
+    opacity: 1;
+}
+
+.add-profilephoto__txt.hide {
+    opacity: 0;
 }
 
 .modal-lk {
@@ -7776,6 +7899,16 @@ svg use {
 
     .mCSB_inside>.mCSB_container {
         margin-right: 0;
+    }
+}
+
+.modal-pickup__list {
+    li {
+        cursor: pointer;
+
+        &:hover {
+            background: #F4F1FF;
+        }
     }
 }
 
@@ -8530,6 +8663,10 @@ svg use {
     height: 19px;
     background: url("../img/del-purshace.svg") no-repeat center;
     background-size: contain;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .purchase-form {
@@ -8672,7 +8809,7 @@ svg use {
     }
 
     span {
-        color: #858585;
+        color: #38B2AC;
     }
 }
 
@@ -8829,6 +8966,7 @@ svg use {
 
         @media (min-width: 992px) {
             margin-right: 20px;
+            margin-top: 0;
         }
     }
 
@@ -9941,6 +10079,20 @@ svg use {
             }
         }
     }
+
+    a {
+        &:hover {
+            color: #38B2AC;
+        }
+    }
+}
+
+.contact-list__email {
+    a {
+        &:hover {
+            color: #38B2AC;
+        }
+    }
 }
 
 .contact-list__title_subscribe {
@@ -10291,6 +10443,10 @@ svg use {
     }
 }
 
+.delivmethod__addcity {
+    cursor: pointer;
+}
+
 .changecity-btn {
     height: 53px;
     border-radius: 0px 22px;
@@ -10351,7 +10507,7 @@ svg use {
 }
 
 .shippinginfo__grey {
-    color: #38B2AC;
+    color: #858585;
 }
 
 .shippinginfo__title {

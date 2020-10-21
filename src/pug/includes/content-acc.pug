@@ -194,13 +194,15 @@ mixin orderProduct
                                 button(type="submit").btn.changepass__btn Сохранить 
 
                     .tab-profile__column
-                        .add-profilephoto
+                        form(action="#" enctype="multipart/form-data").add-profilephoto
                             input(type="file")#addphoto
                             label(for="addphoto").addphoto-label
                                 .addphoto-label__item
+                                    .userphoto
+                                        img(src="img/user.jpg")
                                     .add-profilephoto__img
                                         img(src="img/add-photo.png")
-                                    span Добавить фото
+                                    span.add-profilephoto__txt Добавить фото
 
                 //- Дисконтная программа *
                 .tab-discount.acc-tabscont__item#disc

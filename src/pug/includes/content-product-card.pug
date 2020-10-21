@@ -349,7 +349,7 @@
                 button(type="button").btn-more 
                     span Показать еще
 
-    form.addreview(action="#")
+    form(action="#" method="post" enctype="multipart/form-data").addreview#uploadImages
         .addreview__title Мой отзыв о прямых ножницах 5+ класса
         .addreview__cont
             .addreview__item
@@ -384,8 +384,16 @@
             .addreview__item
                 .addreview__sub-title Вы можете добавить ваше фото товара
                 .addreview__file
-                    input(type="file" multiple)#addFile
-                    label(for="addFile").add-file Прикрепить изображение
+                    input(type="file" multiple)#addImages
+                    label(for="addImages").add-file 
+                        span Прикрепить изображение
+                        <ul class="uploadImagesList" id="uploadImagesList">
+                            <li class="item template">
+                                <span class="img-wrap">
+                                    <img src="">
+                                </span>
+                            </li>
+                        </ul>
 
             .addreview__item
                 button(type="submit").btn-black-cont.addreview__btn Отправить
