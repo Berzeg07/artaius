@@ -186,10 +186,13 @@ mixin orderProduct
                         form.changepass(action="#")
                             .changepass__item
                                 .changepass__title Сменить пароль
+                                label
+                                    input(type="text" placeholder="Новый пароль").changepass__inp.changepass__inp_new
+                                    .changepass__hidden-txt Новый пароль
 
-                                input(type="text" placeholder="Новый пароль").changepass__inp.changepass__inp_new
-
-                                input(type="text" placeholder="Повторите пароль").changepass__inp.changepass__inp_old
+                                label
+                                    input(type="text" placeholder="Повторите пароль").changepass__inp.changepass__inp_old
+                                    .changepass__hidden-txt Новый пароль
 
                                 button(type="submit").btn.changepass__btn Сохранить 
 

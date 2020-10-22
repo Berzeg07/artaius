@@ -112,11 +112,6 @@ $(document).ready(function () {
         });
     }
 
-    $('.overlay').click(function () {
-        $('.modal, .modal-lk, .feedbackmodal, .addcitymodal').fadeOut();
-        $(this).fadeOut();
-    });
-
     $('.fastview-btn').click(function () {
         var htmlModal = $(this).parents('.product-card').find('.fastview-item').html();
 
@@ -163,7 +158,7 @@ $(document).ready(function () {
             },
         });
 
-        $('.fastview__close').click(function () {
+        $('.fastview__close, .overlay').click(function () {
             $('.fastview').fadeOut();
             $('.overlay').fadeOut();
             $('.fastview').remove();
@@ -172,7 +167,19 @@ $(document).ready(function () {
 
         $('.addfavor-block').click(function () {
             $(this).find('.addfavor-block__heart').toggleClass("is-active");
+            $('.addfavor__txt').toggleClass('is-active');
+            $(this).toggleClass('is-active');
+            if ($('.addfavor__txt').hasClass('is-active')) {
+                $('.addfavor__txt').html('В избранном');
+            } else {
+                $('.addfavor__txt').html('В избранное');
+            }
         });
+    });
+
+    $('.overlay').click(function () {
+        $('.modal, .modal-lk, .feedbackmodal, .addcitymodal').fadeOut();
+        $(this).fadeOut();
     });
 
     var galleryProductThumbs = new Swiper('.product-gallery-thumb', {
@@ -573,7 +580,7 @@ $(document).ready(function () {
     $('.delivery-list, .modal-pickup, .modalbasket__columns').mCustomScrollbar({
         axis: 'y',              // вертикальный скролл 
         theme: 'dark',  // тема 
-        // scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+        scrollInertia: '130',   // продолжительность прокрутки, значение в миллисекундах 
         // setHeight: 360,         // высота блока (переписывает CSS) 
         // mouseWheel: {
         //     deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
@@ -646,7 +653,7 @@ $(document).ready(function () {
                 spaceBetween: 30,
                 loop: false,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-pagination-block',
                     clickable: true,
                 },
                 breakpoints: {

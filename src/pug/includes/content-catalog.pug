@@ -22,6 +22,8 @@
                 input(type="checkbox" id=id3)
                 label(for=id3).filter-block__label= txt3
 
+            button(type="submit").filter-price__btn.btn-black Применить
+
     mixin filterCheck(id, txt)
         .filter-block__check
             input(type="checkbox" id=id)
@@ -108,7 +110,7 @@
                     button(type="button").filter-block__clear Очистить
 
             .filter-block__column
-                button(type="submit").filter-block__btn Применить фильтр
+                //- button(type="submit").filter-block__btn Применить фильтр
 
         .catalogtop-mob
             .catalogtop-mob__column

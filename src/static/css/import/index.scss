@@ -958,6 +958,12 @@ svg use {
     li {
         margin-bottom: 10px;
     }
+
+    a {
+        &:hover {
+            color: #38B2AC;
+        }
+    }
 }
 
 .dropdownmenu__list_black {
@@ -1166,6 +1172,7 @@ svg use {
     left: -100%;
     background: white;
     padding-top: 32px;
+    padding-bottom: 50px;
     z-index: 150;
     transition: 0.5s;
     height: 100vh;
@@ -1594,10 +1601,6 @@ svg use {
         font-size: 15px;
     }
 
-    @media (min-width: 1280px) {
-        padding-left: 5px;
-    }
-
     li {
         margin-bottom: 21px;
     }
@@ -1830,7 +1833,8 @@ svg use {
     }
 }
 
-.swiper-pagination {
+.swiper-pagination,
+.swiper-pagination-block {
     bottom: -4px;
 
     @media (max-width: 767px) {
@@ -1840,6 +1844,10 @@ svg use {
     @media (min-width: 1280px) {
         display: none;
     }
+}
+
+.swiper-pagination-block {
+    text-align: center;
 }
 
 .swiper-pagination-bullet {
@@ -2625,6 +2633,10 @@ svg use {
     font-size: 17px;
     text-align: center;
     color: #139AD6;
+
+    &:hover {
+        color: #1972C5;
+    }
 }
 
 .reviews-stars {
@@ -2674,8 +2686,14 @@ svg use {
     display: flex;
     align-items: center;
     cursor: pointer;
+}
 
+.addfavor-block.is-active {
     &:hover {
+        .addfavor-block__heart {
+            background: url("../img/favor-darken.svg") no-repeat center;
+        }
+
         .addfavor__txt {
             color: black;
         }
@@ -2690,6 +2708,10 @@ svg use {
     @media (min-width: 1600px) {
         margin-left: 17px;
     }
+}
+
+.addfavor__txt.is-active {
+    color: #000000;
 }
 
 .fastview__top-info {
@@ -2975,7 +2997,7 @@ svg use {
 }
 
 .news-block__article {
-    color: #38B2AC;
+    color: #A1A1A1;
     font-size: 13px;
     margin-bottom: 25px;
 
@@ -4795,11 +4817,10 @@ svg use {
     @media (min-width: 992px) {
         width: 221px;
     }
+}
 
-
-    li {
-        margin-bottom: 15px;
-    }
+.product-info__select>li {
+    margin-bottom: 15px;
 }
 
 .delivery {
@@ -6166,6 +6187,15 @@ svg use {
             }
         }
 
+        &:nth-child(2) {
+            input {
+                &:focus {
+                    border: none;
+                    border-bottom: 1px solid #C4C4C4;
+                }
+            }
+        }
+
         &:nth-child(3) {
             @media (max-width: 767px) {
                 margin-bottom: 24px;
@@ -6253,7 +6283,7 @@ svg use {
 
 .addreview__inp_comment {
     padding-top: 15px;
-    border-bottom: 1px solid #38B2AC;
+    border-bottom: 1px solid #C4C4C4;
     height: 40px;
     resize: none;
 
@@ -7567,6 +7597,22 @@ svg use {
 .changepass__item {
     max-width: 456px;
     width: 100%;
+
+    label {
+        display: block;
+        position: relative;
+    }
+}
+
+.changepass__hidden-txt {
+    font-size: 13px;
+    color: #38B2AC;
+    position: absolute;
+    left: 3px;
+    top: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 .changepass__title {
@@ -7589,12 +7635,17 @@ svg use {
 
     &:focus {
         border: none;
-        border-bottom: 2px solid #C4C4C4;
+        border-bottom: 2px solid #38B2AC;
     }
 
     @media (min-width: 768px) {
         font-size: 16px;
     }
+}
+
+.changepass__inp:focus+.changepass__hidden-txt {
+    visibility: visible;
+    opacity: 1;
 }
 
 .changepass__inp_new {
@@ -7760,7 +7811,6 @@ svg use {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    outline: 1px solid red;
     max-width: 320px;
     width: 100%;
     z-index: 300;
@@ -8839,7 +8889,7 @@ svg use {
     font-size: 15px;
 
     span {
-        color: #858585;
+        color: #38B2AC;
         font-weight: 500;
     }
 
@@ -9107,7 +9157,7 @@ svg use {
     margin-top: 16px;
 
     span {
-        color: #858585;
+        color: #38B2AC;
         font-weight: 400;
     }
 
@@ -10445,6 +10495,7 @@ svg use {
 
 .delivmethod__addcity {
     cursor: pointer;
+
 }
 
 .changecity-btn {
@@ -11202,6 +11253,10 @@ svg use {
     height: 51px;
     padding-left: 22px;
     padding-right: 15px;
+}
+
+.modal__inp.error {
+    border: 2px solid #38B2AC !important;
 }
 
 .modal-basket__btn {
