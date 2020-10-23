@@ -34,6 +34,11 @@ body {
     margin: 0 auto;
 }
 
+body.hidden-y {
+    overflow-y: hidden;
+    padding-right: 15px;
+}
+
 ol,
 ul {
     padding: 0;

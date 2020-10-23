@@ -30,6 +30,9 @@
 
     @media (max-width: 1279px) {
         padding: 2px 0px;
+        height: 42px;
+        display: flex;
+        align-items: center;
     }
 
     @media (max-width: 767px) {
@@ -74,6 +77,29 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 19px;
+}
+
+.selectcity {
+    width: 170px;
+    color: #686868;
+    font-size: 15px;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 8px;
+            height: 5px;
+            position: absolute;
+            top: 59%;
+            right: -15px;
+            transform: translateY(-50%);
+            background: url('../img/arrow-down.svg') no-repeat center;
+        }
+    }
 }
 
 .select_city,
@@ -583,6 +609,10 @@ svg use {
     font-weight: 500;
     display: inline-block;
     position: relative;
+
+    &:hover {
+        color: #ABECE9;
+    }
 }
 
 .main-nav>li {
@@ -3792,6 +3822,12 @@ svg use {
             border-top: 1px solid #EFEFF9;
         }
     }
+
+    a {
+        &:hover {
+            color: #38B2AC;
+        }
+    }
 }
 
 .product-slider {
@@ -4950,7 +4986,9 @@ svg use {
 }
 
 .delivery__city {
+    color: #38B2AC;
     padding-top: 3px;
+    cursor: pointer;
 
     @media (min-width: 768px) and (max-width: 1279px) {
         padding-top: 6px;
@@ -5164,8 +5202,12 @@ svg use {
 
 .buy-one-click {
     color: #38B2AC;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 13px;
+
+    &:hover {
+        color: #286864;
+    }
 
     @media (min-width: 768px) {
         font-size: 15px;
@@ -6216,11 +6258,15 @@ svg use {
 
         @media (min-width: 1280px) {
             &:nth-child(2) {
+                .textarea-block__article {
+                    top: -24px;
+                }
+
                 .addreview__sub-title {
                     width: 176px;
                 }
 
-                .addreview__inp {
+                .textarea-block {
                     width: calc(100% - 176px);
                 }
             }
@@ -6238,11 +6284,15 @@ svg use {
             }
 
             &:nth-child(4) {
+                .textarea-block__article {
+                    top: -24px;
+                }
+
                 .addreview__sub-title {
                     width: 176px;
                 }
 
-                .addreview__inp {
+                .textarea-block {
                     width: calc(100% - 176px);
                 }
             }
@@ -6305,7 +6355,13 @@ svg use {
     }
 }
 
-.addreview__inp_comment:focus+.textarea-block__article {
+.addreview__inp {
+    &:focus {
+        border-bottom: 3px solid #38B2AC !important;
+    }
+}
+
+.addreview__inp:focus+.textarea-block__article {
     opacity: 1;
 }
 
@@ -7605,13 +7661,11 @@ svg use {
 }
 
 .changepass__hidden-txt {
-    font-size: 13px;
-    color: #38B2AC;
+    font-size: 16px;
+    color: #000000;
     position: absolute;
     left: 3px;
-    top: -5px;
-    opacity: 0;
-    visibility: hidden;
+    top: 17px;
     transition: 0.5s;
 }
 
@@ -7644,8 +7698,9 @@ svg use {
 }
 
 .changepass__inp:focus+.changepass__hidden-txt {
-    visibility: visible;
-    opacity: 1;
+    top: -5px;
+    font-size: 13px;
+    color: #A2BEBC;
 }
 
 .changepass__inp_new {
@@ -8638,12 +8693,12 @@ svg use {
 }
 
 .switch-counter__btn_minus {
-    background: url("../img/minus-icon.png") no-repeat center;
+    background: url("../img/minus-icon.svg") no-repeat center;
     background-size: contain;
 }
 
 .switch-counter__btn_plus {
-    background: url("../img/plus-icon.png") no-repeat center;
+    background: url("../img/plus-icon.svg") no-repeat center;
     background-size: contain;
 }
 
@@ -11879,19 +11934,24 @@ svg use {
     }
 
     @media (min-width: 768px) {
+        max-width: 558px;
+        width: 100%;
+    }
+
+    @media (min-width: 992px) {
         max-width: 950px;
         width: 100%;
     }
 }
 
 .addcitymodal__list {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         display: flex;
         flex-wrap: wrap;
     }
 
     li {
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             width: 20%;
         }
     }
@@ -11969,7 +12029,7 @@ svg use {
         column-count: 3;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         column-count: auto;
     }
 }

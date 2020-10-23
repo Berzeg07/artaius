@@ -75,31 +75,66 @@ $(document).ready(function () {
         });
     });
 
-    var inputs = document.querySelectorAll('.filter-block__check input');
-    var lab;
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('change', function () {
-            if (this.checked) {
-                lab = this.parentNode.textContent;
-                var li = document.createElement('li');
-                li.innerHTML = '<div class="filter-block__res-item">' + '<span>' + lab + '</span>' + '<div class="filter-block__res-del"></div>' + '</div>';
-                var div = document.querySelector('.filter-block__res');
-                div.appendChild(li);
-                $('.filter-block__clear').addClass('is-active');
+    // var inputs = document.querySelectorAll('.filter-block__check input');
+    // var lab;
+    // for (var i = 0; i < inputs.length; i++) {
+    //     inputs[i].addEventListener('change', function () {
+    //         if (this.checked) {
+    //             lab = this.parentNode.textContent;
+    //             var li = document.createElement('li');
+    //             li.innerHTML = '<div class="filter-block__res-item">' + '<span>' + lab + '</span>' + '<div class="filter-block__res-del"></div>' + '</div>';
+    //             var div = document.querySelector('.filter-block__res');
+    //             div.appendChild(li);
+    //             $('.filter-block__clear').addClass('is-active');
 
-                $('.filter-block__res-del').click(function () {
-                    $(this).parents('li').remove();
-                    var checkChildren = $(".filter-block__res").children();
-                    if (checkChildren.length == 0) {
-                        $('.filter-block__clear').removeClass('is-active');
-                        for (var i = 0; i < inputs.length; i++) {
-                            inputs[i].checked = false;
-                        }
+    //             $('.filter-block__res-del').click(function () {
+    //                 $(this).parents('li').remove();
+    //                 var checkChildren = $(".filter-block__res").children();
+    //                 if (checkChildren.length == 0) {
+    //                     $('.filter-block__clear').removeClass('is-active');
+    //                     for (var i = 0; i < inputs.length; i++) {
+    //                         inputs[i].checked = false;
+    //                     }
+    //                 }
+    //             });
+    //         }
+    //         removeFilter();
+    //     });
+    // }
+
+    var filterBtn = document.querySelectorAll('.filter-price__btn');
+
+    if (filterBtn) {
+        for (var i = 0; i < filterBtn.length; i++) {
+            filterBtn[i].addEventListener('click', function () {
+                $('.filter-block__res').html('');
+                var parent = this.parentNode;
+                var inputs = document.querySelectorAll('.filter-block__check input');
+                var lab;
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].checked) {
+                        lab = inputs[i].parentNode.textContent;
+                        var li = document.createElement('li');
+                        li.innerHTML = '<div class="filter-block__res-item">' + '<span>' + lab + '</span>' + '<div class="filter-block__res-del"></div>' + '</div>';
+                        var div = document.querySelector('.filter-block__res');
+                        div.appendChild(li);
+                        $('.filter-block__clear').addClass('is-active');
+
+                        $('.filter-block__res-del').click(function () {
+                            $(this).parents('li').remove();
+                            var checkChildren = $(".filter-block__res").children();
+                            if (checkChildren.length == 0) {
+                                $('.filter-block__clear').removeClass('is-active');
+                                for (var i = 0; i < inputs.length; i++) {
+                                    inputs[i].checked = false;
+                                }
+                            }
+                        });
                     }
-                });
-            }
-            removeFilter();
-        });
+                    removeFilter();
+                }
+            });
+        }
     }
 
     function removeFilter() {
@@ -164,7 +199,11 @@ $(document).ready(function () {
             $('.fastview').remove();
             $('.select-refprod select').selectric('destroy');
         });
+        addfavor();
 
+    });
+
+    function addfavor() {
         $('.addfavor-block').click(function () {
             $(this).find('.addfavor-block__heart').toggleClass("is-active");
             $('.addfavor__txt').toggleClass('is-active');
@@ -175,11 +214,14 @@ $(document).ready(function () {
                 $('.addfavor__txt').html('В избранное');
             }
         });
-    });
+    }
+
+    addfavor();
 
     $('.overlay').click(function () {
         $('.modal, .modal-lk, .feedbackmodal, .addcitymodal').fadeOut();
         $(this).fadeOut();
+        $('body').removeClass('hidden-y');
     });
 
     var galleryProductThumbs = new Swiper('.product-gallery-thumb', {
@@ -319,6 +361,7 @@ $(document).ready(function () {
         $('.modal-lk, .modal, .feedbackmodal, .addcitymodal').fadeOut();
         $('.overlay').fadeOut();
         $('.modalbasket').removeClass('is-active');
+        $('body').removeClass('hidden-y');
     });
 
     $('.basketheader').hover(function () {
@@ -802,6 +845,7 @@ $(document).ready(function () {
     $('.delivmethod__about-shipping').click(function () {
         $('.modal-lk_check').fadeIn();
         $('.overlay').fadeIn();
+        $('body').addClass('hidden-y');
     });
 
     $('.delivery-type').click(function () {
@@ -835,7 +879,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.login a').click(function (e) {
+    $('.login a, .login-icon').click(function (e) {
         e.preventDefault();
         $('#modalauth').fadeIn();
         $('.overlay').fadeIn();
@@ -846,12 +890,13 @@ $(document).ready(function () {
         $('.modalpassrestore').fadeIn();
     });
 
-    $('.phone-list__btn, .recallbtn').click(function () {
+    $('.phone-list__btn, .recallbtn, .buy-one-click').click(function (e) {
+        e.preventDefault();
         $('.feedbackmodal').fadeIn();
         $('.overlay').fadeIn();
     });
 
-    $('.changecity-btn, .delivmethod__addcity').click(function () {
+    $('.changecity-btn, .delivery__city, .delivmethod__addcity, .selectcity, .mob-menu__mark').click(function () {
         $('.addcitymodal').fadeIn();
         $('.overlay').fadeIn();
     });
