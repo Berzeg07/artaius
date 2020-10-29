@@ -48,9 +48,11 @@
                 mixin catGalleryItem(title)
                     .catcategory-galleries__item
                         if title
-                            h2(class="cont-title")= title
+                            h2(class="cont-title")
+                                a(href="#")= title
                         else
-                            h2.cont-title Ножницы
+                            h2.cont-title 
+                                a(href="#") Ножницы
 
                         .product-slider.swiper-container
                             .swiper-wrapper

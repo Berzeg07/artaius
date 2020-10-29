@@ -19,7 +19,6 @@
 
     @media (max-width: 1279px) {
         position: relative;
-        z-index: 100;
     }
 }
 
@@ -447,7 +446,7 @@ svg use {
         top: 0;
         width: 100%;
         background: white;
-        z-index: 100;
+        z-index: 999;
     }
 
     @media (max-width: 599px) {
@@ -609,10 +608,6 @@ svg use {
     font-weight: 500;
     display: inline-block;
     position: relative;
-
-    &:hover {
-        color: #ABECE9;
-    }
 }
 
 .main-nav>li {
@@ -635,6 +630,29 @@ svg use {
             display: flex;
         }
     }
+}
+
+.isauth {
+    display: flex;
+    align-items: center;
+}
+
+.isauth__img {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 10em;
+    margin-right: 12px;
+    background: url("../img/emptyph.svg") no-repeat center;
+    background-size: contain;
+
+    img {
+        display: block;
+    }
+}
+
+.main-nav>li:hover>a {
+    color: #ABECE9;
 }
 
 .logo {
@@ -1203,7 +1221,7 @@ svg use {
     background: white;
     padding-top: 32px;
     padding-bottom: 50px;
-    z-index: 150;
+    z-index: 1000;
     transition: 0.5s;
     height: 100vh;
     overflow-y: auto;
@@ -3574,6 +3592,30 @@ svg use {
             }
 
         }
+    }
+}
+
+.tags {
+    a {
+        font-size: 13px;
+        margin-bottom: 5px;
+        display: inline-block;
+        background: #FEE9E1;
+        border-radius: 22px;
+        padding: 6px 19px;
+        color: #C19686;
+        margin-bottom: 9px;
+
+        &:hover {
+            background: #FFCAB6;
+            color: #EE916E;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
     }
 }
 

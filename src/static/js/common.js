@@ -222,6 +222,7 @@ $(document).ready(function () {
         $('.modal, .modal-lk, .feedbackmodal, .addcitymodal').fadeOut();
         $(this).fadeOut();
         $('body').removeClass('hidden-y');
+        $('.mob-menu, .burger').removeClass('is-active');
     });
 
     var galleryProductThumbs = new Swiper('.product-gallery-thumb', {
@@ -572,6 +573,7 @@ $(document).ready(function () {
     $('.burger').click(function () {
         $(this).toggleClass('is-active');
         $('.mob-menu').toggleClass('is-active');
+        $('.overlay').fadeToggle();
     });
 
     $(window).scroll(function () {

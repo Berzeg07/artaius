@@ -39,9 +39,15 @@
                                 +icon('whatsup-icon','whatsup-icon whatsup-header')
 
                 .login
-                    a(href="#") Вход / Регистрация
-                    //- span / 
-                    //- a(href="#") Регистрация
+                    //- Если не авторизован выполняется этот блок*
+                    //- a(href="#") Вход / Регистрация
+
+                    //- Прошел авторизацию *
+                    .isauth
+                        .isauth__img
+                            img(src="img/isauth.jpg" width="20" height="20")
+                        .isauth__name Анатолий
+
     .header__laptop
         .header__middle.container
             .column
@@ -437,224 +443,14 @@
         ul.sticky-panel__nav
             li
                 a(href="#") Парикмахерский инструмент
-                .dropdownmenu.dropdownmenu_desctop.sticky-panel__dropdown
-                    .dropdownmenu__inner
-                        .dropdownmenu__item
-                            .dropdownmenu__title 
-                                a(href="#") Ножницы
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Прямые Ножницы
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") 3 класс
-                                li
-                                    a(href="#") 4 класс
-                                li
-                                    a(href="#") 5 класс
-                                li
-                                    a(href="#") 5+ класс
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Филировочные ножницы
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") 3 класс
-                                li
-                                    a(href="#") 4 класс
-                                li
-                                    a(href="#") 5 класс
-                                li
-                                    a(href="#") 5+ класс
-
-                            .dropdownmenu__title 
-                                a(href="#") Ножницы для левшей
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Прямые Ножницы
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") 3 класс
-                                li
-                                    a(href="#") 4 класс
-                                li
-                                    a(href="#") 5 класс
-                                li
-                                    a(href="#") 5+ класс
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Филировочные ножницы
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") 3 класс
-                                li
-                                    a(href="#") 4 класс
-                                li
-                                    a(href="#") 5 класс
-                                li
-                                    a(href="#") 5+ класс
-
-                        .dropdownmenu__item
-                            .dropdownmenu__sub-title
-                                a(href="#") Комплекты ножниц
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") 3 класс
-                                li
-                                    a(href="#") 4 класс
-                                li
-                                    a(href="#") 5 класс
-                                li
-                                    a(href="#") 5+ класс
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Аксессуары для ножниц
-
-                            ul.dropdownmenu__list.dropdownmenu__list_column
-                                li
-                                    a(href="#") Масло
-                                li
-                                    a(href="#") Чехлы
-                                li
-                                    a(href="#") Кобура
-
-                            .dropdownmenu__title 
-                                a(href="#") Расходники
-
-                            ul.dropdownmenu__list.dropdownmenu__list_black
-                                li
-                                    a(href="#") Кисти
-                                li
-                                    a(href="#") Миски
-                                li
-                                    a(href="#") Шпатели и лопатки
-                                li
-                                    a(href="#") Выжиматели
-                                li
-                                    a(href="#") Диспансеры
-                                li
-                                    a(href="#") Наборы
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Расчески, щетки, брашинги
-
-                            ul.dropdownmenu__list.dropdownmenu__list_black
-                                li
-                                    a(href="#") Расчески
-                                li
-                                    a(href="#") Щетки
-                                li
-                                    a(href="#") Брашинги
-                                li
-                                    a(href="#") Очистители расчесок и брашингов
-
-                        .dropdownmenu__item
-                            .dropdownmenu__title 
-                                a(href="#") Приборы для волос
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Щипцы для волос
-
-                            ul.dropdownmenu__list
-                                li
-                                    a(href="#") Для выпрямления
-                                li
-                                    a(href="#") Гофре
-                                li
-                                    a(href="#") Для завивки
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Машинки для создания локонов
-
-                            .dropdownmenu__sub-title
-                                a(href="#") Машинки
-
-                            ul.dropdownmenu__list
-                                li
-                                    a(href="#") Машинки для стрижки волос
-                                li
-                                    a(href="#") Машинки для стрижки секущихся концов
-                                li
-                                    a(href="#") Триммеры
-                                li
-                                    a(href="#") Шейверы
-                                li
-                                    a(href="#") Принадлежности к машинкам
-
-                            ul.dropdownmenu__list.dropdownmenu__list_black
-                                li
-                                    a(href="#") Фены
-                                li
-                                    a(href="#") Бритвы и лезвия
-                                li
-                                    a(href="#") Принадлежности и аксессуары
-                                li
-                                    a(href="#") Наборы для парикмахера
-                                li
-                                    a(href="#") Инструменты для окрашивания
-
-                        .dropdownmenu__item
-                            .dropdownmenu__title 
-                                a(href="#") Модельный ряд ножниц
-
-                            ul.dropdownmenu__list
-                                li
-                                    a(href="#") Suntachi Classic
-                                li
-                                    a(href="#") Suntachi Classic Gold
-                                li
-                                    a(href="#") Suntachi Salon
-                                li
-                                    a(href="#") Suntachi Salin Design
-                                li
-                                    a(href="#") Suntachi LUX
-                                li
-                                    a(href="#") Suntachi Ideal
-                                li
-                                    a(href="#") Suntachi Ideal
-                                li
-                                    a(href="#") Suntachi Elite
-                                li
-                                    a(href="#") Akitz
-                                li
-                                    a(href="#") Suntachi Premium
-                                li
-                                    a(href="#") Takara
-
-                        .commercial.commercial_md
-                            .commercial__item
-                                .commercial__img
-                                    a(href="#")
-                                        img(src="img/commerce-prod.jpg")
-
-                                .commercial__action Скидка -40%
-
-                                .commercial__firm Suntachi
-
-                                .commercial__title
-                                    a(href="#") Прямые ножницы ZG-B PETROL
-
-                                .commercial__price
-                                    .commercial__price-old
-                                        strike 12 500
-
-                                    .commercial__price-new
-                                        |10 300 
-                                        <span>&#8381;</span>
-
-                            .tags
-                                a(href="#") Ножницы Suntachi
-                                a(href="#") Брашинги
-                                a(href="#") Фен Dyson
+                +dropdownSticky
             li
                 a(href="#") Для волос
+                +dropdownSticky
             li
                 a(href="#") Для лица
+                +dropdownSticky
+
 
         form.search.sticky-panel__search(action="#" method="POST")
             input(type="text" placeholder="Начните поиск").search__inp
